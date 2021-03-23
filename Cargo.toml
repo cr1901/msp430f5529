@@ -3,6 +3,11 @@ name = "msp430f5529"
 version = "0.1.0"
 authors = ["William D. Jones <thor0505@comcast.net>"]
 edition = "2018"
+description = "Peripheral access API for MSP430F5529 microcontroller"
+documentation = "https://docs.rs/msp430f5529"
+keywords = ["no-std", "msp430", "ti", "launchpad"]
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/cr1901/msp430f5529"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
