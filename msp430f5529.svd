@@ -23695,4 +23695,10 @@
       </interrupt>
     </peripheral>
   </peripherals>
+  <vendorExtensions>
+    <msp430_svd>
+      <version>0.2.0</version>
+      <commit_hash>00c1bf9</commit_hash>
+    </msp430_svd>
+  </vendorExtensions>
 </device>
