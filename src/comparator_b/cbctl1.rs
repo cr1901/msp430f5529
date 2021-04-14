@@ -1,18 +1,52 @@
-#[doc = "Reader of register CBCTL1"]
-pub type R = crate::R<u16, super::CBCTL1>;
-#[doc = "Writer for register CBCTL1"]
-pub type W = crate::W<u16, super::CBCTL1>;
-#[doc = "Register CBCTL1 `reset()`'s with value 0"]
-impl crate::ResetValue for super::CBCTL1 {
-    type Type = u16;
+#[doc = "Register `CBCTL1` reader"]
+pub struct R(crate::R<CBCTL1_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<CBCTL1_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `CBOUT`"]
-pub type CBOUT_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `CBOUT`"]
+impl core::convert::From<crate::R<CBCTL1_SPEC>> for R {
+    fn from(reader: crate::R<CBCTL1_SPEC>) -> Self {
+        R(reader)
+    }
+}
+#[doc = "Register `CBCTL1` writer"]
+pub struct W(crate::W<CBCTL1_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<CBCTL1_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl core::ops::DerefMut for W {
+    #[inline(always)]
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+impl core::convert::From<crate::W<CBCTL1_SPEC>> for W {
+    fn from(writer: crate::W<CBCTL1_SPEC>) -> Self {
+        W(writer)
+    }
+}
+#[doc = "Field `CBOUT` reader - Comp. B Output"]
+pub struct CBOUT_R(crate::FieldReader<bool, bool>);
+impl CBOUT_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        CBOUT_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for CBOUT_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `CBOUT` writer - Comp. B Output"]
 pub struct CBOUT_W<'a> {
     w: &'a mut W,
 }
@@ -30,13 +64,25 @@ impl<'a> CBOUT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u16) & 0x01);
+        self.w.bits = (self.w.bits & !0x01) | (value as u16 & 0x01);
         self.w
     }
 }
-#[doc = "Reader of field `CBOUTPOL`"]
-pub type CBOUTPOL_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `CBOUTPOL`"]
+#[doc = "Field `CBOUTPOL` reader - Comp. B Output Polarity"]
+pub struct CBOUTPOL_R(crate::FieldReader<bool, bool>);
+impl CBOUTPOL_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        CBOUTPOL_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for CBOUTPOL_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `CBOUTPOL` writer - Comp. B Output Polarity"]
 pub struct CBOUTPOL_W<'a> {
     w: &'a mut W,
 }
@@ -54,13 +100,25 @@ impl<'a> CBOUTPOL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u16) & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u16 & 0x01) << 1);
         self.w
     }
 }
-#[doc = "Reader of field `CBF`"]
-pub type CBF_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `CBF`"]
+#[doc = "Field `CBF` reader - Comp. B Enable Output Filter"]
+pub struct CBF_R(crate::FieldReader<bool, bool>);
+impl CBF_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        CBF_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for CBF_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `CBF` writer - Comp. B Enable Output Filter"]
 pub struct CBF_W<'a> {
     w: &'a mut W,
 }
@@ -78,13 +136,25 @@ impl<'a> CBF_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u16) & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u16 & 0x01) << 2);
         self.w
     }
 }
-#[doc = "Reader of field `CBIES`"]
-pub type CBIES_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `CBIES`"]
+#[doc = "Field `CBIES` reader - Comp. B Interrupt Edge Select"]
+pub struct CBIES_R(crate::FieldReader<bool, bool>);
+impl CBIES_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        CBIES_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for CBIES_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `CBIES` writer - Comp. B Interrupt Edge Select"]
 pub struct CBIES_W<'a> {
     w: &'a mut W,
 }
@@ -102,13 +172,25 @@ impl<'a> CBIES_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u16) & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u16 & 0x01) << 3);
         self.w
     }
 }
-#[doc = "Reader of field `CBSHORT`"]
-pub type CBSHORT_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `CBSHORT`"]
+#[doc = "Field `CBSHORT` reader - Comp. B Input Short"]
+pub struct CBSHORT_R(crate::FieldReader<bool, bool>);
+impl CBSHORT_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        CBSHORT_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for CBSHORT_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `CBSHORT` writer - Comp. B Input Short"]
 pub struct CBSHORT_W<'a> {
     w: &'a mut W,
 }
@@ -126,13 +208,25 @@ impl<'a> CBSHORT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | (((value as u16) & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u16 & 0x01) << 4);
         self.w
     }
 }
-#[doc = "Reader of field `CBEX`"]
-pub type CBEX_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `CBEX`"]
+#[doc = "Field `CBEX` reader - Comp. B Exchange Inputs"]
+pub struct CBEX_R(crate::FieldReader<bool, bool>);
+impl CBEX_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        CBEX_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for CBEX_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `CBEX` writer - Comp. B Exchange Inputs"]
 pub struct CBEX_W<'a> {
     w: &'a mut W,
 }
@@ -150,7 +244,7 @@ impl<'a> CBEX_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | (((value as u16) & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u16 & 0x01) << 5);
         self.w
     }
 }
@@ -173,9 +267,12 @@ impl From<CBFDLY_A> for u8 {
         variant as _
     }
 }
-#[doc = "Reader of field `CBFDLY`"]
-pub type CBFDLY_R = crate::R<u8, CBFDLY_A>;
+#[doc = "Field `CBFDLY` reader - Comp. B Filter delay Bit 0"]
+pub struct CBFDLY_R(crate::FieldReader<u8, CBFDLY_A>);
 impl CBFDLY_R {
+    pub(crate) fn new(bits: u8) -> Self {
+        CBFDLY_R(crate::FieldReader::new(bits))
+    }
     #[doc = r"Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> CBFDLY_A {
@@ -190,25 +287,32 @@ impl CBFDLY_R {
     #[doc = "Checks if the value of the field is `CBFDLY_0`"]
     #[inline(always)]
     pub fn is_cbfdly_0(&self) -> bool {
-        *self == CBFDLY_A::CBFDLY_0
+        **self == CBFDLY_A::CBFDLY_0
     }
     #[doc = "Checks if the value of the field is `CBFDLY_1`"]
     #[inline(always)]
     pub fn is_cbfdly_1(&self) -> bool {
-        *self == CBFDLY_A::CBFDLY_1
+        **self == CBFDLY_A::CBFDLY_1
     }
     #[doc = "Checks if the value of the field is `CBFDLY_2`"]
     #[inline(always)]
     pub fn is_cbfdly_2(&self) -> bool {
-        *self == CBFDLY_A::CBFDLY_2
+        **self == CBFDLY_A::CBFDLY_2
     }
     #[doc = "Checks if the value of the field is `CBFDLY_3`"]
     #[inline(always)]
     pub fn is_cbfdly_3(&self) -> bool {
-        *self == CBFDLY_A::CBFDLY_3
+        **self == CBFDLY_A::CBFDLY_3
     }
 }
-#[doc = "Write proxy for field `CBFDLY`"]
+impl core::ops::Deref for CBFDLY_R {
+    type Target = crate::FieldReader<u8, CBFDLY_A>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `CBFDLY` writer - Comp. B Filter delay Bit 0"]
 pub struct CBFDLY_W<'a> {
     w: &'a mut W,
 }
@@ -216,9 +320,7 @@ impl<'a> CBFDLY_W<'a> {
     #[doc = r"Writes `variant` to the field"]
     #[inline(always)]
     pub fn variant(self, variant: CBFDLY_A) -> &'a mut W {
-        {
-            self.bits(variant.into())
-        }
+        self.bits(variant.into())
     }
     #[doc = "Comp. B Filter delay 0 : 450ns"]
     #[inline(always)]
@@ -243,7 +345,7 @@ impl<'a> CBFDLY_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 6)) | (((value as u16) & 0x03) << 6);
+        self.w.bits = (self.w.bits & !(0x03 << 6)) | ((value as u16 & 0x03) << 6);
         self.w
     }
 }
@@ -266,9 +368,12 @@ impl From<CBPWRMD_A> for u8 {
         variant as _
     }
 }
-#[doc = "Reader of field `CBPWRMD`"]
-pub type CBPWRMD_R = crate::R<u8, CBPWRMD_A>;
+#[doc = "Field `CBPWRMD` reader - Comp. B Power Mode Bit 0"]
+pub struct CBPWRMD_R(crate::FieldReader<u8, CBPWRMD_A>);
 impl CBPWRMD_R {
+    pub(crate) fn new(bits: u8) -> Self {
+        CBPWRMD_R(crate::FieldReader::new(bits))
+    }
     #[doc = r"Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> CBPWRMD_A {
@@ -283,25 +388,32 @@ impl CBPWRMD_R {
     #[doc = "Checks if the value of the field is `CBPWRMD_0`"]
     #[inline(always)]
     pub fn is_cbpwrmd_0(&self) -> bool {
-        *self == CBPWRMD_A::CBPWRMD_0
+        **self == CBPWRMD_A::CBPWRMD_0
     }
     #[doc = "Checks if the value of the field is `CBPWRMD_1`"]
     #[inline(always)]
     pub fn is_cbpwrmd_1(&self) -> bool {
-        *self == CBPWRMD_A::CBPWRMD_1
+        **self == CBPWRMD_A::CBPWRMD_1
     }
     #[doc = "Checks if the value of the field is `CBPWRMD_2`"]
     #[inline(always)]
     pub fn is_cbpwrmd_2(&self) -> bool {
-        *self == CBPWRMD_A::CBPWRMD_2
+        **self == CBPWRMD_A::CBPWRMD_2
     }
     #[doc = "Checks if the value of the field is `CBPWRMD_3`"]
     #[inline(always)]
     pub fn is_cbpwrmd_3(&self) -> bool {
-        *self == CBPWRMD_A::CBPWRMD_3
+        **self == CBPWRMD_A::CBPWRMD_3
     }
 }
-#[doc = "Write proxy for field `CBPWRMD`"]
+impl core::ops::Deref for CBPWRMD_R {
+    type Target = crate::FieldReader<u8, CBPWRMD_A>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `CBPWRMD` writer - Comp. B Power Mode Bit 0"]
 pub struct CBPWRMD_W<'a> {
     w: &'a mut W,
 }
@@ -309,9 +421,7 @@ impl<'a> CBPWRMD_W<'a> {
     #[doc = r"Writes `variant` to the field"]
     #[inline(always)]
     pub fn variant(self, variant: CBPWRMD_A) -> &'a mut W {
-        {
-            self.bits(variant.into())
-        }
+        self.bits(variant.into())
     }
     #[doc = "Comp. B Power Mode 0 : High speed"]
     #[inline(always)]
@@ -336,13 +446,25 @@ impl<'a> CBPWRMD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 8)) | (((value as u16) & 0x03) << 8);
+        self.w.bits = (self.w.bits & !(0x03 << 8)) | ((value as u16 & 0x03) << 8);
         self.w
     }
 }
-#[doc = "Reader of field `CBON`"]
-pub type CBON_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `CBON`"]
+#[doc = "Field `CBON` reader - Comp. B enable"]
+pub struct CBON_R(crate::FieldReader<bool, bool>);
+impl CBON_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        CBON_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for CBON_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `CBON` writer - Comp. B enable"]
 pub struct CBON_W<'a> {
     w: &'a mut W,
 }
@@ -360,13 +482,25 @@ impl<'a> CBON_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | (((value as u16) & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u16 & 0x01) << 10);
         self.w
     }
 }
-#[doc = "Reader of field `CBMRVL`"]
-pub type CBMRVL_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `CBMRVL`"]
+#[doc = "Field `CBMRVL` reader - Comp. B CBMRV Level"]
+pub struct CBMRVL_R(crate::FieldReader<bool, bool>);
+impl CBMRVL_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        CBMRVL_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for CBMRVL_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `CBMRVL` writer - Comp. B CBMRV Level"]
 pub struct CBMRVL_W<'a> {
     w: &'a mut W,
 }
@@ -384,13 +518,25 @@ impl<'a> CBMRVL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | (((value as u16) & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u16 & 0x01) << 11);
         self.w
     }
 }
-#[doc = "Reader of field `CBMRVS`"]
-pub type CBMRVS_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `CBMRVS`"]
+#[doc = "Field `CBMRVS` reader - Comp. B Output selects between VREF0 or VREF1"]
+pub struct CBMRVS_R(crate::FieldReader<bool, bool>);
+impl CBMRVS_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        CBMRVS_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for CBMRVS_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `CBMRVS` writer - Comp. B Output selects between VREF0 or VREF1"]
 pub struct CBMRVS_W<'a> {
     w: &'a mut W,
 }
@@ -408,7 +554,7 @@ impl<'a> CBMRVS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | (((value as u16) & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u16 & 0x01) << 12);
         self.w
     }
 }
@@ -524,5 +670,30 @@ impl W {
     #[inline(always)]
     pub fn cbmrvs(&mut self) -> CBMRVS_W {
         CBMRVS_W { w: self }
+    }
+    #[doc = "Writes raw bits to the register."]
+    pub unsafe fn bits(&mut self, bits: u16) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "Comparator B Control Register 1\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cbctl1](index.html) module"]
+pub struct CBCTL1_SPEC;
+impl crate::RegisterSpec for CBCTL1_SPEC {
+    type Ux = u16;
+}
+#[doc = "`read()` method returns [cbctl1::R](R) reader structure"]
+impl crate::Readable for CBCTL1_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [cbctl1::W](W) writer structure"]
+impl crate::Writable for CBCTL1_SPEC {
+    type Writer = W;
+}
+#[doc = "`reset()` method sets CBCTL1 to value 0"]
+impl crate::Resettable for CBCTL1_SPEC {
+    #[inline(always)]
+    fn reset_value() -> Self::Ux {
+        0
     }
 }
