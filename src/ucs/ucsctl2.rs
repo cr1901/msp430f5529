@@ -1,18 +1,55 @@
-#[doc = "Reader of register UCSCTL2"]
-pub type R = crate::R<u16, super::UCSCTL2>;
-#[doc = "Writer for register UCSCTL2"]
-pub type W = crate::W<u16, super::UCSCTL2>;
-#[doc = "Register UCSCTL2 `reset()`'s with value 0"]
-impl crate::ResetValue for super::UCSCTL2 {
-    type Type = u16;
+#[doc = "Register `UCSCTL2` reader"]
+pub struct R(crate::R<UCSCTL2_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<UCSCTL2_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `FLLN0`"]
-pub type FLLN0_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `FLLN0`"]
+impl From<crate::R<UCSCTL2_SPEC>> for R {
+    #[inline(always)]
+    fn from(reader: crate::R<UCSCTL2_SPEC>) -> Self {
+        R(reader)
+    }
+}
+#[doc = "Register `UCSCTL2` writer"]
+pub struct W(crate::W<UCSCTL2_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<UCSCTL2_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl core::ops::DerefMut for W {
+    #[inline(always)]
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+impl From<crate::W<UCSCTL2_SPEC>> for W {
+    #[inline(always)]
+    fn from(writer: crate::W<UCSCTL2_SPEC>) -> Self {
+        W(writer)
+    }
+}
+#[doc = "Field `FLLN0` reader - FLL Multipier Bit : 0"]
+pub struct FLLN0_R(crate::FieldReader<bool, bool>);
+impl FLLN0_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        FLLN0_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for FLLN0_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `FLLN0` writer - FLL Multipier Bit : 0"]
 pub struct FLLN0_W<'a> {
     w: &'a mut W,
 }
@@ -30,13 +67,26 @@ impl<'a> FLLN0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u16) & 0x01);
+        self.w.bits = (self.w.bits & !0x01) | (value as u16 & 0x01);
         self.w
     }
 }
-#[doc = "Reader of field `FLLN1`"]
-pub type FLLN1_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `FLLN1`"]
+#[doc = "Field `FLLN1` reader - FLL Multipier Bit : 1"]
+pub struct FLLN1_R(crate::FieldReader<bool, bool>);
+impl FLLN1_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        FLLN1_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for FLLN1_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `FLLN1` writer - FLL Multipier Bit : 1"]
 pub struct FLLN1_W<'a> {
     w: &'a mut W,
 }
@@ -54,13 +104,26 @@ impl<'a> FLLN1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u16) & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u16 & 0x01) << 1);
         self.w
     }
 }
-#[doc = "Reader of field `FLLN2`"]
-pub type FLLN2_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `FLLN2`"]
+#[doc = "Field `FLLN2` reader - FLL Multipier Bit : 2"]
+pub struct FLLN2_R(crate::FieldReader<bool, bool>);
+impl FLLN2_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        FLLN2_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for FLLN2_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `FLLN2` writer - FLL Multipier Bit : 2"]
 pub struct FLLN2_W<'a> {
     w: &'a mut W,
 }
@@ -78,13 +141,26 @@ impl<'a> FLLN2_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u16) & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u16 & 0x01) << 2);
         self.w
     }
 }
-#[doc = "Reader of field `FLLN3`"]
-pub type FLLN3_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `FLLN3`"]
+#[doc = "Field `FLLN3` reader - FLL Multipier Bit : 3"]
+pub struct FLLN3_R(crate::FieldReader<bool, bool>);
+impl FLLN3_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        FLLN3_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for FLLN3_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `FLLN3` writer - FLL Multipier Bit : 3"]
 pub struct FLLN3_W<'a> {
     w: &'a mut W,
 }
@@ -102,13 +178,26 @@ impl<'a> FLLN3_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u16) & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u16 & 0x01) << 3);
         self.w
     }
 }
-#[doc = "Reader of field `FLLN4`"]
-pub type FLLN4_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `FLLN4`"]
+#[doc = "Field `FLLN4` reader - FLL Multipier Bit : 4"]
+pub struct FLLN4_R(crate::FieldReader<bool, bool>);
+impl FLLN4_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        FLLN4_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for FLLN4_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `FLLN4` writer - FLL Multipier Bit : 4"]
 pub struct FLLN4_W<'a> {
     w: &'a mut W,
 }
@@ -126,13 +215,26 @@ impl<'a> FLLN4_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | (((value as u16) & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u16 & 0x01) << 4);
         self.w
     }
 }
-#[doc = "Reader of field `FLLN5`"]
-pub type FLLN5_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `FLLN5`"]
+#[doc = "Field `FLLN5` reader - FLL Multipier Bit : 5"]
+pub struct FLLN5_R(crate::FieldReader<bool, bool>);
+impl FLLN5_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        FLLN5_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for FLLN5_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `FLLN5` writer - FLL Multipier Bit : 5"]
 pub struct FLLN5_W<'a> {
     w: &'a mut W,
 }
@@ -150,13 +252,26 @@ impl<'a> FLLN5_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | (((value as u16) & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u16 & 0x01) << 5);
         self.w
     }
 }
-#[doc = "Reader of field `FLLN6`"]
-pub type FLLN6_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `FLLN6`"]
+#[doc = "Field `FLLN6` reader - FLL Multipier Bit : 6"]
+pub struct FLLN6_R(crate::FieldReader<bool, bool>);
+impl FLLN6_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        FLLN6_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for FLLN6_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `FLLN6` writer - FLL Multipier Bit : 6"]
 pub struct FLLN6_W<'a> {
     w: &'a mut W,
 }
@@ -174,13 +289,26 @@ impl<'a> FLLN6_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | (((value as u16) & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u16 & 0x01) << 6);
         self.w
     }
 }
-#[doc = "Reader of field `FLLN7`"]
-pub type FLLN7_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `FLLN7`"]
+#[doc = "Field `FLLN7` reader - FLL Multipier Bit : 7"]
+pub struct FLLN7_R(crate::FieldReader<bool, bool>);
+impl FLLN7_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        FLLN7_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for FLLN7_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `FLLN7` writer - FLL Multipier Bit : 7"]
 pub struct FLLN7_W<'a> {
     w: &'a mut W,
 }
@@ -198,13 +326,26 @@ impl<'a> FLLN7_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | (((value as u16) & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u16 & 0x01) << 7);
         self.w
     }
 }
-#[doc = "Reader of field `FLLN8`"]
-pub type FLLN8_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `FLLN8`"]
+#[doc = "Field `FLLN8` reader - FLL Multipier Bit : 8"]
+pub struct FLLN8_R(crate::FieldReader<bool, bool>);
+impl FLLN8_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        FLLN8_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for FLLN8_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `FLLN8` writer - FLL Multipier Bit : 8"]
 pub struct FLLN8_W<'a> {
     w: &'a mut W,
 }
@@ -222,13 +363,26 @@ impl<'a> FLLN8_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | (((value as u16) & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u16 & 0x01) << 8);
         self.w
     }
 }
-#[doc = "Reader of field `FLLN9`"]
-pub type FLLN9_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `FLLN9`"]
+#[doc = "Field `FLLN9` reader - FLL Multipier Bit : 9"]
+pub struct FLLN9_R(crate::FieldReader<bool, bool>);
+impl FLLN9_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        FLLN9_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for FLLN9_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `FLLN9` writer - FLL Multipier Bit : 9"]
 pub struct FLLN9_W<'a> {
     w: &'a mut W,
 }
@@ -246,7 +400,7 @@ impl<'a> FLLN9_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | (((value as u16) & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u16 & 0x01) << 9);
         self.w
     }
 }
@@ -277,9 +431,13 @@ impl From<FLLD_A> for u8 {
         variant as _
     }
 }
-#[doc = "Reader of field `FLLD`"]
-pub type FLLD_R = crate::R<u8, FLLD_A>;
+#[doc = "Field `FLLD` reader - Loop Divider Bit : 0"]
+pub struct FLLD_R(crate::FieldReader<u8, FLLD_A>);
 impl FLLD_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: u8) -> Self {
+        FLLD_R(crate::FieldReader::new(bits))
+    }
     #[doc = r"Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> FLLD_A {
@@ -298,45 +456,52 @@ impl FLLD_R {
     #[doc = "Checks if the value of the field is `FLLD_0`"]
     #[inline(always)]
     pub fn is_flld_0(&self) -> bool {
-        *self == FLLD_A::FLLD_0
+        **self == FLLD_A::FLLD_0
     }
     #[doc = "Checks if the value of the field is `FLLD_1`"]
     #[inline(always)]
     pub fn is_flld_1(&self) -> bool {
-        *self == FLLD_A::FLLD_1
+        **self == FLLD_A::FLLD_1
     }
     #[doc = "Checks if the value of the field is `FLLD_2`"]
     #[inline(always)]
     pub fn is_flld_2(&self) -> bool {
-        *self == FLLD_A::FLLD_2
+        **self == FLLD_A::FLLD_2
     }
     #[doc = "Checks if the value of the field is `FLLD_3`"]
     #[inline(always)]
     pub fn is_flld_3(&self) -> bool {
-        *self == FLLD_A::FLLD_3
+        **self == FLLD_A::FLLD_3
     }
     #[doc = "Checks if the value of the field is `FLLD_4`"]
     #[inline(always)]
     pub fn is_flld_4(&self) -> bool {
-        *self == FLLD_A::FLLD_4
+        **self == FLLD_A::FLLD_4
     }
     #[doc = "Checks if the value of the field is `FLLD_5`"]
     #[inline(always)]
     pub fn is_flld_5(&self) -> bool {
-        *self == FLLD_A::FLLD_5
+        **self == FLLD_A::FLLD_5
     }
     #[doc = "Checks if the value of the field is `FLLD_6`"]
     #[inline(always)]
     pub fn is_flld_6(&self) -> bool {
-        *self == FLLD_A::FLLD_6
+        **self == FLLD_A::FLLD_6
     }
     #[doc = "Checks if the value of the field is `FLLD_7`"]
     #[inline(always)]
     pub fn is_flld_7(&self) -> bool {
-        *self == FLLD_A::FLLD_7
+        **self == FLLD_A::FLLD_7
     }
 }
-#[doc = "Write proxy for field `FLLD`"]
+impl core::ops::Deref for FLLD_R {
+    type Target = crate::FieldReader<u8, FLLD_A>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `FLLD` writer - Loop Divider Bit : 0"]
 pub struct FLLD_W<'a> {
     w: &'a mut W,
 }
@@ -344,9 +509,7 @@ impl<'a> FLLD_W<'a> {
     #[doc = r"Writes `variant` to the field"]
     #[inline(always)]
     pub fn variant(self, variant: FLLD_A) -> &'a mut W {
-        {
-            self.bits(variant.into())
-        }
+        self.bits(variant.into())
     }
     #[doc = "Multiply Selected Loop Freq. 1"]
     #[inline(always)]
@@ -391,7 +554,7 @@ impl<'a> FLLD_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 12)) | (((value as u16) & 0x07) << 12);
+        self.w.bits = (self.w.bits & !(0x07 << 12)) | ((value as u16 & 0x07) << 12);
         self.w
     }
 }
@@ -507,5 +670,31 @@ impl W {
     #[inline(always)]
     pub fn flld(&mut self) -> FLLD_W {
         FLLD_W { w: self }
+    }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u16) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "UCS Control Register 2\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ucsctl2](index.html) module"]
+pub struct UCSCTL2_SPEC;
+impl crate::RegisterSpec for UCSCTL2_SPEC {
+    type Ux = u16;
+}
+#[doc = "`read()` method returns [ucsctl2::R](R) reader structure"]
+impl crate::Readable for UCSCTL2_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [ucsctl2::W](W) writer structure"]
+impl crate::Writable for UCSCTL2_SPEC {
+    type Writer = W;
+}
+#[doc = "`reset()` method sets UCSCTL2 to value 0"]
+impl crate::Resettable for UCSCTL2_SPEC {
+    #[inline(always)]
+    fn reset_value() -> Self::Ux {
+        0
     }
 }

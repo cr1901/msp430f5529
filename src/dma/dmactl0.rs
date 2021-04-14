@@ -1,38 +1,62 @@
-#[doc = "Reader of register DMACTL0"]
-pub type R = crate::R<u16, super::DMACTL0>;
-#[doc = "Writer for register DMACTL0"]
-pub type W = crate::W<u16, super::DMACTL0>;
-#[doc = "Register DMACTL0 `reset()`'s with value 0"]
-impl crate::ResetValue for super::DMACTL0 {
-    type Type = u16;
+#[doc = "Register `DMACTL0` reader"]
+pub struct R(crate::R<DMACTL0_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<DMACTL0_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl From<crate::R<DMACTL0_SPEC>> for R {
+    #[inline(always)]
+    fn from(reader: crate::R<DMACTL0_SPEC>) -> Self {
+        R(reader)
+    }
+}
+#[doc = "Register `DMACTL0` writer"]
+pub struct W(crate::W<DMACTL0_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<DMACTL0_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl core::ops::DerefMut for W {
+    #[inline(always)]
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+impl From<crate::W<DMACTL0_SPEC>> for W {
+    #[inline(always)]
+    fn from(writer: crate::W<DMACTL0_SPEC>) -> Self {
+        W(writer)
     }
 }
 #[doc = "DMA channel 0 transfer select bit 0\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u8)]
 pub enum DMA0TSEL_A {
-    #[doc = "0: DMA channel 0 transfer select 0:  DMA_REQ (sw)"]
+    #[doc = "0: DMA channel 0 transfer select 0: DMA_REQ (sw)"]
     DMA0TSEL_0 = 0,
-    #[doc = "1: DMA channel 0 transfer select 1:  Timer0_A (TA0CCR0.IFG)"]
+    #[doc = "1: DMA channel 0 transfer select 1: Timer0_A (TA0CCR0.IFG)"]
     DMA0TSEL_1 = 1,
-    #[doc = "2: DMA channel 0 transfer select 2:  Timer0_A (TA0CCR2.IFG)"]
+    #[doc = "2: DMA channel 0 transfer select 2: Timer0_A (TA0CCR2.IFG)"]
     DMA0TSEL_2 = 2,
-    #[doc = "3: DMA channel 0 transfer select 3:  Timer1_A (TA1CCR0.IFG)"]
+    #[doc = "3: DMA channel 0 transfer select 3: Timer1_A (TA1CCR0.IFG)"]
     DMA0TSEL_3 = 3,
-    #[doc = "4: DMA channel 0 transfer select 4:  Timer1_A (TA1CCR2.IFG)"]
+    #[doc = "4: DMA channel 0 transfer select 4: Timer1_A (TA1CCR2.IFG)"]
     DMA0TSEL_4 = 4,
-    #[doc = "5: DMA channel 0 transfer select 5:  Timer2_A (TA2CCR0.IFG)"]
+    #[doc = "5: DMA channel 0 transfer select 5: Timer2_A (TA2CCR0.IFG)"]
     DMA0TSEL_5 = 5,
-    #[doc = "6: DMA channel 0 transfer select 6:  Timer2_A (TA2CCR2.IFG)"]
+    #[doc = "6: DMA channel 0 transfer select 6: Timer2_A (TA2CCR2.IFG)"]
     DMA0TSEL_6 = 6,
-    #[doc = "7: DMA channel 0 transfer select 7:  TimerB (TB0CCR0.IFG)"]
+    #[doc = "7: DMA channel 0 transfer select 7: TimerB (TB0CCR0.IFG)"]
     DMA0TSEL_7 = 7,
-    #[doc = "8: DMA channel 0 transfer select 8:  TimerB (TB0CCR2.IFG)"]
+    #[doc = "8: DMA channel 0 transfer select 8: TimerB (TB0CCR2.IFG)"]
     DMA0TSEL_8 = 8,
-    #[doc = "9: DMA channel 0 transfer select 9:  Reserved"]
+    #[doc = "9: DMA channel 0 transfer select 9: Reserved"]
     DMA0TSEL_9 = 9,
     #[doc = "10: DMA channel 0 transfer select 10: Reserved"]
     DMA0TSEL_10 = 10,
@@ -85,9 +109,13 @@ impl From<DMA0TSEL_A> for u8 {
         variant as _
     }
 }
-#[doc = "Reader of field `DMA0TSEL`"]
-pub type DMA0TSEL_R = crate::R<u8, DMA0TSEL_A>;
+#[doc = "Field `DMA0TSEL` reader - DMA channel 0 transfer select bit 0"]
+pub struct DMA0TSEL_R(crate::FieldReader<u8, DMA0TSEL_A>);
 impl DMA0TSEL_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: u8) -> Self {
+        DMA0TSEL_R(crate::FieldReader::new(bits))
+    }
     #[doc = r"Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> DMA0TSEL_A {
@@ -130,165 +158,172 @@ impl DMA0TSEL_R {
     #[doc = "Checks if the value of the field is `DMA0TSEL_0`"]
     #[inline(always)]
     pub fn is_dma0tsel_0(&self) -> bool {
-        *self == DMA0TSEL_A::DMA0TSEL_0
+        **self == DMA0TSEL_A::DMA0TSEL_0
     }
     #[doc = "Checks if the value of the field is `DMA0TSEL_1`"]
     #[inline(always)]
     pub fn is_dma0tsel_1(&self) -> bool {
-        *self == DMA0TSEL_A::DMA0TSEL_1
+        **self == DMA0TSEL_A::DMA0TSEL_1
     }
     #[doc = "Checks if the value of the field is `DMA0TSEL_2`"]
     #[inline(always)]
     pub fn is_dma0tsel_2(&self) -> bool {
-        *self == DMA0TSEL_A::DMA0TSEL_2
+        **self == DMA0TSEL_A::DMA0TSEL_2
     }
     #[doc = "Checks if the value of the field is `DMA0TSEL_3`"]
     #[inline(always)]
     pub fn is_dma0tsel_3(&self) -> bool {
-        *self == DMA0TSEL_A::DMA0TSEL_3
+        **self == DMA0TSEL_A::DMA0TSEL_3
     }
     #[doc = "Checks if the value of the field is `DMA0TSEL_4`"]
     #[inline(always)]
     pub fn is_dma0tsel_4(&self) -> bool {
-        *self == DMA0TSEL_A::DMA0TSEL_4
+        **self == DMA0TSEL_A::DMA0TSEL_4
     }
     #[doc = "Checks if the value of the field is `DMA0TSEL_5`"]
     #[inline(always)]
     pub fn is_dma0tsel_5(&self) -> bool {
-        *self == DMA0TSEL_A::DMA0TSEL_5
+        **self == DMA0TSEL_A::DMA0TSEL_5
     }
     #[doc = "Checks if the value of the field is `DMA0TSEL_6`"]
     #[inline(always)]
     pub fn is_dma0tsel_6(&self) -> bool {
-        *self == DMA0TSEL_A::DMA0TSEL_6
+        **self == DMA0TSEL_A::DMA0TSEL_6
     }
     #[doc = "Checks if the value of the field is `DMA0TSEL_7`"]
     #[inline(always)]
     pub fn is_dma0tsel_7(&self) -> bool {
-        *self == DMA0TSEL_A::DMA0TSEL_7
+        **self == DMA0TSEL_A::DMA0TSEL_7
     }
     #[doc = "Checks if the value of the field is `DMA0TSEL_8`"]
     #[inline(always)]
     pub fn is_dma0tsel_8(&self) -> bool {
-        *self == DMA0TSEL_A::DMA0TSEL_8
+        **self == DMA0TSEL_A::DMA0TSEL_8
     }
     #[doc = "Checks if the value of the field is `DMA0TSEL_9`"]
     #[inline(always)]
     pub fn is_dma0tsel_9(&self) -> bool {
-        *self == DMA0TSEL_A::DMA0TSEL_9
+        **self == DMA0TSEL_A::DMA0TSEL_9
     }
     #[doc = "Checks if the value of the field is `DMA0TSEL_10`"]
     #[inline(always)]
     pub fn is_dma0tsel_10(&self) -> bool {
-        *self == DMA0TSEL_A::DMA0TSEL_10
+        **self == DMA0TSEL_A::DMA0TSEL_10
     }
     #[doc = "Checks if the value of the field is `DMA0TSEL_11`"]
     #[inline(always)]
     pub fn is_dma0tsel_11(&self) -> bool {
-        *self == DMA0TSEL_A::DMA0TSEL_11
+        **self == DMA0TSEL_A::DMA0TSEL_11
     }
     #[doc = "Checks if the value of the field is `DMA0TSEL_12`"]
     #[inline(always)]
     pub fn is_dma0tsel_12(&self) -> bool {
-        *self == DMA0TSEL_A::DMA0TSEL_12
+        **self == DMA0TSEL_A::DMA0TSEL_12
     }
     #[doc = "Checks if the value of the field is `DMA0TSEL_13`"]
     #[inline(always)]
     pub fn is_dma0tsel_13(&self) -> bool {
-        *self == DMA0TSEL_A::DMA0TSEL_13
+        **self == DMA0TSEL_A::DMA0TSEL_13
     }
     #[doc = "Checks if the value of the field is `DMA0TSEL_14`"]
     #[inline(always)]
     pub fn is_dma0tsel_14(&self) -> bool {
-        *self == DMA0TSEL_A::DMA0TSEL_14
+        **self == DMA0TSEL_A::DMA0TSEL_14
     }
     #[doc = "Checks if the value of the field is `DMA0TSEL_15`"]
     #[inline(always)]
     pub fn is_dma0tsel_15(&self) -> bool {
-        *self == DMA0TSEL_A::DMA0TSEL_15
+        **self == DMA0TSEL_A::DMA0TSEL_15
     }
     #[doc = "Checks if the value of the field is `DMA0TSEL_16`"]
     #[inline(always)]
     pub fn is_dma0tsel_16(&self) -> bool {
-        *self == DMA0TSEL_A::DMA0TSEL_16
+        **self == DMA0TSEL_A::DMA0TSEL_16
     }
     #[doc = "Checks if the value of the field is `DMA0TSEL_17`"]
     #[inline(always)]
     pub fn is_dma0tsel_17(&self) -> bool {
-        *self == DMA0TSEL_A::DMA0TSEL_17
+        **self == DMA0TSEL_A::DMA0TSEL_17
     }
     #[doc = "Checks if the value of the field is `DMA0TSEL_18`"]
     #[inline(always)]
     pub fn is_dma0tsel_18(&self) -> bool {
-        *self == DMA0TSEL_A::DMA0TSEL_18
+        **self == DMA0TSEL_A::DMA0TSEL_18
     }
     #[doc = "Checks if the value of the field is `DMA0TSEL_19`"]
     #[inline(always)]
     pub fn is_dma0tsel_19(&self) -> bool {
-        *self == DMA0TSEL_A::DMA0TSEL_19
+        **self == DMA0TSEL_A::DMA0TSEL_19
     }
     #[doc = "Checks if the value of the field is `DMA0TSEL_20`"]
     #[inline(always)]
     pub fn is_dma0tsel_20(&self) -> bool {
-        *self == DMA0TSEL_A::DMA0TSEL_20
+        **self == DMA0TSEL_A::DMA0TSEL_20
     }
     #[doc = "Checks if the value of the field is `DMA0TSEL_21`"]
     #[inline(always)]
     pub fn is_dma0tsel_21(&self) -> bool {
-        *self == DMA0TSEL_A::DMA0TSEL_21
+        **self == DMA0TSEL_A::DMA0TSEL_21
     }
     #[doc = "Checks if the value of the field is `DMA0TSEL_22`"]
     #[inline(always)]
     pub fn is_dma0tsel_22(&self) -> bool {
-        *self == DMA0TSEL_A::DMA0TSEL_22
+        **self == DMA0TSEL_A::DMA0TSEL_22
     }
     #[doc = "Checks if the value of the field is `DMA0TSEL_23`"]
     #[inline(always)]
     pub fn is_dma0tsel_23(&self) -> bool {
-        *self == DMA0TSEL_A::DMA0TSEL_23
+        **self == DMA0TSEL_A::DMA0TSEL_23
     }
     #[doc = "Checks if the value of the field is `DMA0TSEL_24`"]
     #[inline(always)]
     pub fn is_dma0tsel_24(&self) -> bool {
-        *self == DMA0TSEL_A::DMA0TSEL_24
+        **self == DMA0TSEL_A::DMA0TSEL_24
     }
     #[doc = "Checks if the value of the field is `DMA0TSEL_25`"]
     #[inline(always)]
     pub fn is_dma0tsel_25(&self) -> bool {
-        *self == DMA0TSEL_A::DMA0TSEL_25
+        **self == DMA0TSEL_A::DMA0TSEL_25
     }
     #[doc = "Checks if the value of the field is `DMA0TSEL_26`"]
     #[inline(always)]
     pub fn is_dma0tsel_26(&self) -> bool {
-        *self == DMA0TSEL_A::DMA0TSEL_26
+        **self == DMA0TSEL_A::DMA0TSEL_26
     }
     #[doc = "Checks if the value of the field is `DMA0TSEL_27`"]
     #[inline(always)]
     pub fn is_dma0tsel_27(&self) -> bool {
-        *self == DMA0TSEL_A::DMA0TSEL_27
+        **self == DMA0TSEL_A::DMA0TSEL_27
     }
     #[doc = "Checks if the value of the field is `DMA0TSEL_28`"]
     #[inline(always)]
     pub fn is_dma0tsel_28(&self) -> bool {
-        *self == DMA0TSEL_A::DMA0TSEL_28
+        **self == DMA0TSEL_A::DMA0TSEL_28
     }
     #[doc = "Checks if the value of the field is `DMA0TSEL_29`"]
     #[inline(always)]
     pub fn is_dma0tsel_29(&self) -> bool {
-        *self == DMA0TSEL_A::DMA0TSEL_29
+        **self == DMA0TSEL_A::DMA0TSEL_29
     }
     #[doc = "Checks if the value of the field is `DMA0TSEL_30`"]
     #[inline(always)]
     pub fn is_dma0tsel_30(&self) -> bool {
-        *self == DMA0TSEL_A::DMA0TSEL_30
+        **self == DMA0TSEL_A::DMA0TSEL_30
     }
     #[doc = "Checks if the value of the field is `DMA0TSEL_31`"]
     #[inline(always)]
     pub fn is_dma0tsel_31(&self) -> bool {
-        *self == DMA0TSEL_A::DMA0TSEL_31
+        **self == DMA0TSEL_A::DMA0TSEL_31
     }
 }
-#[doc = "Write proxy for field `DMA0TSEL`"]
+impl core::ops::Deref for DMA0TSEL_R {
+    type Target = crate::FieldReader<u8, DMA0TSEL_A>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `DMA0TSEL` writer - DMA channel 0 transfer select bit 0"]
 pub struct DMA0TSEL_W<'a> {
     w: &'a mut W,
 }
@@ -296,9 +331,7 @@ impl<'a> DMA0TSEL_W<'a> {
     #[doc = r"Writes `variant` to the field"]
     #[inline(always)]
     pub fn variant(self, variant: DMA0TSEL_A) -> &'a mut W {
-        {
-            self.bits(variant.into())
-        }
+        self.bits(variant.into())
     }
     #[doc = "DMA channel 0 transfer select 0: DMA_REQ (sw)"]
     #[inline(always)]
@@ -463,7 +496,7 @@ impl<'a> DMA0TSEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x1f) | ((value as u16) & 0x1f);
+        self.w.bits = (self.w.bits & !0x1f) | (value as u16 & 0x1f);
         self.w
     }
 }
@@ -471,25 +504,25 @@ impl<'a> DMA0TSEL_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u8)]
 pub enum DMA1TSEL_A {
-    #[doc = "0: DMA channel 1 transfer select 0:  DMA_REQ (sw)"]
+    #[doc = "0: DMA channel 1 transfer select 0: DMA_REQ (sw)"]
     DMA1TSEL_0 = 0,
-    #[doc = "1: DMA channel 1 transfer select 1:  Timer0_A (TA0CCR0.IFG)"]
+    #[doc = "1: DMA channel 1 transfer select 1: Timer0_A (TA0CCR0.IFG)"]
     DMA1TSEL_1 = 1,
-    #[doc = "2: DMA channel 1 transfer select 2:  Timer0_A (TA0CCR2.IFG)"]
+    #[doc = "2: DMA channel 1 transfer select 2: Timer0_A (TA0CCR2.IFG)"]
     DMA1TSEL_2 = 2,
-    #[doc = "3: DMA channel 1 transfer select 3:  Timer1_A (TA1CCR0.IFG)"]
+    #[doc = "3: DMA channel 1 transfer select 3: Timer1_A (TA1CCR0.IFG)"]
     DMA1TSEL_3 = 3,
-    #[doc = "4: DMA channel 1 transfer select 4:  Timer1_A (TA1CCR2.IFG)"]
+    #[doc = "4: DMA channel 1 transfer select 4: Timer1_A (TA1CCR2.IFG)"]
     DMA1TSEL_4 = 4,
-    #[doc = "5: DMA channel 1 transfer select 5:  Timer2_A (TA2CCR0.IFG)"]
+    #[doc = "5: DMA channel 1 transfer select 5: Timer2_A (TA2CCR0.IFG)"]
     DMA1TSEL_5 = 5,
-    #[doc = "6: DMA channel 1 transfer select 6:  Timer2_A (TA2CCR2.IFG)"]
+    #[doc = "6: DMA channel 1 transfer select 6: Timer2_A (TA2CCR2.IFG)"]
     DMA1TSEL_6 = 6,
-    #[doc = "7: DMA channel 1 transfer select 7:  TimerB (TB0CCR0.IFG)"]
+    #[doc = "7: DMA channel 1 transfer select 7: TimerB (TB0CCR0.IFG)"]
     DMA1TSEL_7 = 7,
-    #[doc = "8: DMA channel 1 transfer select 8:  TimerB (TB0CCR2.IFG)"]
+    #[doc = "8: DMA channel 1 transfer select 8: TimerB (TB0CCR2.IFG)"]
     DMA1TSEL_8 = 8,
-    #[doc = "9: DMA channel 1 transfer select 9:  Reserved"]
+    #[doc = "9: DMA channel 1 transfer select 9: Reserved"]
     DMA1TSEL_9 = 9,
     #[doc = "10: DMA channel 1 transfer select 10: Reserved"]
     DMA1TSEL_10 = 10,
@@ -542,9 +575,13 @@ impl From<DMA1TSEL_A> for u8 {
         variant as _
     }
 }
-#[doc = "Reader of field `DMA1TSEL`"]
-pub type DMA1TSEL_R = crate::R<u8, DMA1TSEL_A>;
+#[doc = "Field `DMA1TSEL` reader - DMA channel 1 transfer select bit 0"]
+pub struct DMA1TSEL_R(crate::FieldReader<u8, DMA1TSEL_A>);
 impl DMA1TSEL_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: u8) -> Self {
+        DMA1TSEL_R(crate::FieldReader::new(bits))
+    }
     #[doc = r"Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> DMA1TSEL_A {
@@ -587,165 +624,172 @@ impl DMA1TSEL_R {
     #[doc = "Checks if the value of the field is `DMA1TSEL_0`"]
     #[inline(always)]
     pub fn is_dma1tsel_0(&self) -> bool {
-        *self == DMA1TSEL_A::DMA1TSEL_0
+        **self == DMA1TSEL_A::DMA1TSEL_0
     }
     #[doc = "Checks if the value of the field is `DMA1TSEL_1`"]
     #[inline(always)]
     pub fn is_dma1tsel_1(&self) -> bool {
-        *self == DMA1TSEL_A::DMA1TSEL_1
+        **self == DMA1TSEL_A::DMA1TSEL_1
     }
     #[doc = "Checks if the value of the field is `DMA1TSEL_2`"]
     #[inline(always)]
     pub fn is_dma1tsel_2(&self) -> bool {
-        *self == DMA1TSEL_A::DMA1TSEL_2
+        **self == DMA1TSEL_A::DMA1TSEL_2
     }
     #[doc = "Checks if the value of the field is `DMA1TSEL_3`"]
     #[inline(always)]
     pub fn is_dma1tsel_3(&self) -> bool {
-        *self == DMA1TSEL_A::DMA1TSEL_3
+        **self == DMA1TSEL_A::DMA1TSEL_3
     }
     #[doc = "Checks if the value of the field is `DMA1TSEL_4`"]
     #[inline(always)]
     pub fn is_dma1tsel_4(&self) -> bool {
-        *self == DMA1TSEL_A::DMA1TSEL_4
+        **self == DMA1TSEL_A::DMA1TSEL_4
     }
     #[doc = "Checks if the value of the field is `DMA1TSEL_5`"]
     #[inline(always)]
     pub fn is_dma1tsel_5(&self) -> bool {
-        *self == DMA1TSEL_A::DMA1TSEL_5
+        **self == DMA1TSEL_A::DMA1TSEL_5
     }
     #[doc = "Checks if the value of the field is `DMA1TSEL_6`"]
     #[inline(always)]
     pub fn is_dma1tsel_6(&self) -> bool {
-        *self == DMA1TSEL_A::DMA1TSEL_6
+        **self == DMA1TSEL_A::DMA1TSEL_6
     }
     #[doc = "Checks if the value of the field is `DMA1TSEL_7`"]
     #[inline(always)]
     pub fn is_dma1tsel_7(&self) -> bool {
-        *self == DMA1TSEL_A::DMA1TSEL_7
+        **self == DMA1TSEL_A::DMA1TSEL_7
     }
     #[doc = "Checks if the value of the field is `DMA1TSEL_8`"]
     #[inline(always)]
     pub fn is_dma1tsel_8(&self) -> bool {
-        *self == DMA1TSEL_A::DMA1TSEL_8
+        **self == DMA1TSEL_A::DMA1TSEL_8
     }
     #[doc = "Checks if the value of the field is `DMA1TSEL_9`"]
     #[inline(always)]
     pub fn is_dma1tsel_9(&self) -> bool {
-        *self == DMA1TSEL_A::DMA1TSEL_9
+        **self == DMA1TSEL_A::DMA1TSEL_9
     }
     #[doc = "Checks if the value of the field is `DMA1TSEL_10`"]
     #[inline(always)]
     pub fn is_dma1tsel_10(&self) -> bool {
-        *self == DMA1TSEL_A::DMA1TSEL_10
+        **self == DMA1TSEL_A::DMA1TSEL_10
     }
     #[doc = "Checks if the value of the field is `DMA1TSEL_11`"]
     #[inline(always)]
     pub fn is_dma1tsel_11(&self) -> bool {
-        *self == DMA1TSEL_A::DMA1TSEL_11
+        **self == DMA1TSEL_A::DMA1TSEL_11
     }
     #[doc = "Checks if the value of the field is `DMA1TSEL_12`"]
     #[inline(always)]
     pub fn is_dma1tsel_12(&self) -> bool {
-        *self == DMA1TSEL_A::DMA1TSEL_12
+        **self == DMA1TSEL_A::DMA1TSEL_12
     }
     #[doc = "Checks if the value of the field is `DMA1TSEL_13`"]
     #[inline(always)]
     pub fn is_dma1tsel_13(&self) -> bool {
-        *self == DMA1TSEL_A::DMA1TSEL_13
+        **self == DMA1TSEL_A::DMA1TSEL_13
     }
     #[doc = "Checks if the value of the field is `DMA1TSEL_14`"]
     #[inline(always)]
     pub fn is_dma1tsel_14(&self) -> bool {
-        *self == DMA1TSEL_A::DMA1TSEL_14
+        **self == DMA1TSEL_A::DMA1TSEL_14
     }
     #[doc = "Checks if the value of the field is `DMA1TSEL_15`"]
     #[inline(always)]
     pub fn is_dma1tsel_15(&self) -> bool {
-        *self == DMA1TSEL_A::DMA1TSEL_15
+        **self == DMA1TSEL_A::DMA1TSEL_15
     }
     #[doc = "Checks if the value of the field is `DMA1TSEL_16`"]
     #[inline(always)]
     pub fn is_dma1tsel_16(&self) -> bool {
-        *self == DMA1TSEL_A::DMA1TSEL_16
+        **self == DMA1TSEL_A::DMA1TSEL_16
     }
     #[doc = "Checks if the value of the field is `DMA1TSEL_17`"]
     #[inline(always)]
     pub fn is_dma1tsel_17(&self) -> bool {
-        *self == DMA1TSEL_A::DMA1TSEL_17
+        **self == DMA1TSEL_A::DMA1TSEL_17
     }
     #[doc = "Checks if the value of the field is `DMA1TSEL_18`"]
     #[inline(always)]
     pub fn is_dma1tsel_18(&self) -> bool {
-        *self == DMA1TSEL_A::DMA1TSEL_18
+        **self == DMA1TSEL_A::DMA1TSEL_18
     }
     #[doc = "Checks if the value of the field is `DMA1TSEL_19`"]
     #[inline(always)]
     pub fn is_dma1tsel_19(&self) -> bool {
-        *self == DMA1TSEL_A::DMA1TSEL_19
+        **self == DMA1TSEL_A::DMA1TSEL_19
     }
     #[doc = "Checks if the value of the field is `DMA1TSEL_20`"]
     #[inline(always)]
     pub fn is_dma1tsel_20(&self) -> bool {
-        *self == DMA1TSEL_A::DMA1TSEL_20
+        **self == DMA1TSEL_A::DMA1TSEL_20
     }
     #[doc = "Checks if the value of the field is `DMA1TSEL_21`"]
     #[inline(always)]
     pub fn is_dma1tsel_21(&self) -> bool {
-        *self == DMA1TSEL_A::DMA1TSEL_21
+        **self == DMA1TSEL_A::DMA1TSEL_21
     }
     #[doc = "Checks if the value of the field is `DMA1TSEL_22`"]
     #[inline(always)]
     pub fn is_dma1tsel_22(&self) -> bool {
-        *self == DMA1TSEL_A::DMA1TSEL_22
+        **self == DMA1TSEL_A::DMA1TSEL_22
     }
     #[doc = "Checks if the value of the field is `DMA1TSEL_23`"]
     #[inline(always)]
     pub fn is_dma1tsel_23(&self) -> bool {
-        *self == DMA1TSEL_A::DMA1TSEL_23
+        **self == DMA1TSEL_A::DMA1TSEL_23
     }
     #[doc = "Checks if the value of the field is `DMA1TSEL_24`"]
     #[inline(always)]
     pub fn is_dma1tsel_24(&self) -> bool {
-        *self == DMA1TSEL_A::DMA1TSEL_24
+        **self == DMA1TSEL_A::DMA1TSEL_24
     }
     #[doc = "Checks if the value of the field is `DMA1TSEL_25`"]
     #[inline(always)]
     pub fn is_dma1tsel_25(&self) -> bool {
-        *self == DMA1TSEL_A::DMA1TSEL_25
+        **self == DMA1TSEL_A::DMA1TSEL_25
     }
     #[doc = "Checks if the value of the field is `DMA1TSEL_26`"]
     #[inline(always)]
     pub fn is_dma1tsel_26(&self) -> bool {
-        *self == DMA1TSEL_A::DMA1TSEL_26
+        **self == DMA1TSEL_A::DMA1TSEL_26
     }
     #[doc = "Checks if the value of the field is `DMA1TSEL_27`"]
     #[inline(always)]
     pub fn is_dma1tsel_27(&self) -> bool {
-        *self == DMA1TSEL_A::DMA1TSEL_27
+        **self == DMA1TSEL_A::DMA1TSEL_27
     }
     #[doc = "Checks if the value of the field is `DMA1TSEL_28`"]
     #[inline(always)]
     pub fn is_dma1tsel_28(&self) -> bool {
-        *self == DMA1TSEL_A::DMA1TSEL_28
+        **self == DMA1TSEL_A::DMA1TSEL_28
     }
     #[doc = "Checks if the value of the field is `DMA1TSEL_29`"]
     #[inline(always)]
     pub fn is_dma1tsel_29(&self) -> bool {
-        *self == DMA1TSEL_A::DMA1TSEL_29
+        **self == DMA1TSEL_A::DMA1TSEL_29
     }
     #[doc = "Checks if the value of the field is `DMA1TSEL_30`"]
     #[inline(always)]
     pub fn is_dma1tsel_30(&self) -> bool {
-        *self == DMA1TSEL_A::DMA1TSEL_30
+        **self == DMA1TSEL_A::DMA1TSEL_30
     }
     #[doc = "Checks if the value of the field is `DMA1TSEL_31`"]
     #[inline(always)]
     pub fn is_dma1tsel_31(&self) -> bool {
-        *self == DMA1TSEL_A::DMA1TSEL_31
+        **self == DMA1TSEL_A::DMA1TSEL_31
     }
 }
-#[doc = "Write proxy for field `DMA1TSEL`"]
+impl core::ops::Deref for DMA1TSEL_R {
+    type Target = crate::FieldReader<u8, DMA1TSEL_A>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `DMA1TSEL` writer - DMA channel 1 transfer select bit 0"]
 pub struct DMA1TSEL_W<'a> {
     w: &'a mut W,
 }
@@ -753,9 +797,7 @@ impl<'a> DMA1TSEL_W<'a> {
     #[doc = r"Writes `variant` to the field"]
     #[inline(always)]
     pub fn variant(self, variant: DMA1TSEL_A) -> &'a mut W {
-        {
-            self.bits(variant.into())
-        }
+        self.bits(variant.into())
     }
     #[doc = "DMA channel 1 transfer select 0: DMA_REQ (sw)"]
     #[inline(always)]
@@ -920,7 +962,7 @@ impl<'a> DMA1TSEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x1f << 8)) | (((value as u16) & 0x1f) << 8);
+        self.w.bits = (self.w.bits & !(0x1f << 8)) | ((value as u16 & 0x1f) << 8);
         self.w
     }
 }
@@ -946,5 +988,31 @@ impl W {
     #[inline(always)]
     pub fn dma1tsel(&mut self) -> DMA1TSEL_W {
         DMA1TSEL_W { w: self }
+    }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u16) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "DMA Module Control 0\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dmactl0](index.html) module"]
+pub struct DMACTL0_SPEC;
+impl crate::RegisterSpec for DMACTL0_SPEC {
+    type Ux = u16;
+}
+#[doc = "`read()` method returns [dmactl0::R](R) reader structure"]
+impl crate::Readable for DMACTL0_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [dmactl0::W](W) writer structure"]
+impl crate::Writable for DMACTL0_SPEC {
+    type Writer = W;
+}
+#[doc = "`reset()` method sets DMACTL0 to value 0"]
+impl crate::Resettable for DMACTL0_SPEC {
+    #[inline(always)]
+    fn reset_value() -> Self::Ux {
+        0
     }
 }

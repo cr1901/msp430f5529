@@ -1,18 +1,55 @@
-#[doc = "Reader of register P8DS"]
-pub type R = crate::R<u8, super::P8DS>;
-#[doc = "Writer for register P8DS"]
-pub type W = crate::W<u8, super::P8DS>;
-#[doc = "Register P8DS `reset()`'s with value 0"]
-impl crate::ResetValue for super::P8DS {
-    type Type = u8;
+#[doc = "Register `P8DS` reader"]
+pub struct R(crate::R<P8DS_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<P8DS_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `P8DS0`"]
-pub type P8DS0_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `P8DS0`"]
+impl From<crate::R<P8DS_SPEC>> for R {
+    #[inline(always)]
+    fn from(reader: crate::R<P8DS_SPEC>) -> Self {
+        R(reader)
+    }
+}
+#[doc = "Register `P8DS` writer"]
+pub struct W(crate::W<P8DS_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<P8DS_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl core::ops::DerefMut for W {
+    #[inline(always)]
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+impl From<crate::W<P8DS_SPEC>> for W {
+    #[inline(always)]
+    fn from(writer: crate::W<P8DS_SPEC>) -> Self {
+        W(writer)
+    }
+}
+#[doc = "Field `P8DS0` reader - P8DS0"]
+pub struct P8DS0_R(crate::FieldReader<bool, bool>);
+impl P8DS0_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        P8DS0_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for P8DS0_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `P8DS0` writer - P8DS0"]
 pub struct P8DS0_W<'a> {
     w: &'a mut W,
 }
@@ -30,13 +67,26 @@ impl<'a> P8DS0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u8) & 0x01);
+        self.w.bits = (self.w.bits & !0x01) | (value as u8 & 0x01);
         self.w
     }
 }
-#[doc = "Reader of field `P8DS1`"]
-pub type P8DS1_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `P8DS1`"]
+#[doc = "Field `P8DS1` reader - P8DS1"]
+pub struct P8DS1_R(crate::FieldReader<bool, bool>);
+impl P8DS1_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        P8DS1_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for P8DS1_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `P8DS1` writer - P8DS1"]
 pub struct P8DS1_W<'a> {
     w: &'a mut W,
 }
@@ -54,13 +104,26 @@ impl<'a> P8DS1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u8) & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u8 & 0x01) << 1);
         self.w
     }
 }
-#[doc = "Reader of field `P8DS2`"]
-pub type P8DS2_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `P8DS2`"]
+#[doc = "Field `P8DS2` reader - P8DS2"]
+pub struct P8DS2_R(crate::FieldReader<bool, bool>);
+impl P8DS2_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        P8DS2_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for P8DS2_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `P8DS2` writer - P8DS2"]
 pub struct P8DS2_W<'a> {
     w: &'a mut W,
 }
@@ -78,13 +141,26 @@ impl<'a> P8DS2_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u8) & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u8 & 0x01) << 2);
         self.w
     }
 }
-#[doc = "Reader of field `P8DS3`"]
-pub type P8DS3_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `P8DS3`"]
+#[doc = "Field `P8DS3` reader - P8DS3"]
+pub struct P8DS3_R(crate::FieldReader<bool, bool>);
+impl P8DS3_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        P8DS3_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for P8DS3_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `P8DS3` writer - P8DS3"]
 pub struct P8DS3_W<'a> {
     w: &'a mut W,
 }
@@ -102,13 +178,26 @@ impl<'a> P8DS3_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u8) & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u8 & 0x01) << 3);
         self.w
     }
 }
-#[doc = "Reader of field `P8DS4`"]
-pub type P8DS4_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `P8DS4`"]
+#[doc = "Field `P8DS4` reader - P8DS4"]
+pub struct P8DS4_R(crate::FieldReader<bool, bool>);
+impl P8DS4_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        P8DS4_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for P8DS4_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `P8DS4` writer - P8DS4"]
 pub struct P8DS4_W<'a> {
     w: &'a mut W,
 }
@@ -126,13 +215,26 @@ impl<'a> P8DS4_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | (((value as u8) & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u8 & 0x01) << 4);
         self.w
     }
 }
-#[doc = "Reader of field `P8DS5`"]
-pub type P8DS5_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `P8DS5`"]
+#[doc = "Field `P8DS5` reader - P8DS5"]
+pub struct P8DS5_R(crate::FieldReader<bool, bool>);
+impl P8DS5_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        P8DS5_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for P8DS5_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `P8DS5` writer - P8DS5"]
 pub struct P8DS5_W<'a> {
     w: &'a mut W,
 }
@@ -150,13 +252,26 @@ impl<'a> P8DS5_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | (((value as u8) & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u8 & 0x01) << 5);
         self.w
     }
 }
-#[doc = "Reader of field `P8DS6`"]
-pub type P8DS6_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `P8DS6`"]
+#[doc = "Field `P8DS6` reader - P8DS6"]
+pub struct P8DS6_R(crate::FieldReader<bool, bool>);
+impl P8DS6_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        P8DS6_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for P8DS6_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `P8DS6` writer - P8DS6"]
 pub struct P8DS6_W<'a> {
     w: &'a mut W,
 }
@@ -174,13 +289,26 @@ impl<'a> P8DS6_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | (((value as u8) & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u8 & 0x01) << 6);
         self.w
     }
 }
-#[doc = "Reader of field `P8DS7`"]
-pub type P8DS7_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `P8DS7`"]
+#[doc = "Field `P8DS7` reader - P8DS7"]
+pub struct P8DS7_R(crate::FieldReader<bool, bool>);
+impl P8DS7_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        P8DS7_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for P8DS7_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `P8DS7` writer - P8DS7"]
 pub struct P8DS7_W<'a> {
     w: &'a mut W,
 }
@@ -198,7 +326,7 @@ impl<'a> P8DS7_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | (((value as u8) & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u8 & 0x01) << 7);
         self.w
     }
 }
@@ -284,5 +412,31 @@ impl W {
     #[inline(always)]
     pub fn p8ds7(&mut self) -> P8DS7_W {
         P8DS7_W { w: self }
+    }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u8) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "Port 8 Drive Strenght\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [p8ds](index.html) module"]
+pub struct P8DS_SPEC;
+impl crate::RegisterSpec for P8DS_SPEC {
+    type Ux = u8;
+}
+#[doc = "`read()` method returns [p8ds::R](R) reader structure"]
+impl crate::Readable for P8DS_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [p8ds::W](W) writer structure"]
+impl crate::Writable for P8DS_SPEC {
+    type Writer = W;
+}
+#[doc = "`reset()` method sets P8DS to value 0"]
+impl crate::Resettable for P8DS_SPEC {
+    #[inline(always)]
+    fn reset_value() -> Self::Ux {
+        0
     }
 }

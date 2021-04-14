@@ -1,18 +1,55 @@
-#[doc = "Reader of register USBIEPCNF_6"]
-pub type R = crate::R<u8, super::USBIEPCNF_6>;
-#[doc = "Writer for register USBIEPCNF_6"]
-pub type W = crate::W<u8, super::USBIEPCNF_6>;
-#[doc = "Register USBIEPCNF_6 `reset()`'s with value 0"]
-impl crate::ResetValue for super::USBIEPCNF_6 {
-    type Type = u8;
+#[doc = "Register `USBIEPCNF_6` reader"]
+pub struct R(crate::R<USBIEPCNF_6_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<USBIEPCNF_6_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `USBIIE`"]
-pub type USBIIE_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `USBIIE`"]
+impl From<crate::R<USBIEPCNF_6_SPEC>> for R {
+    #[inline(always)]
+    fn from(reader: crate::R<USBIEPCNF_6_SPEC>) -> Self {
+        R(reader)
+    }
+}
+#[doc = "Register `USBIEPCNF_6` writer"]
+pub struct W(crate::W<USBIEPCNF_6_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<USBIEPCNF_6_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl core::ops::DerefMut for W {
+    #[inline(always)]
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+impl From<crate::W<USBIEPCNF_6_SPEC>> for W {
+    #[inline(always)]
+    fn from(writer: crate::W<USBIEPCNF_6_SPEC>) -> Self {
+        W(writer)
+    }
+}
+#[doc = "Field `USBIIE` reader - USB - Transaction Interrupt indication enable"]
+pub struct USBIIE_R(crate::FieldReader<bool, bool>);
+impl USBIIE_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        USBIIE_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for USBIIE_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `USBIIE` writer - USB - Transaction Interrupt indication enable"]
 pub struct USBIIE_W<'a> {
     w: &'a mut W,
 }
@@ -30,13 +67,26 @@ impl<'a> USBIIE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u8) & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u8 & 0x01) << 2);
         self.w
     }
 }
-#[doc = "Reader of field `STALL`"]
-pub type STALL_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `STALL`"]
+#[doc = "Field `STALL` reader - USB - Stall Condition"]
+pub struct STALL_R(crate::FieldReader<bool, bool>);
+impl STALL_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        STALL_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for STALL_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `STALL` writer - USB - Stall Condition"]
 pub struct STALL_W<'a> {
     w: &'a mut W,
 }
@@ -54,13 +104,26 @@ impl<'a> STALL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u8) & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u8 & 0x01) << 3);
         self.w
     }
 }
-#[doc = "Reader of field `DBUF`"]
-pub type DBUF_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `DBUF`"]
+#[doc = "Field `DBUF` reader - USB - Double Buffer Enable"]
+pub struct DBUF_R(crate::FieldReader<bool, bool>);
+impl DBUF_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        DBUF_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for DBUF_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `DBUF` writer - USB - Double Buffer Enable"]
 pub struct DBUF_W<'a> {
     w: &'a mut W,
 }
@@ -78,13 +141,26 @@ impl<'a> DBUF_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | (((value as u8) & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u8 & 0x01) << 4);
         self.w
     }
 }
-#[doc = "Reader of field `TOGGLE`"]
-pub type TOGGLE_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `TOGGLE`"]
+#[doc = "Field `TOGGLE` reader - USB - Toggle Bit"]
+pub struct TOGGLE_R(crate::FieldReader<bool, bool>);
+impl TOGGLE_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        TOGGLE_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for TOGGLE_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `TOGGLE` writer - USB - Toggle Bit"]
 pub struct TOGGLE_W<'a> {
     w: &'a mut W,
 }
@@ -102,13 +178,26 @@ impl<'a> TOGGLE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | (((value as u8) & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u8 & 0x01) << 5);
         self.w
     }
 }
-#[doc = "Reader of field `UBME`"]
-pub type UBME_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `UBME`"]
+#[doc = "Field `UBME` reader - USB - UBM In-Endpoint Enable"]
+pub struct UBME_R(crate::FieldReader<bool, bool>);
+impl UBME_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        UBME_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for UBME_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `UBME` writer - USB - UBM In-Endpoint Enable"]
 pub struct UBME_W<'a> {
     w: &'a mut W,
 }
@@ -126,7 +215,7 @@ impl<'a> UBME_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | (((value as u8) & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u8 & 0x01) << 7);
         self.w
     }
 }
@@ -182,5 +271,31 @@ impl W {
     #[inline(always)]
     pub fn ubme(&mut self) -> UBME_W {
         UBME_W { w: self }
+    }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u8) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "Input Endpoint_6: Configuration\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [usbiepcnf_6](index.html) module"]
+pub struct USBIEPCNF_6_SPEC;
+impl crate::RegisterSpec for USBIEPCNF_6_SPEC {
+    type Ux = u8;
+}
+#[doc = "`read()` method returns [usbiepcnf_6::R](R) reader structure"]
+impl crate::Readable for USBIEPCNF_6_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [usbiepcnf_6::W](W) writer structure"]
+impl crate::Writable for USBIEPCNF_6_SPEC {
+    type Writer = W;
+}
+#[doc = "`reset()` method sets USBIEPCNF_6 to value 0"]
+impl crate::Resettable for USBIEPCNF_6_SPEC {
+    #[inline(always)]
+    fn reset_value() -> Self::Ux {
+        0
     }
 }

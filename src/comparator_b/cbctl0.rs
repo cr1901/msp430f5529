@@ -1,13 +1,37 @@
-#[doc = "Reader of register CBCTL0"]
-pub type R = crate::R<u16, super::CBCTL0>;
-#[doc = "Writer for register CBCTL0"]
-pub type W = crate::W<u16, super::CBCTL0>;
-#[doc = "Register CBCTL0 `reset()`'s with value 0"]
-impl crate::ResetValue for super::CBCTL0 {
-    type Type = u16;
+#[doc = "Register `CBCTL0` reader"]
+pub struct R(crate::R<CBCTL0_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<CBCTL0_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl From<crate::R<CBCTL0_SPEC>> for R {
+    #[inline(always)]
+    fn from(reader: crate::R<CBCTL0_SPEC>) -> Self {
+        R(reader)
+    }
+}
+#[doc = "Register `CBCTL0` writer"]
+pub struct W(crate::W<CBCTL0_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<CBCTL0_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl core::ops::DerefMut for W {
+    #[inline(always)]
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+impl From<crate::W<CBCTL0_SPEC>> for W {
+    #[inline(always)]
+    fn from(writer: crate::W<CBCTL0_SPEC>) -> Self {
+        W(writer)
     }
 }
 #[doc = "Comp. B Pos. Channel Input Select 0\n\nValue on reset: 0"]
@@ -53,9 +77,13 @@ impl From<CBIPSEL_A> for u8 {
         variant as _
     }
 }
-#[doc = "Reader of field `CBIPSEL`"]
-pub type CBIPSEL_R = crate::R<u8, CBIPSEL_A>;
+#[doc = "Field `CBIPSEL` reader - Comp. B Pos. Channel Input Select 0"]
+pub struct CBIPSEL_R(crate::FieldReader<u8, CBIPSEL_A>);
 impl CBIPSEL_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: u8) -> Self {
+        CBIPSEL_R(crate::FieldReader::new(bits))
+    }
     #[doc = r"Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> CBIPSEL_A {
@@ -82,85 +110,92 @@ impl CBIPSEL_R {
     #[doc = "Checks if the value of the field is `CBIPSEL_0`"]
     #[inline(always)]
     pub fn is_cbipsel_0(&self) -> bool {
-        *self == CBIPSEL_A::CBIPSEL_0
+        **self == CBIPSEL_A::CBIPSEL_0
     }
     #[doc = "Checks if the value of the field is `CBIPSEL_1`"]
     #[inline(always)]
     pub fn is_cbipsel_1(&self) -> bool {
-        *self == CBIPSEL_A::CBIPSEL_1
+        **self == CBIPSEL_A::CBIPSEL_1
     }
     #[doc = "Checks if the value of the field is `CBIPSEL_2`"]
     #[inline(always)]
     pub fn is_cbipsel_2(&self) -> bool {
-        *self == CBIPSEL_A::CBIPSEL_2
+        **self == CBIPSEL_A::CBIPSEL_2
     }
     #[doc = "Checks if the value of the field is `CBIPSEL_3`"]
     #[inline(always)]
     pub fn is_cbipsel_3(&self) -> bool {
-        *self == CBIPSEL_A::CBIPSEL_3
+        **self == CBIPSEL_A::CBIPSEL_3
     }
     #[doc = "Checks if the value of the field is `CBIPSEL_4`"]
     #[inline(always)]
     pub fn is_cbipsel_4(&self) -> bool {
-        *self == CBIPSEL_A::CBIPSEL_4
+        **self == CBIPSEL_A::CBIPSEL_4
     }
     #[doc = "Checks if the value of the field is `CBIPSEL_5`"]
     #[inline(always)]
     pub fn is_cbipsel_5(&self) -> bool {
-        *self == CBIPSEL_A::CBIPSEL_5
+        **self == CBIPSEL_A::CBIPSEL_5
     }
     #[doc = "Checks if the value of the field is `CBIPSEL_6`"]
     #[inline(always)]
     pub fn is_cbipsel_6(&self) -> bool {
-        *self == CBIPSEL_A::CBIPSEL_6
+        **self == CBIPSEL_A::CBIPSEL_6
     }
     #[doc = "Checks if the value of the field is `CBIPSEL_7`"]
     #[inline(always)]
     pub fn is_cbipsel_7(&self) -> bool {
-        *self == CBIPSEL_A::CBIPSEL_7
+        **self == CBIPSEL_A::CBIPSEL_7
     }
     #[doc = "Checks if the value of the field is `CBIPSEL_8`"]
     #[inline(always)]
     pub fn is_cbipsel_8(&self) -> bool {
-        *self == CBIPSEL_A::CBIPSEL_8
+        **self == CBIPSEL_A::CBIPSEL_8
     }
     #[doc = "Checks if the value of the field is `CBIPSEL_9`"]
     #[inline(always)]
     pub fn is_cbipsel_9(&self) -> bool {
-        *self == CBIPSEL_A::CBIPSEL_9
+        **self == CBIPSEL_A::CBIPSEL_9
     }
     #[doc = "Checks if the value of the field is `CBIPSEL_10`"]
     #[inline(always)]
     pub fn is_cbipsel_10(&self) -> bool {
-        *self == CBIPSEL_A::CBIPSEL_10
+        **self == CBIPSEL_A::CBIPSEL_10
     }
     #[doc = "Checks if the value of the field is `CBIPSEL_11`"]
     #[inline(always)]
     pub fn is_cbipsel_11(&self) -> bool {
-        *self == CBIPSEL_A::CBIPSEL_11
+        **self == CBIPSEL_A::CBIPSEL_11
     }
     #[doc = "Checks if the value of the field is `CBIPSEL_12`"]
     #[inline(always)]
     pub fn is_cbipsel_12(&self) -> bool {
-        *self == CBIPSEL_A::CBIPSEL_12
+        **self == CBIPSEL_A::CBIPSEL_12
     }
     #[doc = "Checks if the value of the field is `CBIPSEL_13`"]
     #[inline(always)]
     pub fn is_cbipsel_13(&self) -> bool {
-        *self == CBIPSEL_A::CBIPSEL_13
+        **self == CBIPSEL_A::CBIPSEL_13
     }
     #[doc = "Checks if the value of the field is `CBIPSEL_14`"]
     #[inline(always)]
     pub fn is_cbipsel_14(&self) -> bool {
-        *self == CBIPSEL_A::CBIPSEL_14
+        **self == CBIPSEL_A::CBIPSEL_14
     }
     #[doc = "Checks if the value of the field is `CBIPSEL_15`"]
     #[inline(always)]
     pub fn is_cbipsel_15(&self) -> bool {
-        *self == CBIPSEL_A::CBIPSEL_15
+        **self == CBIPSEL_A::CBIPSEL_15
     }
 }
-#[doc = "Write proxy for field `CBIPSEL`"]
+impl core::ops::Deref for CBIPSEL_R {
+    type Target = crate::FieldReader<u8, CBIPSEL_A>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `CBIPSEL` writer - Comp. B Pos. Channel Input Select 0"]
 pub struct CBIPSEL_W<'a> {
     w: &'a mut W,
 }
@@ -168,9 +203,7 @@ impl<'a> CBIPSEL_W<'a> {
     #[doc = r"Writes `variant` to the field"]
     #[inline(always)]
     pub fn variant(self, variant: CBIPSEL_A) -> &'a mut W {
-        {
-            self.bits(variant.into())
-        }
+        self.bits(variant.into())
     }
     #[doc = "Comp. B V+ terminal Input Select: Channel 0"]
     #[inline(always)]
@@ -255,13 +288,26 @@ impl<'a> CBIPSEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0f) | ((value as u16) & 0x0f);
+        self.w.bits = (self.w.bits & !0x0f) | (value as u16 & 0x0f);
         self.w
     }
 }
-#[doc = "Reader of field `CBIPEN`"]
-pub type CBIPEN_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `CBIPEN`"]
+#[doc = "Field `CBIPEN` reader - Comp. B Pos. Channel Input Enable"]
+pub struct CBIPEN_R(crate::FieldReader<bool, bool>);
+impl CBIPEN_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        CBIPEN_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for CBIPEN_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `CBIPEN` writer - Comp. B Pos. Channel Input Enable"]
 pub struct CBIPEN_W<'a> {
     w: &'a mut W,
 }
@@ -279,7 +325,7 @@ impl<'a> CBIPEN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | (((value as u16) & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u16 & 0x01) << 7);
         self.w
     }
 }
@@ -326,9 +372,13 @@ impl From<CBIMSEL_A> for u8 {
         variant as _
     }
 }
-#[doc = "Reader of field `CBIMSEL`"]
-pub type CBIMSEL_R = crate::R<u8, CBIMSEL_A>;
+#[doc = "Field `CBIMSEL` reader - Comp. B Neg. Channel Input Select 0"]
+pub struct CBIMSEL_R(crate::FieldReader<u8, CBIMSEL_A>);
 impl CBIMSEL_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: u8) -> Self {
+        CBIMSEL_R(crate::FieldReader::new(bits))
+    }
     #[doc = r"Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> CBIMSEL_A {
@@ -355,85 +405,92 @@ impl CBIMSEL_R {
     #[doc = "Checks if the value of the field is `CBIMSEL_0`"]
     #[inline(always)]
     pub fn is_cbimsel_0(&self) -> bool {
-        *self == CBIMSEL_A::CBIMSEL_0
+        **self == CBIMSEL_A::CBIMSEL_0
     }
     #[doc = "Checks if the value of the field is `CBIMSEL_1`"]
     #[inline(always)]
     pub fn is_cbimsel_1(&self) -> bool {
-        *self == CBIMSEL_A::CBIMSEL_1
+        **self == CBIMSEL_A::CBIMSEL_1
     }
     #[doc = "Checks if the value of the field is `CBIMSEL_2`"]
     #[inline(always)]
     pub fn is_cbimsel_2(&self) -> bool {
-        *self == CBIMSEL_A::CBIMSEL_2
+        **self == CBIMSEL_A::CBIMSEL_2
     }
     #[doc = "Checks if the value of the field is `CBIMSEL_3`"]
     #[inline(always)]
     pub fn is_cbimsel_3(&self) -> bool {
-        *self == CBIMSEL_A::CBIMSEL_3
+        **self == CBIMSEL_A::CBIMSEL_3
     }
     #[doc = "Checks if the value of the field is `CBIMSEL_4`"]
     #[inline(always)]
     pub fn is_cbimsel_4(&self) -> bool {
-        *self == CBIMSEL_A::CBIMSEL_4
+        **self == CBIMSEL_A::CBIMSEL_4
     }
     #[doc = "Checks if the value of the field is `CBIMSEL_5`"]
     #[inline(always)]
     pub fn is_cbimsel_5(&self) -> bool {
-        *self == CBIMSEL_A::CBIMSEL_5
+        **self == CBIMSEL_A::CBIMSEL_5
     }
     #[doc = "Checks if the value of the field is `CBIMSEL_6`"]
     #[inline(always)]
     pub fn is_cbimsel_6(&self) -> bool {
-        *self == CBIMSEL_A::CBIMSEL_6
+        **self == CBIMSEL_A::CBIMSEL_6
     }
     #[doc = "Checks if the value of the field is `CBIMSEL_7`"]
     #[inline(always)]
     pub fn is_cbimsel_7(&self) -> bool {
-        *self == CBIMSEL_A::CBIMSEL_7
+        **self == CBIMSEL_A::CBIMSEL_7
     }
     #[doc = "Checks if the value of the field is `CBIMSEL_8`"]
     #[inline(always)]
     pub fn is_cbimsel_8(&self) -> bool {
-        *self == CBIMSEL_A::CBIMSEL_8
+        **self == CBIMSEL_A::CBIMSEL_8
     }
     #[doc = "Checks if the value of the field is `CBIMSEL_9`"]
     #[inline(always)]
     pub fn is_cbimsel_9(&self) -> bool {
-        *self == CBIMSEL_A::CBIMSEL_9
+        **self == CBIMSEL_A::CBIMSEL_9
     }
     #[doc = "Checks if the value of the field is `CBIMSEL_10`"]
     #[inline(always)]
     pub fn is_cbimsel_10(&self) -> bool {
-        *self == CBIMSEL_A::CBIMSEL_10
+        **self == CBIMSEL_A::CBIMSEL_10
     }
     #[doc = "Checks if the value of the field is `CBIMSEL_11`"]
     #[inline(always)]
     pub fn is_cbimsel_11(&self) -> bool {
-        *self == CBIMSEL_A::CBIMSEL_11
+        **self == CBIMSEL_A::CBIMSEL_11
     }
     #[doc = "Checks if the value of the field is `CBIMSEL_12`"]
     #[inline(always)]
     pub fn is_cbimsel_12(&self) -> bool {
-        *self == CBIMSEL_A::CBIMSEL_12
+        **self == CBIMSEL_A::CBIMSEL_12
     }
     #[doc = "Checks if the value of the field is `CBIMSEL_13`"]
     #[inline(always)]
     pub fn is_cbimsel_13(&self) -> bool {
-        *self == CBIMSEL_A::CBIMSEL_13
+        **self == CBIMSEL_A::CBIMSEL_13
     }
     #[doc = "Checks if the value of the field is `CBIMSEL_14`"]
     #[inline(always)]
     pub fn is_cbimsel_14(&self) -> bool {
-        *self == CBIMSEL_A::CBIMSEL_14
+        **self == CBIMSEL_A::CBIMSEL_14
     }
     #[doc = "Checks if the value of the field is `CBIMSEL_15`"]
     #[inline(always)]
     pub fn is_cbimsel_15(&self) -> bool {
-        *self == CBIMSEL_A::CBIMSEL_15
+        **self == CBIMSEL_A::CBIMSEL_15
     }
 }
-#[doc = "Write proxy for field `CBIMSEL`"]
+impl core::ops::Deref for CBIMSEL_R {
+    type Target = crate::FieldReader<u8, CBIMSEL_A>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `CBIMSEL` writer - Comp. B Neg. Channel Input Select 0"]
 pub struct CBIMSEL_W<'a> {
     w: &'a mut W,
 }
@@ -441,9 +498,7 @@ impl<'a> CBIMSEL_W<'a> {
     #[doc = r"Writes `variant` to the field"]
     #[inline(always)]
     pub fn variant(self, variant: CBIMSEL_A) -> &'a mut W {
-        {
-            self.bits(variant.into())
-        }
+        self.bits(variant.into())
     }
     #[doc = "Comp. B V- Terminal Input Select: Channel 0"]
     #[inline(always)]
@@ -528,13 +583,26 @@ impl<'a> CBIMSEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 8)) | (((value as u16) & 0x0f) << 8);
+        self.w.bits = (self.w.bits & !(0x0f << 8)) | ((value as u16 & 0x0f) << 8);
         self.w
     }
 }
-#[doc = "Reader of field `CBIMEN`"]
-pub type CBIMEN_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `CBIMEN`"]
+#[doc = "Field `CBIMEN` reader - Comp. B Neg. Channel Input Enable"]
+pub struct CBIMEN_R(crate::FieldReader<bool, bool>);
+impl CBIMEN_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        CBIMEN_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for CBIMEN_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `CBIMEN` writer - Comp. B Neg. Channel Input Enable"]
 pub struct CBIMEN_W<'a> {
     w: &'a mut W,
 }
@@ -552,7 +620,7 @@ impl<'a> CBIMEN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | (((value as u16) & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u16 & 0x01) << 15);
         self.w
     }
 }
@@ -598,5 +666,31 @@ impl W {
     #[inline(always)]
     pub fn cbimen(&mut self) -> CBIMEN_W {
         CBIMEN_W { w: self }
+    }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u16) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "Comparator B Control Register 0\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cbctl0](index.html) module"]
+pub struct CBCTL0_SPEC;
+impl crate::RegisterSpec for CBCTL0_SPEC {
+    type Ux = u16;
+}
+#[doc = "`read()` method returns [cbctl0::R](R) reader structure"]
+impl crate::Readable for CBCTL0_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [cbctl0::W](W) writer structure"]
+impl crate::Writable for CBCTL0_SPEC {
+    type Writer = W;
+}
+#[doc = "`reset()` method sets CBCTL0 to value 0"]
+impl crate::Resettable for CBCTL0_SPEC {
+    #[inline(always)]
+    fn reset_value() -> Self::Ux {
+        0
     }
 }

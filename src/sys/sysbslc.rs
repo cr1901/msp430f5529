@@ -1,18 +1,55 @@
-#[doc = "Reader of register SYSBSLC"]
-pub type R = crate::R<u16, super::SYSBSLC>;
-#[doc = "Writer for register SYSBSLC"]
-pub type W = crate::W<u16, super::SYSBSLC>;
-#[doc = "Register SYSBSLC `reset()`'s with value 0"]
-impl crate::ResetValue for super::SYSBSLC {
-    type Type = u16;
+#[doc = "Register `SYSBSLC` reader"]
+pub struct R(crate::R<SYSBSLC_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<SYSBSLC_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `SYSBSLSIZE0`"]
-pub type SYSBSLSIZE0_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `SYSBSLSIZE0`"]
+impl From<crate::R<SYSBSLC_SPEC>> for R {
+    #[inline(always)]
+    fn from(reader: crate::R<SYSBSLC_SPEC>) -> Self {
+        R(reader)
+    }
+}
+#[doc = "Register `SYSBSLC` writer"]
+pub struct W(crate::W<SYSBSLC_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<SYSBSLC_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl core::ops::DerefMut for W {
+    #[inline(always)]
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+impl From<crate::W<SYSBSLC_SPEC>> for W {
+    #[inline(always)]
+    fn from(writer: crate::W<SYSBSLC_SPEC>) -> Self {
+        W(writer)
+    }
+}
+#[doc = "Field `SYSBSLSIZE0` reader - SYS - BSL Protection Size 0"]
+pub struct SYSBSLSIZE0_R(crate::FieldReader<bool, bool>);
+impl SYSBSLSIZE0_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        SYSBSLSIZE0_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for SYSBSLSIZE0_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `SYSBSLSIZE0` writer - SYS - BSL Protection Size 0"]
 pub struct SYSBSLSIZE0_W<'a> {
     w: &'a mut W,
 }
@@ -30,13 +67,26 @@ impl<'a> SYSBSLSIZE0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u16) & 0x01);
+        self.w.bits = (self.w.bits & !0x01) | (value as u16 & 0x01);
         self.w
     }
 }
-#[doc = "Reader of field `SYSBSLSIZE1`"]
-pub type SYSBSLSIZE1_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `SYSBSLSIZE1`"]
+#[doc = "Field `SYSBSLSIZE1` reader - SYS - BSL Protection Size 1"]
+pub struct SYSBSLSIZE1_R(crate::FieldReader<bool, bool>);
+impl SYSBSLSIZE1_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        SYSBSLSIZE1_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for SYSBSLSIZE1_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `SYSBSLSIZE1` writer - SYS - BSL Protection Size 1"]
 pub struct SYSBSLSIZE1_W<'a> {
     w: &'a mut W,
 }
@@ -54,13 +104,26 @@ impl<'a> SYSBSLSIZE1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u16) & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u16 & 0x01) << 1);
         self.w
     }
 }
-#[doc = "Reader of field `SYSBSLR`"]
-pub type SYSBSLR_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `SYSBSLR`"]
+#[doc = "Field `SYSBSLR` reader - SYS - RAM assigned to BSL"]
+pub struct SYSBSLR_R(crate::FieldReader<bool, bool>);
+impl SYSBSLR_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        SYSBSLR_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for SYSBSLR_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `SYSBSLR` writer - SYS - RAM assigned to BSL"]
 pub struct SYSBSLR_W<'a> {
     w: &'a mut W,
 }
@@ -78,13 +141,26 @@ impl<'a> SYSBSLR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u16) & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u16 & 0x01) << 2);
         self.w
     }
 }
-#[doc = "Reader of field `SYSBSLOFF`"]
-pub type SYSBSLOFF_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `SYSBSLOFF`"]
+#[doc = "Field `SYSBSLOFF` reader - SYS - BSL Memory disabled"]
+pub struct SYSBSLOFF_R(crate::FieldReader<bool, bool>);
+impl SYSBSLOFF_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        SYSBSLOFF_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for SYSBSLOFF_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `SYSBSLOFF` writer - SYS - BSL Memory disabled"]
 pub struct SYSBSLOFF_W<'a> {
     w: &'a mut W,
 }
@@ -102,13 +178,26 @@ impl<'a> SYSBSLOFF_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | (((value as u16) & 0x01) << 14);
+        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u16 & 0x01) << 14);
         self.w
     }
 }
-#[doc = "Reader of field `SYSBSLPE`"]
-pub type SYSBSLPE_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `SYSBSLPE`"]
+#[doc = "Field `SYSBSLPE` reader - SYS - BSL Memory protection enabled"]
+pub struct SYSBSLPE_R(crate::FieldReader<bool, bool>);
+impl SYSBSLPE_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        SYSBSLPE_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for SYSBSLPE_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `SYSBSLPE` writer - SYS - BSL Memory protection enabled"]
 pub struct SYSBSLPE_W<'a> {
     w: &'a mut W,
 }
@@ -126,7 +215,7 @@ impl<'a> SYSBSLPE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | (((value as u16) & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u16 & 0x01) << 15);
         self.w
     }
 }
@@ -182,5 +271,31 @@ impl W {
     #[inline(always)]
     pub fn sysbslpe(&mut self) -> SYSBSLPE_W {
         SYSBSLPE_W { w: self }
+    }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u16) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "Boot strap configuration area\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sysbslc](index.html) module"]
+pub struct SYSBSLC_SPEC;
+impl crate::RegisterSpec for SYSBSLC_SPEC {
+    type Ux = u16;
+}
+#[doc = "`read()` method returns [sysbslc::R](R) reader structure"]
+impl crate::Readable for SYSBSLC_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [sysbslc::W](W) writer structure"]
+impl crate::Writable for SYSBSLC_SPEC {
+    type Writer = W;
+}
+#[doc = "`reset()` method sets SYSBSLC to value 0"]
+impl crate::Resettable for SYSBSLC_SPEC {
+    #[inline(always)]
+    fn reset_value() -> Self::Ux {
+        0
     }
 }

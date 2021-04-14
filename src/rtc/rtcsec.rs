@@ -1,18 +1,55 @@
-#[doc = "Reader of register RTCSEC"]
-pub type R = crate::R<u8, super::RTCSEC>;
-#[doc = "Writer for register RTCSEC"]
-pub type W = crate::W<u8, super::RTCSEC>;
-#[doc = "Register RTCSEC `reset()`'s with value 0"]
-impl crate::ResetValue for super::RTCSEC {
-    type Type = u8;
+#[doc = "Register `RTCSEC` reader"]
+pub struct R(crate::R<RTCSEC_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<RTCSEC_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `SECONDS0`"]
-pub type SECONDS0_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `SECONDS0`"]
+impl From<crate::R<RTCSEC_SPEC>> for R {
+    #[inline(always)]
+    fn from(reader: crate::R<RTCSEC_SPEC>) -> Self {
+        R(reader)
+    }
+}
+#[doc = "Register `RTCSEC` writer"]
+pub struct W(crate::W<RTCSEC_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<RTCSEC_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl core::ops::DerefMut for W {
+    #[inline(always)]
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+impl From<crate::W<RTCSEC_SPEC>> for W {
+    #[inline(always)]
+    fn from(writer: crate::W<RTCSEC_SPEC>) -> Self {
+        W(writer)
+    }
+}
+#[doc = "Field `SECONDS0` reader - Real Time Clock Seconds Bit: 0"]
+pub struct SECONDS0_R(crate::FieldReader<bool, bool>);
+impl SECONDS0_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        SECONDS0_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for SECONDS0_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `SECONDS0` writer - Real Time Clock Seconds Bit: 0"]
 pub struct SECONDS0_W<'a> {
     w: &'a mut W,
 }
@@ -30,13 +67,26 @@ impl<'a> SECONDS0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u8) & 0x01);
+        self.w.bits = (self.w.bits & !0x01) | (value as u8 & 0x01);
         self.w
     }
 }
-#[doc = "Reader of field `SECONDS1`"]
-pub type SECONDS1_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `SECONDS1`"]
+#[doc = "Field `SECONDS1` reader - Real Time Clock Seconds Bit: 1"]
+pub struct SECONDS1_R(crate::FieldReader<bool, bool>);
+impl SECONDS1_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        SECONDS1_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for SECONDS1_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `SECONDS1` writer - Real Time Clock Seconds Bit: 1"]
 pub struct SECONDS1_W<'a> {
     w: &'a mut W,
 }
@@ -54,13 +104,26 @@ impl<'a> SECONDS1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u8) & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u8 & 0x01) << 1);
         self.w
     }
 }
-#[doc = "Reader of field `SECONDS2`"]
-pub type SECONDS2_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `SECONDS2`"]
+#[doc = "Field `SECONDS2` reader - Real Time Clock Seconds Bit: 2"]
+pub struct SECONDS2_R(crate::FieldReader<bool, bool>);
+impl SECONDS2_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        SECONDS2_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for SECONDS2_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `SECONDS2` writer - Real Time Clock Seconds Bit: 2"]
 pub struct SECONDS2_W<'a> {
     w: &'a mut W,
 }
@@ -78,13 +141,26 @@ impl<'a> SECONDS2_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u8) & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u8 & 0x01) << 2);
         self.w
     }
 }
-#[doc = "Reader of field `SECONDS3`"]
-pub type SECONDS3_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `SECONDS3`"]
+#[doc = "Field `SECONDS3` reader - Real Time Clock Seconds Bit: 3"]
+pub struct SECONDS3_R(crate::FieldReader<bool, bool>);
+impl SECONDS3_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        SECONDS3_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for SECONDS3_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `SECONDS3` writer - Real Time Clock Seconds Bit: 3"]
 pub struct SECONDS3_W<'a> {
     w: &'a mut W,
 }
@@ -102,13 +178,26 @@ impl<'a> SECONDS3_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u8) & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u8 & 0x01) << 3);
         self.w
     }
 }
-#[doc = "Reader of field `SECONDS4`"]
-pub type SECONDS4_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `SECONDS4`"]
+#[doc = "Field `SECONDS4` reader - Real Time Clock Seconds Bit: 4"]
+pub struct SECONDS4_R(crate::FieldReader<bool, bool>);
+impl SECONDS4_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        SECONDS4_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for SECONDS4_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `SECONDS4` writer - Real Time Clock Seconds Bit: 4"]
 pub struct SECONDS4_W<'a> {
     w: &'a mut W,
 }
@@ -126,13 +215,26 @@ impl<'a> SECONDS4_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | (((value as u8) & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u8 & 0x01) << 4);
         self.w
     }
 }
-#[doc = "Reader of field `SECONDS5`"]
-pub type SECONDS5_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `SECONDS5`"]
+#[doc = "Field `SECONDS5` reader - Real Time Clock Seconds Bit: 5"]
+pub struct SECONDS5_R(crate::FieldReader<bool, bool>);
+impl SECONDS5_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        SECONDS5_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for SECONDS5_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `SECONDS5` writer - Real Time Clock Seconds Bit: 5"]
 pub struct SECONDS5_W<'a> {
     w: &'a mut W,
 }
@@ -150,13 +252,26 @@ impl<'a> SECONDS5_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | (((value as u8) & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u8 & 0x01) << 5);
         self.w
     }
 }
-#[doc = "Reader of field `SECONDS6`"]
-pub type SECONDS6_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `SECONDS6`"]
+#[doc = "Field `SECONDS6` reader - Real Time Clock Seconds Bit: 6"]
+pub struct SECONDS6_R(crate::FieldReader<bool, bool>);
+impl SECONDS6_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        SECONDS6_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for SECONDS6_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `SECONDS6` writer - Real Time Clock Seconds Bit: 6"]
 pub struct SECONDS6_W<'a> {
     w: &'a mut W,
 }
@@ -174,7 +289,7 @@ impl<'a> SECONDS6_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | (((value as u8) & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u8 & 0x01) << 6);
         self.w
     }
 }
@@ -250,5 +365,31 @@ impl W {
     #[inline(always)]
     pub fn seconds6(&mut self) -> SECONDS6_W {
         SECONDS6_W { w: self }
+    }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u8) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "Real Time Clock Seconds\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [rtcsec](index.html) module"]
+pub struct RTCSEC_SPEC;
+impl crate::RegisterSpec for RTCSEC_SPEC {
+    type Ux = u8;
+}
+#[doc = "`read()` method returns [rtcsec::R](R) reader structure"]
+impl crate::Readable for RTCSEC_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [rtcsec::W](W) writer structure"]
+impl crate::Writable for RTCSEC_SPEC {
+    type Writer = W;
+}
+#[doc = "`reset()` method sets RTCSEC to value 0"]
+impl crate::Resettable for RTCSEC_SPEC {
+    #[inline(always)]
+    fn reset_value() -> Self::Ux {
+        0
     }
 }

@@ -1,18 +1,55 @@
-#[doc = "Reader of register P2OUT"]
-pub type R = crate::R<u8, super::P2OUT>;
-#[doc = "Writer for register P2OUT"]
-pub type W = crate::W<u8, super::P2OUT>;
-#[doc = "Register P2OUT `reset()`'s with value 0"]
-impl crate::ResetValue for super::P2OUT {
-    type Type = u8;
+#[doc = "Register `P2OUT` reader"]
+pub struct R(crate::R<P2OUT_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<P2OUT_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `P2OUT0`"]
-pub type P2OUT0_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `P2OUT0`"]
+impl From<crate::R<P2OUT_SPEC>> for R {
+    #[inline(always)]
+    fn from(reader: crate::R<P2OUT_SPEC>) -> Self {
+        R(reader)
+    }
+}
+#[doc = "Register `P2OUT` writer"]
+pub struct W(crate::W<P2OUT_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<P2OUT_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl core::ops::DerefMut for W {
+    #[inline(always)]
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+impl From<crate::W<P2OUT_SPEC>> for W {
+    #[inline(always)]
+    fn from(writer: crate::W<P2OUT_SPEC>) -> Self {
+        W(writer)
+    }
+}
+#[doc = "Field `P2OUT0` reader - P2OUT0"]
+pub struct P2OUT0_R(crate::FieldReader<bool, bool>);
+impl P2OUT0_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        P2OUT0_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for P2OUT0_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `P2OUT0` writer - P2OUT0"]
 pub struct P2OUT0_W<'a> {
     w: &'a mut W,
 }
@@ -30,13 +67,26 @@ impl<'a> P2OUT0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u8) & 0x01);
+        self.w.bits = (self.w.bits & !0x01) | (value as u8 & 0x01);
         self.w
     }
 }
-#[doc = "Reader of field `P2OUT1`"]
-pub type P2OUT1_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `P2OUT1`"]
+#[doc = "Field `P2OUT1` reader - P2OUT1"]
+pub struct P2OUT1_R(crate::FieldReader<bool, bool>);
+impl P2OUT1_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        P2OUT1_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for P2OUT1_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `P2OUT1` writer - P2OUT1"]
 pub struct P2OUT1_W<'a> {
     w: &'a mut W,
 }
@@ -54,13 +104,26 @@ impl<'a> P2OUT1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u8) & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u8 & 0x01) << 1);
         self.w
     }
 }
-#[doc = "Reader of field `P2OUT2`"]
-pub type P2OUT2_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `P2OUT2`"]
+#[doc = "Field `P2OUT2` reader - P2OUT2"]
+pub struct P2OUT2_R(crate::FieldReader<bool, bool>);
+impl P2OUT2_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        P2OUT2_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for P2OUT2_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `P2OUT2` writer - P2OUT2"]
 pub struct P2OUT2_W<'a> {
     w: &'a mut W,
 }
@@ -78,13 +141,26 @@ impl<'a> P2OUT2_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u8) & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u8 & 0x01) << 2);
         self.w
     }
 }
-#[doc = "Reader of field `P2OUT3`"]
-pub type P2OUT3_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `P2OUT3`"]
+#[doc = "Field `P2OUT3` reader - P2OUT3"]
+pub struct P2OUT3_R(crate::FieldReader<bool, bool>);
+impl P2OUT3_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        P2OUT3_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for P2OUT3_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `P2OUT3` writer - P2OUT3"]
 pub struct P2OUT3_W<'a> {
     w: &'a mut W,
 }
@@ -102,13 +178,26 @@ impl<'a> P2OUT3_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u8) & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u8 & 0x01) << 3);
         self.w
     }
 }
-#[doc = "Reader of field `P2OUT4`"]
-pub type P2OUT4_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `P2OUT4`"]
+#[doc = "Field `P2OUT4` reader - P2OUT4"]
+pub struct P2OUT4_R(crate::FieldReader<bool, bool>);
+impl P2OUT4_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        P2OUT4_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for P2OUT4_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `P2OUT4` writer - P2OUT4"]
 pub struct P2OUT4_W<'a> {
     w: &'a mut W,
 }
@@ -126,13 +215,26 @@ impl<'a> P2OUT4_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | (((value as u8) & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u8 & 0x01) << 4);
         self.w
     }
 }
-#[doc = "Reader of field `P2OUT5`"]
-pub type P2OUT5_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `P2OUT5`"]
+#[doc = "Field `P2OUT5` reader - P2OUT5"]
+pub struct P2OUT5_R(crate::FieldReader<bool, bool>);
+impl P2OUT5_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        P2OUT5_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for P2OUT5_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `P2OUT5` writer - P2OUT5"]
 pub struct P2OUT5_W<'a> {
     w: &'a mut W,
 }
@@ -150,13 +252,26 @@ impl<'a> P2OUT5_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | (((value as u8) & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u8 & 0x01) << 5);
         self.w
     }
 }
-#[doc = "Reader of field `P2OUT6`"]
-pub type P2OUT6_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `P2OUT6`"]
+#[doc = "Field `P2OUT6` reader - P2OUT6"]
+pub struct P2OUT6_R(crate::FieldReader<bool, bool>);
+impl P2OUT6_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        P2OUT6_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for P2OUT6_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `P2OUT6` writer - P2OUT6"]
 pub struct P2OUT6_W<'a> {
     w: &'a mut W,
 }
@@ -174,13 +289,26 @@ impl<'a> P2OUT6_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | (((value as u8) & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u8 & 0x01) << 6);
         self.w
     }
 }
-#[doc = "Reader of field `P2OUT7`"]
-pub type P2OUT7_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `P2OUT7`"]
+#[doc = "Field `P2OUT7` reader - P2OUT7"]
+pub struct P2OUT7_R(crate::FieldReader<bool, bool>);
+impl P2OUT7_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        P2OUT7_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for P2OUT7_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `P2OUT7` writer - P2OUT7"]
 pub struct P2OUT7_W<'a> {
     w: &'a mut W,
 }
@@ -198,7 +326,7 @@ impl<'a> P2OUT7_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | (((value as u8) & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u8 & 0x01) << 7);
         self.w
     }
 }
@@ -284,5 +412,31 @@ impl W {
     #[inline(always)]
     pub fn p2out7(&mut self) -> P2OUT7_W {
         P2OUT7_W { w: self }
+    }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u8) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "Port 2 Output\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [p2out](index.html) module"]
+pub struct P2OUT_SPEC;
+impl crate::RegisterSpec for P2OUT_SPEC {
+    type Ux = u8;
+}
+#[doc = "`read()` method returns [p2out::R](R) reader structure"]
+impl crate::Readable for P2OUT_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [p2out::W](W) writer structure"]
+impl crate::Writable for P2OUT_SPEC {
+    type Writer = W;
+}
+#[doc = "`reset()` method sets P2OUT to value 0"]
+impl crate::Resettable for P2OUT_SPEC {
+    #[inline(always)]
+    fn reset_value() -> Self::Ux {
+        0
     }
 }

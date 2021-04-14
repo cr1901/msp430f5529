@@ -1,18 +1,55 @@
-#[doc = "Reader of register P4DIR"]
-pub type R = crate::R<u8, super::P4DIR>;
-#[doc = "Writer for register P4DIR"]
-pub type W = crate::W<u8, super::P4DIR>;
-#[doc = "Register P4DIR `reset()`'s with value 0"]
-impl crate::ResetValue for super::P4DIR {
-    type Type = u8;
+#[doc = "Register `P4DIR` reader"]
+pub struct R(crate::R<P4DIR_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<P4DIR_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `P4DIR0`"]
-pub type P4DIR0_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `P4DIR0`"]
+impl From<crate::R<P4DIR_SPEC>> for R {
+    #[inline(always)]
+    fn from(reader: crate::R<P4DIR_SPEC>) -> Self {
+        R(reader)
+    }
+}
+#[doc = "Register `P4DIR` writer"]
+pub struct W(crate::W<P4DIR_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<P4DIR_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl core::ops::DerefMut for W {
+    #[inline(always)]
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+impl From<crate::W<P4DIR_SPEC>> for W {
+    #[inline(always)]
+    fn from(writer: crate::W<P4DIR_SPEC>) -> Self {
+        W(writer)
+    }
+}
+#[doc = "Field `P4DIR0` reader - P4DIR0"]
+pub struct P4DIR0_R(crate::FieldReader<bool, bool>);
+impl P4DIR0_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        P4DIR0_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for P4DIR0_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `P4DIR0` writer - P4DIR0"]
 pub struct P4DIR0_W<'a> {
     w: &'a mut W,
 }
@@ -30,13 +67,26 @@ impl<'a> P4DIR0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u8) & 0x01);
+        self.w.bits = (self.w.bits & !0x01) | (value as u8 & 0x01);
         self.w
     }
 }
-#[doc = "Reader of field `P4DIR1`"]
-pub type P4DIR1_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `P4DIR1`"]
+#[doc = "Field `P4DIR1` reader - P4DIR1"]
+pub struct P4DIR1_R(crate::FieldReader<bool, bool>);
+impl P4DIR1_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        P4DIR1_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for P4DIR1_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `P4DIR1` writer - P4DIR1"]
 pub struct P4DIR1_W<'a> {
     w: &'a mut W,
 }
@@ -54,13 +104,26 @@ impl<'a> P4DIR1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u8) & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u8 & 0x01) << 1);
         self.w
     }
 }
-#[doc = "Reader of field `P4DIR2`"]
-pub type P4DIR2_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `P4DIR2`"]
+#[doc = "Field `P4DIR2` reader - P4DIR2"]
+pub struct P4DIR2_R(crate::FieldReader<bool, bool>);
+impl P4DIR2_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        P4DIR2_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for P4DIR2_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `P4DIR2` writer - P4DIR2"]
 pub struct P4DIR2_W<'a> {
     w: &'a mut W,
 }
@@ -78,13 +141,26 @@ impl<'a> P4DIR2_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u8) & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u8 & 0x01) << 2);
         self.w
     }
 }
-#[doc = "Reader of field `P4DIR3`"]
-pub type P4DIR3_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `P4DIR3`"]
+#[doc = "Field `P4DIR3` reader - P4DIR3"]
+pub struct P4DIR3_R(crate::FieldReader<bool, bool>);
+impl P4DIR3_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        P4DIR3_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for P4DIR3_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `P4DIR3` writer - P4DIR3"]
 pub struct P4DIR3_W<'a> {
     w: &'a mut W,
 }
@@ -102,13 +178,26 @@ impl<'a> P4DIR3_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u8) & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u8 & 0x01) << 3);
         self.w
     }
 }
-#[doc = "Reader of field `P4DIR4`"]
-pub type P4DIR4_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `P4DIR4`"]
+#[doc = "Field `P4DIR4` reader - P4DIR4"]
+pub struct P4DIR4_R(crate::FieldReader<bool, bool>);
+impl P4DIR4_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        P4DIR4_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for P4DIR4_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `P4DIR4` writer - P4DIR4"]
 pub struct P4DIR4_W<'a> {
     w: &'a mut W,
 }
@@ -126,13 +215,26 @@ impl<'a> P4DIR4_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | (((value as u8) & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u8 & 0x01) << 4);
         self.w
     }
 }
-#[doc = "Reader of field `P4DIR5`"]
-pub type P4DIR5_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `P4DIR5`"]
+#[doc = "Field `P4DIR5` reader - P4DIR5"]
+pub struct P4DIR5_R(crate::FieldReader<bool, bool>);
+impl P4DIR5_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        P4DIR5_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for P4DIR5_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `P4DIR5` writer - P4DIR5"]
 pub struct P4DIR5_W<'a> {
     w: &'a mut W,
 }
@@ -150,13 +252,26 @@ impl<'a> P4DIR5_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | (((value as u8) & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u8 & 0x01) << 5);
         self.w
     }
 }
-#[doc = "Reader of field `P4DIR6`"]
-pub type P4DIR6_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `P4DIR6`"]
+#[doc = "Field `P4DIR6` reader - P4DIR6"]
+pub struct P4DIR6_R(crate::FieldReader<bool, bool>);
+impl P4DIR6_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        P4DIR6_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for P4DIR6_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `P4DIR6` writer - P4DIR6"]
 pub struct P4DIR6_W<'a> {
     w: &'a mut W,
 }
@@ -174,13 +289,26 @@ impl<'a> P4DIR6_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | (((value as u8) & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u8 & 0x01) << 6);
         self.w
     }
 }
-#[doc = "Reader of field `P4DIR7`"]
-pub type P4DIR7_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `P4DIR7`"]
+#[doc = "Field `P4DIR7` reader - P4DIR7"]
+pub struct P4DIR7_R(crate::FieldReader<bool, bool>);
+impl P4DIR7_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        P4DIR7_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for P4DIR7_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `P4DIR7` writer - P4DIR7"]
 pub struct P4DIR7_W<'a> {
     w: &'a mut W,
 }
@@ -198,7 +326,7 @@ impl<'a> P4DIR7_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | (((value as u8) & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u8 & 0x01) << 7);
         self.w
     }
 }
@@ -284,5 +412,31 @@ impl W {
     #[inline(always)]
     pub fn p4dir7(&mut self) -> P4DIR7_W {
         P4DIR7_W { w: self }
+    }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u8) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "Port 4 Direction\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [p4dir](index.html) module"]
+pub struct P4DIR_SPEC;
+impl crate::RegisterSpec for P4DIR_SPEC {
+    type Ux = u8;
+}
+#[doc = "`read()` method returns [p4dir::R](R) reader structure"]
+impl crate::Readable for P4DIR_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [p4dir::W](W) writer structure"]
+impl crate::Writable for P4DIR_SPEC {
+    type Writer = W;
+}
+#[doc = "`reset()` method sets P4DIR to value 0"]
+impl crate::Resettable for P4DIR_SPEC {
+    #[inline(always)]
+    fn reset_value() -> Self::Ux {
+        0
     }
 }

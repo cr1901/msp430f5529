@@ -1,18 +1,55 @@
-#[doc = "Reader of register ADC12CTL0"]
-pub type R = crate::R<u16, super::ADC12CTL0>;
-#[doc = "Writer for register ADC12CTL0"]
-pub type W = crate::W<u16, super::ADC12CTL0>;
-#[doc = "Register ADC12CTL0 `reset()`'s with value 0"]
-impl crate::ResetValue for super::ADC12CTL0 {
-    type Type = u16;
+#[doc = "Register `ADC12CTL0` reader"]
+pub struct R(crate::R<ADC12CTL0_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<ADC12CTL0_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `ADC12SC`"]
-pub type ADC12SC_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `ADC12SC`"]
+impl From<crate::R<ADC12CTL0_SPEC>> for R {
+    #[inline(always)]
+    fn from(reader: crate::R<ADC12CTL0_SPEC>) -> Self {
+        R(reader)
+    }
+}
+#[doc = "Register `ADC12CTL0` writer"]
+pub struct W(crate::W<ADC12CTL0_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<ADC12CTL0_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl core::ops::DerefMut for W {
+    #[inline(always)]
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+impl From<crate::W<ADC12CTL0_SPEC>> for W {
+    #[inline(always)]
+    fn from(writer: crate::W<ADC12CTL0_SPEC>) -> Self {
+        W(writer)
+    }
+}
+#[doc = "Field `ADC12SC` reader - ADC12 Start Conversion"]
+pub struct ADC12SC_R(crate::FieldReader<bool, bool>);
+impl ADC12SC_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        ADC12SC_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for ADC12SC_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `ADC12SC` writer - ADC12 Start Conversion"]
 pub struct ADC12SC_W<'a> {
     w: &'a mut W,
 }
@@ -30,13 +67,26 @@ impl<'a> ADC12SC_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u16) & 0x01);
+        self.w.bits = (self.w.bits & !0x01) | (value as u16 & 0x01);
         self.w
     }
 }
-#[doc = "Reader of field `ADC12ENC`"]
-pub type ADC12ENC_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `ADC12ENC`"]
+#[doc = "Field `ADC12ENC` reader - ADC12 Enable Conversion"]
+pub struct ADC12ENC_R(crate::FieldReader<bool, bool>);
+impl ADC12ENC_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        ADC12ENC_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for ADC12ENC_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `ADC12ENC` writer - ADC12 Enable Conversion"]
 pub struct ADC12ENC_W<'a> {
     w: &'a mut W,
 }
@@ -54,13 +104,26 @@ impl<'a> ADC12ENC_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u16) & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u16 & 0x01) << 1);
         self.w
     }
 }
-#[doc = "Reader of field `ADC12TOVIE`"]
-pub type ADC12TOVIE_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `ADC12TOVIE`"]
+#[doc = "Field `ADC12TOVIE` reader - ADC12 Timer Overflow interrupt enable"]
+pub struct ADC12TOVIE_R(crate::FieldReader<bool, bool>);
+impl ADC12TOVIE_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        ADC12TOVIE_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for ADC12TOVIE_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `ADC12TOVIE` writer - ADC12 Timer Overflow interrupt enable"]
 pub struct ADC12TOVIE_W<'a> {
     w: &'a mut W,
 }
@@ -78,13 +141,26 @@ impl<'a> ADC12TOVIE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u16) & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u16 & 0x01) << 2);
         self.w
     }
 }
-#[doc = "Reader of field `ADC12OVIE`"]
-pub type ADC12OVIE_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `ADC12OVIE`"]
+#[doc = "Field `ADC12OVIE` reader - ADC12 Overflow interrupt enable"]
+pub struct ADC12OVIE_R(crate::FieldReader<bool, bool>);
+impl ADC12OVIE_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        ADC12OVIE_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for ADC12OVIE_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `ADC12OVIE` writer - ADC12 Overflow interrupt enable"]
 pub struct ADC12OVIE_W<'a> {
     w: &'a mut W,
 }
@@ -102,13 +178,26 @@ impl<'a> ADC12OVIE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u16) & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u16 & 0x01) << 3);
         self.w
     }
 }
-#[doc = "Reader of field `ADC12ON`"]
-pub type ADC12ON_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `ADC12ON`"]
+#[doc = "Field `ADC12ON` reader - ADC12 On/enable"]
+pub struct ADC12ON_R(crate::FieldReader<bool, bool>);
+impl ADC12ON_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        ADC12ON_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for ADC12ON_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `ADC12ON` writer - ADC12 On/enable"]
 pub struct ADC12ON_W<'a> {
     w: &'a mut W,
 }
@@ -126,13 +215,26 @@ impl<'a> ADC12ON_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | (((value as u16) & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u16 & 0x01) << 4);
         self.w
     }
 }
-#[doc = "Reader of field `ADC12REFON`"]
-pub type ADC12REFON_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `ADC12REFON`"]
+#[doc = "Field `ADC12REFON` reader - ADC12 Reference on"]
+pub struct ADC12REFON_R(crate::FieldReader<bool, bool>);
+impl ADC12REFON_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        ADC12REFON_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for ADC12REFON_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `ADC12REFON` writer - ADC12 Reference on"]
 pub struct ADC12REFON_W<'a> {
     w: &'a mut W,
 }
@@ -150,13 +252,26 @@ impl<'a> ADC12REFON_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | (((value as u16) & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u16 & 0x01) << 5);
         self.w
     }
 }
-#[doc = "Reader of field `ADC12REF2_5V`"]
-pub type ADC12REF2_5V_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `ADC12REF2_5V`"]
+#[doc = "Field `ADC12REF2_5V` reader - ADC12 Ref 0:1.5V / 1:2.5V"]
+pub struct ADC12REF2_5V_R(crate::FieldReader<bool, bool>);
+impl ADC12REF2_5V_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        ADC12REF2_5V_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for ADC12REF2_5V_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `ADC12REF2_5V` writer - ADC12 Ref 0:1.5V / 1:2.5V"]
 pub struct ADC12REF2_5V_W<'a> {
     w: &'a mut W,
 }
@@ -174,13 +289,26 @@ impl<'a> ADC12REF2_5V_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | (((value as u16) & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u16 & 0x01) << 6);
         self.w
     }
 }
-#[doc = "Reader of field `ADC12MSC`"]
-pub type ADC12MSC_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `ADC12MSC`"]
+#[doc = "Field `ADC12MSC` reader - ADC12 Multiple SampleConversion"]
+pub struct ADC12MSC_R(crate::FieldReader<bool, bool>);
+impl ADC12MSC_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        ADC12MSC_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for ADC12MSC_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `ADC12MSC` writer - ADC12 Multiple SampleConversion"]
 pub struct ADC12MSC_W<'a> {
     w: &'a mut W,
 }
@@ -198,7 +326,7 @@ impl<'a> ADC12MSC_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | (((value as u16) & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u16 & 0x01) << 7);
         self.w
     }
 }
@@ -245,9 +373,13 @@ impl From<ADC12SHT0_A> for u8 {
         variant as _
     }
 }
-#[doc = "Reader of field `ADC12SHT0`"]
-pub type ADC12SHT0_R = crate::R<u8, ADC12SHT0_A>;
+#[doc = "Field `ADC12SHT0` reader - ADC12 Sample Hold 0 Select Bit: 0"]
+pub struct ADC12SHT0_R(crate::FieldReader<u8, ADC12SHT0_A>);
 impl ADC12SHT0_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: u8) -> Self {
+        ADC12SHT0_R(crate::FieldReader::new(bits))
+    }
     #[doc = r"Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> ADC12SHT0_A {
@@ -274,85 +406,92 @@ impl ADC12SHT0_R {
     #[doc = "Checks if the value of the field is `ADC12SHT0_0`"]
     #[inline(always)]
     pub fn is_adc12sht0_0(&self) -> bool {
-        *self == ADC12SHT0_A::ADC12SHT0_0
+        **self == ADC12SHT0_A::ADC12SHT0_0
     }
     #[doc = "Checks if the value of the field is `ADC12SHT0_1`"]
     #[inline(always)]
     pub fn is_adc12sht0_1(&self) -> bool {
-        *self == ADC12SHT0_A::ADC12SHT0_1
+        **self == ADC12SHT0_A::ADC12SHT0_1
     }
     #[doc = "Checks if the value of the field is `ADC12SHT0_2`"]
     #[inline(always)]
     pub fn is_adc12sht0_2(&self) -> bool {
-        *self == ADC12SHT0_A::ADC12SHT0_2
+        **self == ADC12SHT0_A::ADC12SHT0_2
     }
     #[doc = "Checks if the value of the field is `ADC12SHT0_3`"]
     #[inline(always)]
     pub fn is_adc12sht0_3(&self) -> bool {
-        *self == ADC12SHT0_A::ADC12SHT0_3
+        **self == ADC12SHT0_A::ADC12SHT0_3
     }
     #[doc = "Checks if the value of the field is `ADC12SHT0_4`"]
     #[inline(always)]
     pub fn is_adc12sht0_4(&self) -> bool {
-        *self == ADC12SHT0_A::ADC12SHT0_4
+        **self == ADC12SHT0_A::ADC12SHT0_4
     }
     #[doc = "Checks if the value of the field is `ADC12SHT0_5`"]
     #[inline(always)]
     pub fn is_adc12sht0_5(&self) -> bool {
-        *self == ADC12SHT0_A::ADC12SHT0_5
+        **self == ADC12SHT0_A::ADC12SHT0_5
     }
     #[doc = "Checks if the value of the field is `ADC12SHT0_6`"]
     #[inline(always)]
     pub fn is_adc12sht0_6(&self) -> bool {
-        *self == ADC12SHT0_A::ADC12SHT0_6
+        **self == ADC12SHT0_A::ADC12SHT0_6
     }
     #[doc = "Checks if the value of the field is `ADC12SHT0_7`"]
     #[inline(always)]
     pub fn is_adc12sht0_7(&self) -> bool {
-        *self == ADC12SHT0_A::ADC12SHT0_7
+        **self == ADC12SHT0_A::ADC12SHT0_7
     }
     #[doc = "Checks if the value of the field is `ADC12SHT0_8`"]
     #[inline(always)]
     pub fn is_adc12sht0_8(&self) -> bool {
-        *self == ADC12SHT0_A::ADC12SHT0_8
+        **self == ADC12SHT0_A::ADC12SHT0_8
     }
     #[doc = "Checks if the value of the field is `ADC12SHT0_9`"]
     #[inline(always)]
     pub fn is_adc12sht0_9(&self) -> bool {
-        *self == ADC12SHT0_A::ADC12SHT0_9
+        **self == ADC12SHT0_A::ADC12SHT0_9
     }
     #[doc = "Checks if the value of the field is `ADC12SHT0_10`"]
     #[inline(always)]
     pub fn is_adc12sht0_10(&self) -> bool {
-        *self == ADC12SHT0_A::ADC12SHT0_10
+        **self == ADC12SHT0_A::ADC12SHT0_10
     }
     #[doc = "Checks if the value of the field is `ADC12SHT0_11`"]
     #[inline(always)]
     pub fn is_adc12sht0_11(&self) -> bool {
-        *self == ADC12SHT0_A::ADC12SHT0_11
+        **self == ADC12SHT0_A::ADC12SHT0_11
     }
     #[doc = "Checks if the value of the field is `ADC12SHT0_12`"]
     #[inline(always)]
     pub fn is_adc12sht0_12(&self) -> bool {
-        *self == ADC12SHT0_A::ADC12SHT0_12
+        **self == ADC12SHT0_A::ADC12SHT0_12
     }
     #[doc = "Checks if the value of the field is `ADC12SHT0_13`"]
     #[inline(always)]
     pub fn is_adc12sht0_13(&self) -> bool {
-        *self == ADC12SHT0_A::ADC12SHT0_13
+        **self == ADC12SHT0_A::ADC12SHT0_13
     }
     #[doc = "Checks if the value of the field is `ADC12SHT0_14`"]
     #[inline(always)]
     pub fn is_adc12sht0_14(&self) -> bool {
-        *self == ADC12SHT0_A::ADC12SHT0_14
+        **self == ADC12SHT0_A::ADC12SHT0_14
     }
     #[doc = "Checks if the value of the field is `ADC12SHT0_15`"]
     #[inline(always)]
     pub fn is_adc12sht0_15(&self) -> bool {
-        *self == ADC12SHT0_A::ADC12SHT0_15
+        **self == ADC12SHT0_A::ADC12SHT0_15
     }
 }
-#[doc = "Write proxy for field `ADC12SHT0`"]
+impl core::ops::Deref for ADC12SHT0_R {
+    type Target = crate::FieldReader<u8, ADC12SHT0_A>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `ADC12SHT0` writer - ADC12 Sample Hold 0 Select Bit: 0"]
 pub struct ADC12SHT0_W<'a> {
     w: &'a mut W,
 }
@@ -360,9 +499,7 @@ impl<'a> ADC12SHT0_W<'a> {
     #[doc = r"Writes `variant` to the field"]
     #[inline(always)]
     pub fn variant(self, variant: ADC12SHT0_A) -> &'a mut W {
-        {
-            self.bits(variant.into())
-        }
+        self.bits(variant.into())
     }
     #[doc = "ADC12 Sample Hold 0 Select Bit: 0"]
     #[inline(always)]
@@ -447,7 +584,7 @@ impl<'a> ADC12SHT0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 8)) | (((value as u16) & 0x0f) << 8);
+        self.w.bits = (self.w.bits & !(0x0f << 8)) | ((value as u16 & 0x0f) << 8);
         self.w
     }
 }
@@ -494,9 +631,13 @@ impl From<ADC12SHT1_A> for u8 {
         variant as _
     }
 }
-#[doc = "Reader of field `ADC12SHT1`"]
-pub type ADC12SHT1_R = crate::R<u8, ADC12SHT1_A>;
+#[doc = "Field `ADC12SHT1` reader - ADC12 Sample Hold 1 Select Bit: 0"]
+pub struct ADC12SHT1_R(crate::FieldReader<u8, ADC12SHT1_A>);
 impl ADC12SHT1_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: u8) -> Self {
+        ADC12SHT1_R(crate::FieldReader::new(bits))
+    }
     #[doc = r"Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> ADC12SHT1_A {
@@ -523,85 +664,92 @@ impl ADC12SHT1_R {
     #[doc = "Checks if the value of the field is `ADC12SHT1_0`"]
     #[inline(always)]
     pub fn is_adc12sht1_0(&self) -> bool {
-        *self == ADC12SHT1_A::ADC12SHT1_0
+        **self == ADC12SHT1_A::ADC12SHT1_0
     }
     #[doc = "Checks if the value of the field is `ADC12SHT1_1`"]
     #[inline(always)]
     pub fn is_adc12sht1_1(&self) -> bool {
-        *self == ADC12SHT1_A::ADC12SHT1_1
+        **self == ADC12SHT1_A::ADC12SHT1_1
     }
     #[doc = "Checks if the value of the field is `ADC12SHT1_2`"]
     #[inline(always)]
     pub fn is_adc12sht1_2(&self) -> bool {
-        *self == ADC12SHT1_A::ADC12SHT1_2
+        **self == ADC12SHT1_A::ADC12SHT1_2
     }
     #[doc = "Checks if the value of the field is `ADC12SHT1_3`"]
     #[inline(always)]
     pub fn is_adc12sht1_3(&self) -> bool {
-        *self == ADC12SHT1_A::ADC12SHT1_3
+        **self == ADC12SHT1_A::ADC12SHT1_3
     }
     #[doc = "Checks if the value of the field is `ADC12SHT1_4`"]
     #[inline(always)]
     pub fn is_adc12sht1_4(&self) -> bool {
-        *self == ADC12SHT1_A::ADC12SHT1_4
+        **self == ADC12SHT1_A::ADC12SHT1_4
     }
     #[doc = "Checks if the value of the field is `ADC12SHT1_5`"]
     #[inline(always)]
     pub fn is_adc12sht1_5(&self) -> bool {
-        *self == ADC12SHT1_A::ADC12SHT1_5
+        **self == ADC12SHT1_A::ADC12SHT1_5
     }
     #[doc = "Checks if the value of the field is `ADC12SHT1_6`"]
     #[inline(always)]
     pub fn is_adc12sht1_6(&self) -> bool {
-        *self == ADC12SHT1_A::ADC12SHT1_6
+        **self == ADC12SHT1_A::ADC12SHT1_6
     }
     #[doc = "Checks if the value of the field is `ADC12SHT1_7`"]
     #[inline(always)]
     pub fn is_adc12sht1_7(&self) -> bool {
-        *self == ADC12SHT1_A::ADC12SHT1_7
+        **self == ADC12SHT1_A::ADC12SHT1_7
     }
     #[doc = "Checks if the value of the field is `ADC12SHT1_8`"]
     #[inline(always)]
     pub fn is_adc12sht1_8(&self) -> bool {
-        *self == ADC12SHT1_A::ADC12SHT1_8
+        **self == ADC12SHT1_A::ADC12SHT1_8
     }
     #[doc = "Checks if the value of the field is `ADC12SHT1_9`"]
     #[inline(always)]
     pub fn is_adc12sht1_9(&self) -> bool {
-        *self == ADC12SHT1_A::ADC12SHT1_9
+        **self == ADC12SHT1_A::ADC12SHT1_9
     }
     #[doc = "Checks if the value of the field is `ADC12SHT1_10`"]
     #[inline(always)]
     pub fn is_adc12sht1_10(&self) -> bool {
-        *self == ADC12SHT1_A::ADC12SHT1_10
+        **self == ADC12SHT1_A::ADC12SHT1_10
     }
     #[doc = "Checks if the value of the field is `ADC12SHT1_11`"]
     #[inline(always)]
     pub fn is_adc12sht1_11(&self) -> bool {
-        *self == ADC12SHT1_A::ADC12SHT1_11
+        **self == ADC12SHT1_A::ADC12SHT1_11
     }
     #[doc = "Checks if the value of the field is `ADC12SHT1_12`"]
     #[inline(always)]
     pub fn is_adc12sht1_12(&self) -> bool {
-        *self == ADC12SHT1_A::ADC12SHT1_12
+        **self == ADC12SHT1_A::ADC12SHT1_12
     }
     #[doc = "Checks if the value of the field is `ADC12SHT1_13`"]
     #[inline(always)]
     pub fn is_adc12sht1_13(&self) -> bool {
-        *self == ADC12SHT1_A::ADC12SHT1_13
+        **self == ADC12SHT1_A::ADC12SHT1_13
     }
     #[doc = "Checks if the value of the field is `ADC12SHT1_14`"]
     #[inline(always)]
     pub fn is_adc12sht1_14(&self) -> bool {
-        *self == ADC12SHT1_A::ADC12SHT1_14
+        **self == ADC12SHT1_A::ADC12SHT1_14
     }
     #[doc = "Checks if the value of the field is `ADC12SHT1_15`"]
     #[inline(always)]
     pub fn is_adc12sht1_15(&self) -> bool {
-        *self == ADC12SHT1_A::ADC12SHT1_15
+        **self == ADC12SHT1_A::ADC12SHT1_15
     }
 }
-#[doc = "Write proxy for field `ADC12SHT1`"]
+impl core::ops::Deref for ADC12SHT1_R {
+    type Target = crate::FieldReader<u8, ADC12SHT1_A>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `ADC12SHT1` writer - ADC12 Sample Hold 1 Select Bit: 0"]
 pub struct ADC12SHT1_W<'a> {
     w: &'a mut W,
 }
@@ -609,9 +757,7 @@ impl<'a> ADC12SHT1_W<'a> {
     #[doc = r"Writes `variant` to the field"]
     #[inline(always)]
     pub fn variant(self, variant: ADC12SHT1_A) -> &'a mut W {
-        {
-            self.bits(variant.into())
-        }
+        self.bits(variant.into())
     }
     #[doc = "ADC12 Sample Hold 1 Select Bit: 0"]
     #[inline(always)]
@@ -696,7 +842,7 @@ impl<'a> ADC12SHT1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 12)) | (((value as u16) & 0x0f) << 12);
+        self.w.bits = (self.w.bits & !(0x0f << 12)) | ((value as u16 & 0x0f) << 12);
         self.w
     }
 }
@@ -802,5 +948,31 @@ impl W {
     #[inline(always)]
     pub fn adc12sht1(&mut self) -> ADC12SHT1_W {
         ADC12SHT1_W { w: self }
+    }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u16) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "ADC12+ Control 0\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [adc12ctl0](index.html) module"]
+pub struct ADC12CTL0_SPEC;
+impl crate::RegisterSpec for ADC12CTL0_SPEC {
+    type Ux = u16;
+}
+#[doc = "`read()` method returns [adc12ctl0::R](R) reader structure"]
+impl crate::Readable for ADC12CTL0_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [adc12ctl0::W](W) writer structure"]
+impl crate::Writable for ADC12CTL0_SPEC {
+    type Writer = W;
+}
+#[doc = "`reset()` method sets ADC12CTL0 to value 0"]
+impl crate::Resettable for ADC12CTL0_SPEC {
+    #[inline(always)]
+    fn reset_value() -> Self::Ux {
+        0
     }
 }

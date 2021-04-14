@@ -1,18 +1,55 @@
-#[doc = "Reader of register UCA1IRTCTL"]
-pub type R = crate::R<u8, super::UCA1IRTCTL>;
-#[doc = "Writer for register UCA1IRTCTL"]
-pub type W = crate::W<u8, super::UCA1IRTCTL>;
-#[doc = "Register UCA1IRTCTL `reset()`'s with value 0"]
-impl crate::ResetValue for super::UCA1IRTCTL {
-    type Type = u8;
+#[doc = "Register `UCA1IRTCTL` reader"]
+pub struct R(crate::R<UCA1IRTCTL_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<UCA1IRTCTL_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `UCIREN`"]
-pub type UCIREN_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `UCIREN`"]
+impl From<crate::R<UCA1IRTCTL_SPEC>> for R {
+    #[inline(always)]
+    fn from(reader: crate::R<UCA1IRTCTL_SPEC>) -> Self {
+        R(reader)
+    }
+}
+#[doc = "Register `UCA1IRTCTL` writer"]
+pub struct W(crate::W<UCA1IRTCTL_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<UCA1IRTCTL_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl core::ops::DerefMut for W {
+    #[inline(always)]
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+impl From<crate::W<UCA1IRTCTL_SPEC>> for W {
+    #[inline(always)]
+    fn from(writer: crate::W<UCA1IRTCTL_SPEC>) -> Self {
+        W(writer)
+    }
+}
+#[doc = "Field `UCIREN` reader - IRDA Encoder/Decoder enable"]
+pub struct UCIREN_R(crate::FieldReader<bool, bool>);
+impl UCIREN_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        UCIREN_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for UCIREN_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `UCIREN` writer - IRDA Encoder/Decoder enable"]
 pub struct UCIREN_W<'a> {
     w: &'a mut W,
 }
@@ -30,13 +67,26 @@ impl<'a> UCIREN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u8) & 0x01);
+        self.w.bits = (self.w.bits & !0x01) | (value as u8 & 0x01);
         self.w
     }
 }
-#[doc = "Reader of field `UCIRTXCLK`"]
-pub type UCIRTXCLK_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `UCIRTXCLK`"]
+#[doc = "Field `UCIRTXCLK` reader - IRDA Transmit Pulse Clock Select"]
+pub struct UCIRTXCLK_R(crate::FieldReader<bool, bool>);
+impl UCIRTXCLK_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        UCIRTXCLK_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for UCIRTXCLK_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `UCIRTXCLK` writer - IRDA Transmit Pulse Clock Select"]
 pub struct UCIRTXCLK_W<'a> {
     w: &'a mut W,
 }
@@ -54,13 +104,26 @@ impl<'a> UCIRTXCLK_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u8) & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u8 & 0x01) << 1);
         self.w
     }
 }
-#[doc = "Reader of field `UCIRTXPL0`"]
-pub type UCIRTXPL0_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `UCIRTXPL0`"]
+#[doc = "Field `UCIRTXPL0` reader - IRDA Transmit Pulse Length 0"]
+pub struct UCIRTXPL0_R(crate::FieldReader<bool, bool>);
+impl UCIRTXPL0_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        UCIRTXPL0_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for UCIRTXPL0_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `UCIRTXPL0` writer - IRDA Transmit Pulse Length 0"]
 pub struct UCIRTXPL0_W<'a> {
     w: &'a mut W,
 }
@@ -78,13 +141,26 @@ impl<'a> UCIRTXPL0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u8) & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u8 & 0x01) << 2);
         self.w
     }
 }
-#[doc = "Reader of field `UCIRTXPL1`"]
-pub type UCIRTXPL1_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `UCIRTXPL1`"]
+#[doc = "Field `UCIRTXPL1` reader - IRDA Transmit Pulse Length 1"]
+pub struct UCIRTXPL1_R(crate::FieldReader<bool, bool>);
+impl UCIRTXPL1_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        UCIRTXPL1_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for UCIRTXPL1_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `UCIRTXPL1` writer - IRDA Transmit Pulse Length 1"]
 pub struct UCIRTXPL1_W<'a> {
     w: &'a mut W,
 }
@@ -102,13 +178,26 @@ impl<'a> UCIRTXPL1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u8) & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u8 & 0x01) << 3);
         self.w
     }
 }
-#[doc = "Reader of field `UCIRTXPL2`"]
-pub type UCIRTXPL2_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `UCIRTXPL2`"]
+#[doc = "Field `UCIRTXPL2` reader - IRDA Transmit Pulse Length 2"]
+pub struct UCIRTXPL2_R(crate::FieldReader<bool, bool>);
+impl UCIRTXPL2_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        UCIRTXPL2_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for UCIRTXPL2_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `UCIRTXPL2` writer - IRDA Transmit Pulse Length 2"]
 pub struct UCIRTXPL2_W<'a> {
     w: &'a mut W,
 }
@@ -126,13 +215,26 @@ impl<'a> UCIRTXPL2_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | (((value as u8) & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u8 & 0x01) << 4);
         self.w
     }
 }
-#[doc = "Reader of field `UCIRTXPL3`"]
-pub type UCIRTXPL3_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `UCIRTXPL3`"]
+#[doc = "Field `UCIRTXPL3` reader - IRDA Transmit Pulse Length 3"]
+pub struct UCIRTXPL3_R(crate::FieldReader<bool, bool>);
+impl UCIRTXPL3_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        UCIRTXPL3_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for UCIRTXPL3_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `UCIRTXPL3` writer - IRDA Transmit Pulse Length 3"]
 pub struct UCIRTXPL3_W<'a> {
     w: &'a mut W,
 }
@@ -150,13 +252,26 @@ impl<'a> UCIRTXPL3_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | (((value as u8) & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u8 & 0x01) << 5);
         self.w
     }
 }
-#[doc = "Reader of field `UCIRTXPL4`"]
-pub type UCIRTXPL4_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `UCIRTXPL4`"]
+#[doc = "Field `UCIRTXPL4` reader - IRDA Transmit Pulse Length 4"]
+pub struct UCIRTXPL4_R(crate::FieldReader<bool, bool>);
+impl UCIRTXPL4_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        UCIRTXPL4_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for UCIRTXPL4_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `UCIRTXPL4` writer - IRDA Transmit Pulse Length 4"]
 pub struct UCIRTXPL4_W<'a> {
     w: &'a mut W,
 }
@@ -174,13 +289,26 @@ impl<'a> UCIRTXPL4_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | (((value as u8) & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u8 & 0x01) << 6);
         self.w
     }
 }
-#[doc = "Reader of field `UCIRTXPL5`"]
-pub type UCIRTXPL5_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `UCIRTXPL5`"]
+#[doc = "Field `UCIRTXPL5` reader - IRDA Transmit Pulse Length 5"]
+pub struct UCIRTXPL5_R(crate::FieldReader<bool, bool>);
+impl UCIRTXPL5_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        UCIRTXPL5_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for UCIRTXPL5_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `UCIRTXPL5` writer - IRDA Transmit Pulse Length 5"]
 pub struct UCIRTXPL5_W<'a> {
     w: &'a mut W,
 }
@@ -198,7 +326,7 @@ impl<'a> UCIRTXPL5_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | (((value as u8) & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u8 & 0x01) << 7);
         self.w
     }
 }
@@ -284,5 +412,31 @@ impl W {
     #[inline(always)]
     pub fn ucirtxpl5(&mut self) -> UCIRTXPL5_W {
         UCIRTXPL5_W { w: self }
+    }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u8) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "USCI A1 IrDA Transmit Control\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uca1irtctl](index.html) module"]
+pub struct UCA1IRTCTL_SPEC;
+impl crate::RegisterSpec for UCA1IRTCTL_SPEC {
+    type Ux = u8;
+}
+#[doc = "`read()` method returns [uca1irtctl::R](R) reader structure"]
+impl crate::Readable for UCA1IRTCTL_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [uca1irtctl::W](W) writer structure"]
+impl crate::Writable for UCA1IRTCTL_SPEC {
+    type Writer = W;
+}
+#[doc = "`reset()` method sets UCA1IRTCTL to value 0"]
+impl crate::Resettable for UCA1IRTCTL_SPEC {
+    #[inline(always)]
+    fn reset_value() -> Self::Ux {
+        0
     }
 }

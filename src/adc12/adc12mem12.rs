@@ -1,14 +1,64 @@
-#[doc = "Reader of register ADC12MEM12"]
-pub type R = crate::R<u16, super::ADC12MEM12>;
-#[doc = "Writer for register ADC12MEM12"]
-pub type W = crate::W<u16, super::ADC12MEM12>;
-#[doc = "Register ADC12MEM12 `reset()`'s with value 0"]
-impl crate::ResetValue for super::ADC12MEM12 {
-    type Type = u16;
+#[doc = "Register `ADC12MEM12` reader"]
+pub struct R(crate::R<ADC12MEM12_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<ADC12MEM12_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl From<crate::R<ADC12MEM12_SPEC>> for R {
+    #[inline(always)]
+    fn from(reader: crate::R<ADC12MEM12_SPEC>) -> Self {
+        R(reader)
+    }
+}
+#[doc = "Register `ADC12MEM12` writer"]
+pub struct W(crate::W<ADC12MEM12_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<ADC12MEM12_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl core::ops::DerefMut for W {
+    #[inline(always)]
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+impl From<crate::W<ADC12MEM12_SPEC>> for W {
+    #[inline(always)]
+    fn from(writer: crate::W<ADC12MEM12_SPEC>) -> Self {
+        W(writer)
+    }
+}
+impl W {
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u16) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "ADC12 Conversion Memory 12\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [adc12mem12](index.html) module"]
+pub struct ADC12MEM12_SPEC;
+impl crate::RegisterSpec for ADC12MEM12_SPEC {
+    type Ux = u16;
+}
+#[doc = "`read()` method returns [adc12mem12::R](R) reader structure"]
+impl crate::Readable for ADC12MEM12_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [adc12mem12::W](W) writer structure"]
+impl crate::Writable for ADC12MEM12_SPEC {
+    type Writer = W;
+}
+#[doc = "`reset()` method sets ADC12MEM12 to value 0"]
+impl crate::Resettable for ADC12MEM12_SPEC {
+    #[inline(always)]
+    fn reset_value() -> Self::Ux {
         0
     }
 }
-impl R {}
-impl W {}

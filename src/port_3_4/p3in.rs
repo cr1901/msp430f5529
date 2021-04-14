@@ -1,18 +1,55 @@
-#[doc = "Reader of register P3IN"]
-pub type R = crate::R<u8, super::P3IN>;
-#[doc = "Writer for register P3IN"]
-pub type W = crate::W<u8, super::P3IN>;
-#[doc = "Register P3IN `reset()`'s with value 0"]
-impl crate::ResetValue for super::P3IN {
-    type Type = u8;
+#[doc = "Register `P3IN` reader"]
+pub struct R(crate::R<P3IN_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<P3IN_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `P3IN0`"]
-pub type P3IN0_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `P3IN0`"]
+impl From<crate::R<P3IN_SPEC>> for R {
+    #[inline(always)]
+    fn from(reader: crate::R<P3IN_SPEC>) -> Self {
+        R(reader)
+    }
+}
+#[doc = "Register `P3IN` writer"]
+pub struct W(crate::W<P3IN_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<P3IN_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl core::ops::DerefMut for W {
+    #[inline(always)]
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+impl From<crate::W<P3IN_SPEC>> for W {
+    #[inline(always)]
+    fn from(writer: crate::W<P3IN_SPEC>) -> Self {
+        W(writer)
+    }
+}
+#[doc = "Field `P3IN0` reader - P3IN0"]
+pub struct P3IN0_R(crate::FieldReader<bool, bool>);
+impl P3IN0_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        P3IN0_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for P3IN0_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `P3IN0` writer - P3IN0"]
 pub struct P3IN0_W<'a> {
     w: &'a mut W,
 }
@@ -30,13 +67,26 @@ impl<'a> P3IN0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u8) & 0x01);
+        self.w.bits = (self.w.bits & !0x01) | (value as u8 & 0x01);
         self.w
     }
 }
-#[doc = "Reader of field `P3IN1`"]
-pub type P3IN1_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `P3IN1`"]
+#[doc = "Field `P3IN1` reader - P3IN1"]
+pub struct P3IN1_R(crate::FieldReader<bool, bool>);
+impl P3IN1_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        P3IN1_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for P3IN1_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `P3IN1` writer - P3IN1"]
 pub struct P3IN1_W<'a> {
     w: &'a mut W,
 }
@@ -54,13 +104,26 @@ impl<'a> P3IN1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u8) & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u8 & 0x01) << 1);
         self.w
     }
 }
-#[doc = "Reader of field `P3IN2`"]
-pub type P3IN2_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `P3IN2`"]
+#[doc = "Field `P3IN2` reader - P3IN2"]
+pub struct P3IN2_R(crate::FieldReader<bool, bool>);
+impl P3IN2_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        P3IN2_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for P3IN2_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `P3IN2` writer - P3IN2"]
 pub struct P3IN2_W<'a> {
     w: &'a mut W,
 }
@@ -78,13 +141,26 @@ impl<'a> P3IN2_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u8) & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u8 & 0x01) << 2);
         self.w
     }
 }
-#[doc = "Reader of field `P3IN3`"]
-pub type P3IN3_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `P3IN3`"]
+#[doc = "Field `P3IN3` reader - P3IN3"]
+pub struct P3IN3_R(crate::FieldReader<bool, bool>);
+impl P3IN3_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        P3IN3_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for P3IN3_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `P3IN3` writer - P3IN3"]
 pub struct P3IN3_W<'a> {
     w: &'a mut W,
 }
@@ -102,13 +178,26 @@ impl<'a> P3IN3_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u8) & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u8 & 0x01) << 3);
         self.w
     }
 }
-#[doc = "Reader of field `P3IN4`"]
-pub type P3IN4_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `P3IN4`"]
+#[doc = "Field `P3IN4` reader - P3IN4"]
+pub struct P3IN4_R(crate::FieldReader<bool, bool>);
+impl P3IN4_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        P3IN4_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for P3IN4_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `P3IN4` writer - P3IN4"]
 pub struct P3IN4_W<'a> {
     w: &'a mut W,
 }
@@ -126,13 +215,26 @@ impl<'a> P3IN4_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | (((value as u8) & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u8 & 0x01) << 4);
         self.w
     }
 }
-#[doc = "Reader of field `P3IN5`"]
-pub type P3IN5_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `P3IN5`"]
+#[doc = "Field `P3IN5` reader - P3IN5"]
+pub struct P3IN5_R(crate::FieldReader<bool, bool>);
+impl P3IN5_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        P3IN5_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for P3IN5_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `P3IN5` writer - P3IN5"]
 pub struct P3IN5_W<'a> {
     w: &'a mut W,
 }
@@ -150,13 +252,26 @@ impl<'a> P3IN5_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | (((value as u8) & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u8 & 0x01) << 5);
         self.w
     }
 }
-#[doc = "Reader of field `P3IN6`"]
-pub type P3IN6_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `P3IN6`"]
+#[doc = "Field `P3IN6` reader - P3IN6"]
+pub struct P3IN6_R(crate::FieldReader<bool, bool>);
+impl P3IN6_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        P3IN6_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for P3IN6_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `P3IN6` writer - P3IN6"]
 pub struct P3IN6_W<'a> {
     w: &'a mut W,
 }
@@ -174,13 +289,26 @@ impl<'a> P3IN6_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | (((value as u8) & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u8 & 0x01) << 6);
         self.w
     }
 }
-#[doc = "Reader of field `P3IN7`"]
-pub type P3IN7_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `P3IN7`"]
+#[doc = "Field `P3IN7` reader - P3IN7"]
+pub struct P3IN7_R(crate::FieldReader<bool, bool>);
+impl P3IN7_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        P3IN7_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for P3IN7_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `P3IN7` writer - P3IN7"]
 pub struct P3IN7_W<'a> {
     w: &'a mut W,
 }
@@ -198,7 +326,7 @@ impl<'a> P3IN7_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | (((value as u8) & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u8 & 0x01) << 7);
         self.w
     }
 }
@@ -284,5 +412,31 @@ impl W {
     #[inline(always)]
     pub fn p3in7(&mut self) -> P3IN7_W {
         P3IN7_W { w: self }
+    }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u8) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "Port 3 Input\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [p3in](index.html) module"]
+pub struct P3IN_SPEC;
+impl crate::RegisterSpec for P3IN_SPEC {
+    type Ux = u8;
+}
+#[doc = "`read()` method returns [p3in::R](R) reader structure"]
+impl crate::Readable for P3IN_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [p3in::W](W) writer structure"]
+impl crate::Writable for P3IN_SPEC {
+    type Writer = W;
+}
+#[doc = "`reset()` method sets P3IN to value 0"]
+impl crate::Resettable for P3IN_SPEC {
+    #[inline(always)]
+    fn reset_value() -> Self::Ux {
+        0
     }
 }

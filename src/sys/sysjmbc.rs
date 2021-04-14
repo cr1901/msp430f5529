@@ -1,18 +1,55 @@
-#[doc = "Reader of register SYSJMBC"]
-pub type R = crate::R<u16, super::SYSJMBC>;
-#[doc = "Writer for register SYSJMBC"]
-pub type W = crate::W<u16, super::SYSJMBC>;
-#[doc = "Register SYSJMBC `reset()`'s with value 0"]
-impl crate::ResetValue for super::SYSJMBC {
-    type Type = u16;
+#[doc = "Register `SYSJMBC` reader"]
+pub struct R(crate::R<SYSJMBC_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<SYSJMBC_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `JMBIN0FG`"]
-pub type JMBIN0FG_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `JMBIN0FG`"]
+impl From<crate::R<SYSJMBC_SPEC>> for R {
+    #[inline(always)]
+    fn from(reader: crate::R<SYSJMBC_SPEC>) -> Self {
+        R(reader)
+    }
+}
+#[doc = "Register `SYSJMBC` writer"]
+pub struct W(crate::W<SYSJMBC_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<SYSJMBC_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl core::ops::DerefMut for W {
+    #[inline(always)]
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+impl From<crate::W<SYSJMBC_SPEC>> for W {
+    #[inline(always)]
+    fn from(writer: crate::W<SYSJMBC_SPEC>) -> Self {
+        W(writer)
+    }
+}
+#[doc = "Field `JMBIN0FG` reader - SYS - Incoming JTAG Mailbox 0 Flag"]
+pub struct JMBIN0FG_R(crate::FieldReader<bool, bool>);
+impl JMBIN0FG_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        JMBIN0FG_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for JMBIN0FG_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `JMBIN0FG` writer - SYS - Incoming JTAG Mailbox 0 Flag"]
 pub struct JMBIN0FG_W<'a> {
     w: &'a mut W,
 }
@@ -30,13 +67,26 @@ impl<'a> JMBIN0FG_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u16) & 0x01);
+        self.w.bits = (self.w.bits & !0x01) | (value as u16 & 0x01);
         self.w
     }
 }
-#[doc = "Reader of field `JMBIN1FG`"]
-pub type JMBIN1FG_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `JMBIN1FG`"]
+#[doc = "Field `JMBIN1FG` reader - SYS - Incoming JTAG Mailbox 1 Flag"]
+pub struct JMBIN1FG_R(crate::FieldReader<bool, bool>);
+impl JMBIN1FG_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        JMBIN1FG_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for JMBIN1FG_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `JMBIN1FG` writer - SYS - Incoming JTAG Mailbox 1 Flag"]
 pub struct JMBIN1FG_W<'a> {
     w: &'a mut W,
 }
@@ -54,13 +104,26 @@ impl<'a> JMBIN1FG_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u16) & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u16 & 0x01) << 1);
         self.w
     }
 }
-#[doc = "Reader of field `JMBOUT0FG`"]
-pub type JMBOUT0FG_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `JMBOUT0FG`"]
+#[doc = "Field `JMBOUT0FG` reader - SYS - Outgoing JTAG Mailbox 0 Flag"]
+pub struct JMBOUT0FG_R(crate::FieldReader<bool, bool>);
+impl JMBOUT0FG_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        JMBOUT0FG_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for JMBOUT0FG_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `JMBOUT0FG` writer - SYS - Outgoing JTAG Mailbox 0 Flag"]
 pub struct JMBOUT0FG_W<'a> {
     w: &'a mut W,
 }
@@ -78,13 +141,26 @@ impl<'a> JMBOUT0FG_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u16) & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u16 & 0x01) << 2);
         self.w
     }
 }
-#[doc = "Reader of field `JMBOUT1FG`"]
-pub type JMBOUT1FG_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `JMBOUT1FG`"]
+#[doc = "Field `JMBOUT1FG` reader - SYS - Outgoing JTAG Mailbox 1 Flag"]
+pub struct JMBOUT1FG_R(crate::FieldReader<bool, bool>);
+impl JMBOUT1FG_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        JMBOUT1FG_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for JMBOUT1FG_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `JMBOUT1FG` writer - SYS - Outgoing JTAG Mailbox 1 Flag"]
 pub struct JMBOUT1FG_W<'a> {
     w: &'a mut W,
 }
@@ -102,13 +178,26 @@ impl<'a> JMBOUT1FG_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u16) & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u16 & 0x01) << 3);
         self.w
     }
 }
-#[doc = "Reader of field `JMBMODE`"]
-pub type JMBMODE_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `JMBMODE`"]
+#[doc = "Field `JMBMODE` reader - SYS - JMB 16/32 Bit Mode"]
+pub struct JMBMODE_R(crate::FieldReader<bool, bool>);
+impl JMBMODE_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        JMBMODE_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for JMBMODE_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `JMBMODE` writer - SYS - JMB 16/32 Bit Mode"]
 pub struct JMBMODE_W<'a> {
     w: &'a mut W,
 }
@@ -126,13 +215,26 @@ impl<'a> JMBMODE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | (((value as u16) & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u16 & 0x01) << 4);
         self.w
     }
 }
-#[doc = "Reader of field `JMBCLR0OFF`"]
-pub type JMBCLR0OFF_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `JMBCLR0OFF`"]
+#[doc = "Field `JMBCLR0OFF` reader - SYS - Incoming JTAG Mailbox 0 Flag auto-clear disalbe"]
+pub struct JMBCLR0OFF_R(crate::FieldReader<bool, bool>);
+impl JMBCLR0OFF_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        JMBCLR0OFF_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for JMBCLR0OFF_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `JMBCLR0OFF` writer - SYS - Incoming JTAG Mailbox 0 Flag auto-clear disalbe"]
 pub struct JMBCLR0OFF_W<'a> {
     w: &'a mut W,
 }
@@ -150,13 +252,26 @@ impl<'a> JMBCLR0OFF_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | (((value as u16) & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u16 & 0x01) << 6);
         self.w
     }
 }
-#[doc = "Reader of field `JMBCLR1OFF`"]
-pub type JMBCLR1OFF_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `JMBCLR1OFF`"]
+#[doc = "Field `JMBCLR1OFF` reader - SYS - Incoming JTAG Mailbox 1 Flag auto-clear disalbe"]
+pub struct JMBCLR1OFF_R(crate::FieldReader<bool, bool>);
+impl JMBCLR1OFF_R {
+    #[inline(always)]
+    pub(crate) fn new(bits: bool) -> Self {
+        JMBCLR1OFF_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for JMBCLR1OFF_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `JMBCLR1OFF` writer - SYS - Incoming JTAG Mailbox 1 Flag auto-clear disalbe"]
 pub struct JMBCLR1OFF_W<'a> {
     w: &'a mut W,
 }
@@ -174,7 +289,7 @@ impl<'a> JMBCLR1OFF_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | (((value as u16) & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u16 & 0x01) << 7);
         self.w
     }
 }
@@ -250,5 +365,31 @@ impl W {
     #[inline(always)]
     pub fn jmbclr1off(&mut self) -> JMBCLR1OFF_W {
         JMBCLR1OFF_W { w: self }
+    }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u16) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "JTAG mailbox control\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sysjmbc](index.html) module"]
+pub struct SYSJMBC_SPEC;
+impl crate::RegisterSpec for SYSJMBC_SPEC {
+    type Ux = u16;
+}
+#[doc = "`read()` method returns [sysjmbc::R](R) reader structure"]
+impl crate::Readable for SYSJMBC_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [sysjmbc::W](W) writer structure"]
+impl crate::Writable for SYSJMBC_SPEC {
+    type Writer = W;
+}
+#[doc = "`reset()` method sets SYSJMBC to value 0"]
+impl crate::Resettable for SYSJMBC_SPEC {
+    #[inline(always)]
+    fn reset_value() -> Self::Ux {
+        0
     }
 }
