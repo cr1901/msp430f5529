@@ -5,7 +5,7 @@
 
 > Peripheral access API for MSP430F5529 microcontroller.
 
-Generated using [svd2rust] v0.17.0
+Generated using [svd2rust] v0.20.0
 
 [svd2rust]: https://github.com/rust-embedded/svd2rust
 
