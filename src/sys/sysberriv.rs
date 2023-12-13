@@ -1,64 +1,42 @@
 #[doc = "Register `SYSBERRIV` reader"]
-pub struct R(crate::R<SYSBERRIV_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SYSBERRIV_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SYSBERRIV_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SYSBERRIV_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SYSBERRIV_SPEC>;
 #[doc = "Register `SYSBERRIV` writer"]
-pub struct W(crate::W<SYSBERRIV_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<SYSBERRIV_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+pub type W = crate::W<SYSBERRIV_SPEC>;
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        write!(f, "{}", self.bits())
     }
 }
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<SYSBERRIV_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<SYSBERRIV_SPEC>) -> Self {
-        W(writer)
+impl core::fmt::Debug for crate::generic::Reg<SYSBERRIV_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 impl W {
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u16) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Bus Error vector generator\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sysberriv](index.html) module"]
+#[doc = "Bus Error vector generator\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`sysberriv::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sysberriv::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SYSBERRIV_SPEC;
 impl crate::RegisterSpec for SYSBERRIV_SPEC {
     type Ux = u16;
 }
-#[doc = "`read()` method returns [sysberriv::R](R) reader structure"]
-impl crate::Readable for SYSBERRIV_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [sysberriv::W](W) writer structure"]
+#[doc = "`read()` method returns [`sysberriv::R`](R) reader structure"]
+impl crate::Readable for SYSBERRIV_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`sysberriv::W`](W) writer structure"]
 impl crate::Writable for SYSBERRIV_SPEC {
-    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SYSBERRIV to value 0"]
 impl crate::Resettable for SYSBERRIV_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

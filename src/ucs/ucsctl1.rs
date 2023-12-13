@@ -1,78 +1,15 @@
 #[doc = "Register `UCSCTL1` reader"]
-pub struct R(crate::R<UCSCTL1_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<UCSCTL1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<UCSCTL1_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<UCSCTL1_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<UCSCTL1_SPEC>;
 #[doc = "Register `UCSCTL1` writer"]
-pub struct W(crate::W<UCSCTL1_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<UCSCTL1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<UCSCTL1_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<UCSCTL1_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<UCSCTL1_SPEC>;
 #[doc = "Field `DISMOD` reader - Disable Modulation"]
-pub struct DISMOD_R(crate::FieldReader<bool, bool>);
-impl DISMOD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DISMOD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DISMOD_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DISMOD_R = crate::BitReader;
 #[doc = "Field `DISMOD` writer - Disable Modulation"]
-pub struct DISMOD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DISMOD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u16 & 0x01);
-        self.w
-    }
-}
+pub type DISMOD_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `DCORSEL` reader - DCO Freq. Range Select Bit : 0"]
+pub type DCORSEL_R = crate::FieldReader<DCORSEL_A>;
 #[doc = "DCO Freq. Range Select Bit : 0\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum DCORSEL_A {
     #[doc = "0: DCO RSEL 0"]
@@ -98,16 +35,13 @@ impl From<DCORSEL_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `DCORSEL` reader - DCO Freq. Range Select Bit : 0"]
-pub struct DCORSEL_R(crate::FieldReader<u8, DCORSEL_A>);
+impl crate::FieldSpec for DCORSEL_A {
+    type Ux = u8;
+}
 impl DCORSEL_R {
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DCORSEL_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
-    #[inline(always)]
-    pub fn variant(&self) -> DCORSEL_A {
+    pub const fn variant(&self) -> DCORSEL_A {
         match self.bits {
             0 => DCORSEL_A::DCORSEL_0,
             1 => DCORSEL_A::DCORSEL_1,
@@ -120,158 +54,144 @@ impl DCORSEL_R {
             _ => unreachable!(),
         }
     }
-    #[doc = "Checks if the value of the field is `DCORSEL_0`"]
+    #[doc = "DCO RSEL 0"]
     #[inline(always)]
     pub fn is_dcorsel_0(&self) -> bool {
-        **self == DCORSEL_A::DCORSEL_0
+        *self == DCORSEL_A::DCORSEL_0
     }
-    #[doc = "Checks if the value of the field is `DCORSEL_1`"]
+    #[doc = "DCO RSEL 1"]
     #[inline(always)]
     pub fn is_dcorsel_1(&self) -> bool {
-        **self == DCORSEL_A::DCORSEL_1
+        *self == DCORSEL_A::DCORSEL_1
     }
-    #[doc = "Checks if the value of the field is `DCORSEL_2`"]
+    #[doc = "DCO RSEL 2"]
     #[inline(always)]
     pub fn is_dcorsel_2(&self) -> bool {
-        **self == DCORSEL_A::DCORSEL_2
+        *self == DCORSEL_A::DCORSEL_2
     }
-    #[doc = "Checks if the value of the field is `DCORSEL_3`"]
+    #[doc = "DCO RSEL 3"]
     #[inline(always)]
     pub fn is_dcorsel_3(&self) -> bool {
-        **self == DCORSEL_A::DCORSEL_3
+        *self == DCORSEL_A::DCORSEL_3
     }
-    #[doc = "Checks if the value of the field is `DCORSEL_4`"]
+    #[doc = "DCO RSEL 4"]
     #[inline(always)]
     pub fn is_dcorsel_4(&self) -> bool {
-        **self == DCORSEL_A::DCORSEL_4
+        *self == DCORSEL_A::DCORSEL_4
     }
-    #[doc = "Checks if the value of the field is `DCORSEL_5`"]
+    #[doc = "DCO RSEL 5"]
     #[inline(always)]
     pub fn is_dcorsel_5(&self) -> bool {
-        **self == DCORSEL_A::DCORSEL_5
+        *self == DCORSEL_A::DCORSEL_5
     }
-    #[doc = "Checks if the value of the field is `DCORSEL_6`"]
+    #[doc = "DCO RSEL 6"]
     #[inline(always)]
     pub fn is_dcorsel_6(&self) -> bool {
-        **self == DCORSEL_A::DCORSEL_6
+        *self == DCORSEL_A::DCORSEL_6
     }
-    #[doc = "Checks if the value of the field is `DCORSEL_7`"]
+    #[doc = "DCO RSEL 7"]
     #[inline(always)]
     pub fn is_dcorsel_7(&self) -> bool {
-        **self == DCORSEL_A::DCORSEL_7
-    }
-}
-impl core::ops::Deref for DCORSEL_R {
-    type Target = crate::FieldReader<u8, DCORSEL_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == DCORSEL_A::DCORSEL_7
     }
 }
 #[doc = "Field `DCORSEL` writer - DCO Freq. Range Select Bit : 0"]
-pub struct DCORSEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DCORSEL_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: DCORSEL_A) -> &'a mut W {
-        self.bits(variant.into())
-    }
+pub type DCORSEL_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3, DCORSEL_A>;
+impl<'a, REG> DCORSEL_W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
     #[doc = "DCO RSEL 0"]
     #[inline(always)]
-    pub fn dcorsel_0(self) -> &'a mut W {
+    pub fn dcorsel_0(self) -> &'a mut crate::W<REG> {
         self.variant(DCORSEL_A::DCORSEL_0)
     }
     #[doc = "DCO RSEL 1"]
     #[inline(always)]
-    pub fn dcorsel_1(self) -> &'a mut W {
+    pub fn dcorsel_1(self) -> &'a mut crate::W<REG> {
         self.variant(DCORSEL_A::DCORSEL_1)
     }
     #[doc = "DCO RSEL 2"]
     #[inline(always)]
-    pub fn dcorsel_2(self) -> &'a mut W {
+    pub fn dcorsel_2(self) -> &'a mut crate::W<REG> {
         self.variant(DCORSEL_A::DCORSEL_2)
     }
     #[doc = "DCO RSEL 3"]
     #[inline(always)]
-    pub fn dcorsel_3(self) -> &'a mut W {
+    pub fn dcorsel_3(self) -> &'a mut crate::W<REG> {
         self.variant(DCORSEL_A::DCORSEL_3)
     }
     #[doc = "DCO RSEL 4"]
     #[inline(always)]
-    pub fn dcorsel_4(self) -> &'a mut W {
+    pub fn dcorsel_4(self) -> &'a mut crate::W<REG> {
         self.variant(DCORSEL_A::DCORSEL_4)
     }
     #[doc = "DCO RSEL 5"]
     #[inline(always)]
-    pub fn dcorsel_5(self) -> &'a mut W {
+    pub fn dcorsel_5(self) -> &'a mut crate::W<REG> {
         self.variant(DCORSEL_A::DCORSEL_5)
     }
     #[doc = "DCO RSEL 6"]
     #[inline(always)]
-    pub fn dcorsel_6(self) -> &'a mut W {
+    pub fn dcorsel_6(self) -> &'a mut crate::W<REG> {
         self.variant(DCORSEL_A::DCORSEL_6)
     }
     #[doc = "DCO RSEL 7"]
     #[inline(always)]
-    pub fn dcorsel_7(self) -> &'a mut W {
+    pub fn dcorsel_7(self) -> &'a mut crate::W<REG> {
         self.variant(DCORSEL_A::DCORSEL_7)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 4)) | ((value as u16 & 0x07) << 4);
-        self.w
     }
 }
 impl R {
     #[doc = "Bit 0 - Disable Modulation"]
     #[inline(always)]
     pub fn dismod(&self) -> DISMOD_R {
-        DISMOD_R::new((self.bits & 0x01) != 0)
+        DISMOD_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bits 4:6 - DCO Freq. Range Select Bit : 0"]
     #[inline(always)]
     pub fn dcorsel(&self) -> DCORSEL_R {
-        DCORSEL_R::new(((self.bits >> 4) & 0x07) as u8)
+        DCORSEL_R::new(((self.bits >> 4) & 7) as u8)
     }
 }
 impl W {
     #[doc = "Bit 0 - Disable Modulation"]
     #[inline(always)]
-    pub fn dismod(&mut self) -> DISMOD_W {
-        DISMOD_W { w: self }
+    #[must_use]
+    pub fn dismod(&mut self) -> DISMOD_W<UCSCTL1_SPEC> {
+        DISMOD_W::new(self, 0)
     }
     #[doc = "Bits 4:6 - DCO Freq. Range Select Bit : 0"]
     #[inline(always)]
-    pub fn dcorsel(&mut self) -> DCORSEL_W {
-        DCORSEL_W { w: self }
+    #[must_use]
+    pub fn dcorsel(&mut self) -> DCORSEL_W<UCSCTL1_SPEC> {
+        DCORSEL_W::new(self, 4)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u16) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "UCS Control Register 1\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ucsctl1](index.html) module"]
+#[doc = "UCS Control Register 1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ucsctl1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ucsctl1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct UCSCTL1_SPEC;
 impl crate::RegisterSpec for UCSCTL1_SPEC {
     type Ux = u16;
 }
-#[doc = "`read()` method returns [ucsctl1::R](R) reader structure"]
-impl crate::Readable for UCSCTL1_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [ucsctl1::W](W) writer structure"]
+#[doc = "`read()` method returns [`ucsctl1::R`](R) reader structure"]
+impl crate::Readable for UCSCTL1_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`ucsctl1::W`](W) writer structure"]
 impl crate::Writable for UCSCTL1_SPEC {
-    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets UCSCTL1 to value 0"]
 impl crate::Resettable for UCSCTL1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

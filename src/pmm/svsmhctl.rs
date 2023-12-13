@@ -1,41 +1,11 @@
 #[doc = "Register `SVSMHCTL` reader"]
-pub struct R(crate::R<SVSMHCTL_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SVSMHCTL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SVSMHCTL_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SVSMHCTL_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SVSMHCTL_SPEC>;
 #[doc = "Register `SVSMHCTL` writer"]
-pub struct W(crate::W<SVSMHCTL_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<SVSMHCTL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<SVSMHCTL_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<SVSMHCTL_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<SVSMHCTL_SPEC>;
+#[doc = "Field `SVSMHRRL` reader - SVS and SVM high side Reset Release Voltage Level Bit: 0"]
+pub type SVSMHRRL_R = crate::FieldReader<SVSMHRRL_A>;
 #[doc = "SVS and SVM high side Reset Release Voltage Level Bit: 0\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum SVSMHRRL_A {
     #[doc = "0: SVS and SVM high side Reset Release Voltage Level 0"]
@@ -61,16 +31,13 @@ impl From<SVSMHRRL_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `SVSMHRRL` reader - SVS and SVM high side Reset Release Voltage Level Bit: 0"]
-pub struct SVSMHRRL_R(crate::FieldReader<u8, SVSMHRRL_A>);
+impl crate::FieldSpec for SVSMHRRL_A {
+    type Ux = u8;
+}
 impl SVSMHRRL_R {
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SVSMHRRL_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
-    #[inline(always)]
-    pub fn variant(&self) -> SVSMHRRL_A {
+    pub const fn variant(&self) -> SVSMHRRL_A {
         match self.bits {
             0 => SVSMHRRL_A::SVSMHRRL_0,
             1 => SVSMHRRL_A::SVSMHRRL_1,
@@ -83,261 +50,115 @@ impl SVSMHRRL_R {
             _ => unreachable!(),
         }
     }
-    #[doc = "Checks if the value of the field is `SVSMHRRL_0`"]
+    #[doc = "SVS and SVM high side Reset Release Voltage Level 0"]
     #[inline(always)]
     pub fn is_svsmhrrl_0(&self) -> bool {
-        **self == SVSMHRRL_A::SVSMHRRL_0
+        *self == SVSMHRRL_A::SVSMHRRL_0
     }
-    #[doc = "Checks if the value of the field is `SVSMHRRL_1`"]
+    #[doc = "SVS and SVM high side Reset Release Voltage Level 1"]
     #[inline(always)]
     pub fn is_svsmhrrl_1(&self) -> bool {
-        **self == SVSMHRRL_A::SVSMHRRL_1
+        *self == SVSMHRRL_A::SVSMHRRL_1
     }
-    #[doc = "Checks if the value of the field is `SVSMHRRL_2`"]
+    #[doc = "SVS and SVM high side Reset Release Voltage Level 2"]
     #[inline(always)]
     pub fn is_svsmhrrl_2(&self) -> bool {
-        **self == SVSMHRRL_A::SVSMHRRL_2
+        *self == SVSMHRRL_A::SVSMHRRL_2
     }
-    #[doc = "Checks if the value of the field is `SVSMHRRL_3`"]
+    #[doc = "SVS and SVM high side Reset Release Voltage Level 3"]
     #[inline(always)]
     pub fn is_svsmhrrl_3(&self) -> bool {
-        **self == SVSMHRRL_A::SVSMHRRL_3
+        *self == SVSMHRRL_A::SVSMHRRL_3
     }
-    #[doc = "Checks if the value of the field is `SVSMHRRL_4`"]
+    #[doc = "SVS and SVM high side Reset Release Voltage Level 4"]
     #[inline(always)]
     pub fn is_svsmhrrl_4(&self) -> bool {
-        **self == SVSMHRRL_A::SVSMHRRL_4
+        *self == SVSMHRRL_A::SVSMHRRL_4
     }
-    #[doc = "Checks if the value of the field is `SVSMHRRL_5`"]
+    #[doc = "SVS and SVM high side Reset Release Voltage Level 5"]
     #[inline(always)]
     pub fn is_svsmhrrl_5(&self) -> bool {
-        **self == SVSMHRRL_A::SVSMHRRL_5
+        *self == SVSMHRRL_A::SVSMHRRL_5
     }
-    #[doc = "Checks if the value of the field is `SVSMHRRL_6`"]
+    #[doc = "SVS and SVM high side Reset Release Voltage Level 6"]
     #[inline(always)]
     pub fn is_svsmhrrl_6(&self) -> bool {
-        **self == SVSMHRRL_A::SVSMHRRL_6
+        *self == SVSMHRRL_A::SVSMHRRL_6
     }
-    #[doc = "Checks if the value of the field is `SVSMHRRL_7`"]
+    #[doc = "SVS and SVM high side Reset Release Voltage Level 7"]
     #[inline(always)]
     pub fn is_svsmhrrl_7(&self) -> bool {
-        **self == SVSMHRRL_A::SVSMHRRL_7
-    }
-}
-impl core::ops::Deref for SVSMHRRL_R {
-    type Target = crate::FieldReader<u8, SVSMHRRL_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == SVSMHRRL_A::SVSMHRRL_7
     }
 }
 #[doc = "Field `SVSMHRRL` writer - SVS and SVM high side Reset Release Voltage Level Bit: 0"]
-pub struct SVSMHRRL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SVSMHRRL_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: SVSMHRRL_A) -> &'a mut W {
-        self.bits(variant.into())
-    }
+pub type SVSMHRRL_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3, SVSMHRRL_A>;
+impl<'a, REG> SVSMHRRL_W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
     #[doc = "SVS and SVM high side Reset Release Voltage Level 0"]
     #[inline(always)]
-    pub fn svsmhrrl_0(self) -> &'a mut W {
+    pub fn svsmhrrl_0(self) -> &'a mut crate::W<REG> {
         self.variant(SVSMHRRL_A::SVSMHRRL_0)
     }
     #[doc = "SVS and SVM high side Reset Release Voltage Level 1"]
     #[inline(always)]
-    pub fn svsmhrrl_1(self) -> &'a mut W {
+    pub fn svsmhrrl_1(self) -> &'a mut crate::W<REG> {
         self.variant(SVSMHRRL_A::SVSMHRRL_1)
     }
     #[doc = "SVS and SVM high side Reset Release Voltage Level 2"]
     #[inline(always)]
-    pub fn svsmhrrl_2(self) -> &'a mut W {
+    pub fn svsmhrrl_2(self) -> &'a mut crate::W<REG> {
         self.variant(SVSMHRRL_A::SVSMHRRL_2)
     }
     #[doc = "SVS and SVM high side Reset Release Voltage Level 3"]
     #[inline(always)]
-    pub fn svsmhrrl_3(self) -> &'a mut W {
+    pub fn svsmhrrl_3(self) -> &'a mut crate::W<REG> {
         self.variant(SVSMHRRL_A::SVSMHRRL_3)
     }
     #[doc = "SVS and SVM high side Reset Release Voltage Level 4"]
     #[inline(always)]
-    pub fn svsmhrrl_4(self) -> &'a mut W {
+    pub fn svsmhrrl_4(self) -> &'a mut crate::W<REG> {
         self.variant(SVSMHRRL_A::SVSMHRRL_4)
     }
     #[doc = "SVS and SVM high side Reset Release Voltage Level 5"]
     #[inline(always)]
-    pub fn svsmhrrl_5(self) -> &'a mut W {
+    pub fn svsmhrrl_5(self) -> &'a mut crate::W<REG> {
         self.variant(SVSMHRRL_A::SVSMHRRL_5)
     }
     #[doc = "SVS and SVM high side Reset Release Voltage Level 6"]
     #[inline(always)]
-    pub fn svsmhrrl_6(self) -> &'a mut W {
+    pub fn svsmhrrl_6(self) -> &'a mut crate::W<REG> {
         self.variant(SVSMHRRL_A::SVSMHRRL_6)
     }
     #[doc = "SVS and SVM high side Reset Release Voltage Level 7"]
     #[inline(always)]
-    pub fn svsmhrrl_7(self) -> &'a mut W {
+    pub fn svsmhrrl_7(self) -> &'a mut crate::W<REG> {
         self.variant(SVSMHRRL_A::SVSMHRRL_7)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x07) | (value as u16 & 0x07);
-        self.w
     }
 }
 #[doc = "Field `SVSMHDLYST` reader - SVS and SVM high side delay status"]
-pub struct SVSMHDLYST_R(crate::FieldReader<bool, bool>);
-impl SVSMHDLYST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SVSMHDLYST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SVSMHDLYST_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SVSMHDLYST_R = crate::BitReader;
 #[doc = "Field `SVSMHDLYST` writer - SVS and SVM high side delay status"]
-pub struct SVSMHDLYST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SVSMHDLYST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u16 & 0x01) << 3);
-        self.w
-    }
-}
+pub type SVSMHDLYST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SVSHMD` reader - SVS high side mode"]
-pub struct SVSHMD_R(crate::FieldReader<bool, bool>);
-impl SVSHMD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SVSHMD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SVSHMD_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SVSHMD_R = crate::BitReader;
 #[doc = "Field `SVSHMD` writer - SVS high side mode"]
-pub struct SVSHMD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SVSHMD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u16 & 0x01) << 4);
-        self.w
-    }
-}
+pub type SVSHMD_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SVSMHEVM` reader - SVS and SVM high side event mask"]
-pub struct SVSMHEVM_R(crate::FieldReader<bool, bool>);
-impl SVSMHEVM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SVSMHEVM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SVSMHEVM_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SVSMHEVM_R = crate::BitReader;
 #[doc = "Field `SVSMHEVM` writer - SVS and SVM high side event mask"]
-pub struct SVSMHEVM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SVSMHEVM_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u16 & 0x01) << 6);
-        self.w
-    }
-}
+pub type SVSMHEVM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SVSMHACE` reader - SVS and SVM high side auto control enable"]
-pub struct SVSMHACE_R(crate::FieldReader<bool, bool>);
-impl SVSMHACE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SVSMHACE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SVSMHACE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SVSMHACE_R = crate::BitReader;
 #[doc = "Field `SVSMHACE` writer - SVS and SVM high side auto control enable"]
-pub struct SVSMHACE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SVSMHACE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u16 & 0x01) << 7);
-        self.w
-    }
-}
+pub type SVSMHACE_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `SVSHRVL` reader - SVS high side reset voltage level Bit: 0"]
+pub type SVSHRVL_R = crate::FieldReader<SVSHRVL_A>;
 #[doc = "SVS high side reset voltage level Bit: 0\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum SVSHRVL_A {
     #[doc = "0: SVS high side Reset Release Voltage Level 0"]
@@ -355,16 +176,13 @@ impl From<SVSHRVL_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `SVSHRVL` reader - SVS high side reset voltage level Bit: 0"]
-pub struct SVSHRVL_R(crate::FieldReader<u8, SVSHRVL_A>);
+impl crate::FieldSpec for SVSHRVL_A {
+    type Ux = u8;
+}
 impl SVSHRVL_R {
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SVSHRVL_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
-    #[inline(always)]
-    pub fn variant(&self) -> SVSHRVL_A {
+    pub const fn variant(&self) -> SVSHRVL_A {
         match self.bits {
             0 => SVSHRVL_A::SVSHRVL_0,
             1 => SVSHRVL_A::SVSHRVL_1,
@@ -373,393 +191,223 @@ impl SVSHRVL_R {
             _ => unreachable!(),
         }
     }
-    #[doc = "Checks if the value of the field is `SVSHRVL_0`"]
+    #[doc = "SVS high side Reset Release Voltage Level 0"]
     #[inline(always)]
     pub fn is_svshrvl_0(&self) -> bool {
-        **self == SVSHRVL_A::SVSHRVL_0
+        *self == SVSHRVL_A::SVSHRVL_0
     }
-    #[doc = "Checks if the value of the field is `SVSHRVL_1`"]
+    #[doc = "SVS high side Reset Release Voltage Level 1"]
     #[inline(always)]
     pub fn is_svshrvl_1(&self) -> bool {
-        **self == SVSHRVL_A::SVSHRVL_1
+        *self == SVSHRVL_A::SVSHRVL_1
     }
-    #[doc = "Checks if the value of the field is `SVSHRVL_2`"]
+    #[doc = "SVS high side Reset Release Voltage Level 2"]
     #[inline(always)]
     pub fn is_svshrvl_2(&self) -> bool {
-        **self == SVSHRVL_A::SVSHRVL_2
+        *self == SVSHRVL_A::SVSHRVL_2
     }
-    #[doc = "Checks if the value of the field is `SVSHRVL_3`"]
+    #[doc = "SVS high side Reset Release Voltage Level 3"]
     #[inline(always)]
     pub fn is_svshrvl_3(&self) -> bool {
-        **self == SVSHRVL_A::SVSHRVL_3
-    }
-}
-impl core::ops::Deref for SVSHRVL_R {
-    type Target = crate::FieldReader<u8, SVSHRVL_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == SVSHRVL_A::SVSHRVL_3
     }
 }
 #[doc = "Field `SVSHRVL` writer - SVS high side reset voltage level Bit: 0"]
-pub struct SVSHRVL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SVSHRVL_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: SVSHRVL_A) -> &'a mut W {
-        self.bits(variant.into())
-    }
+pub type SVSHRVL_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, SVSHRVL_A>;
+impl<'a, REG> SVSHRVL_W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
     #[doc = "SVS high side Reset Release Voltage Level 0"]
     #[inline(always)]
-    pub fn svshrvl_0(self) -> &'a mut W {
+    pub fn svshrvl_0(self) -> &'a mut crate::W<REG> {
         self.variant(SVSHRVL_A::SVSHRVL_0)
     }
     #[doc = "SVS high side Reset Release Voltage Level 1"]
     #[inline(always)]
-    pub fn svshrvl_1(self) -> &'a mut W {
+    pub fn svshrvl_1(self) -> &'a mut crate::W<REG> {
         self.variant(SVSHRVL_A::SVSHRVL_1)
     }
     #[doc = "SVS high side Reset Release Voltage Level 2"]
     #[inline(always)]
-    pub fn svshrvl_2(self) -> &'a mut W {
+    pub fn svshrvl_2(self) -> &'a mut crate::W<REG> {
         self.variant(SVSHRVL_A::SVSHRVL_2)
     }
     #[doc = "SVS high side Reset Release Voltage Level 3"]
     #[inline(always)]
-    pub fn svshrvl_3(self) -> &'a mut W {
+    pub fn svshrvl_3(self) -> &'a mut crate::W<REG> {
         self.variant(SVSHRVL_A::SVSHRVL_3)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 8)) | ((value as u16 & 0x03) << 8);
-        self.w
     }
 }
 #[doc = "Field `SVSHE` reader - SVS high side enable"]
-pub struct SVSHE_R(crate::FieldReader<bool, bool>);
-impl SVSHE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SVSHE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SVSHE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SVSHE_R = crate::BitReader;
 #[doc = "Field `SVSHE` writer - SVS high side enable"]
-pub struct SVSHE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SVSHE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u16 & 0x01) << 10);
-        self.w
-    }
-}
+pub type SVSHE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SVSHFP` reader - SVS high side full performace mode"]
-pub struct SVSHFP_R(crate::FieldReader<bool, bool>);
-impl SVSHFP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SVSHFP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SVSHFP_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SVSHFP_R = crate::BitReader;
 #[doc = "Field `SVSHFP` writer - SVS high side full performace mode"]
-pub struct SVSHFP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SVSHFP_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u16 & 0x01) << 11);
-        self.w
-    }
-}
+pub type SVSHFP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SVMHOVPE` reader - SVM high side over-voltage enable"]
-pub struct SVMHOVPE_R(crate::FieldReader<bool, bool>);
-impl SVMHOVPE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SVMHOVPE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SVMHOVPE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SVMHOVPE_R = crate::BitReader;
 #[doc = "Field `SVMHOVPE` writer - SVM high side over-voltage enable"]
-pub struct SVMHOVPE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SVMHOVPE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u16 & 0x01) << 12);
-        self.w
-    }
-}
+pub type SVMHOVPE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SVMHE` reader - SVM high side enable"]
-pub struct SVMHE_R(crate::FieldReader<bool, bool>);
-impl SVMHE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SVMHE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SVMHE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SVMHE_R = crate::BitReader;
 #[doc = "Field `SVMHE` writer - SVM high side enable"]
-pub struct SVMHE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SVMHE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u16 & 0x01) << 14);
-        self.w
-    }
-}
+pub type SVMHE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SVMHFP` reader - SVM high side full performace mode"]
-pub struct SVMHFP_R(crate::FieldReader<bool, bool>);
-impl SVMHFP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SVMHFP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SVMHFP_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SVMHFP_R = crate::BitReader;
 #[doc = "Field `SVMHFP` writer - SVM high side full performace mode"]
-pub struct SVMHFP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SVMHFP_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u16 & 0x01) << 15);
-        self.w
-    }
-}
+pub type SVMHFP_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:2 - SVS and SVM high side Reset Release Voltage Level Bit: 0"]
     #[inline(always)]
     pub fn svsmhrrl(&self) -> SVSMHRRL_R {
-        SVSMHRRL_R::new((self.bits & 0x07) as u8)
+        SVSMHRRL_R::new((self.bits & 7) as u8)
     }
     #[doc = "Bit 3 - SVS and SVM high side delay status"]
     #[inline(always)]
     pub fn svsmhdlyst(&self) -> SVSMHDLYST_R {
-        SVSMHDLYST_R::new(((self.bits >> 3) & 0x01) != 0)
+        SVSMHDLYST_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - SVS high side mode"]
     #[inline(always)]
     pub fn svshmd(&self) -> SVSHMD_R {
-        SVSHMD_R::new(((self.bits >> 4) & 0x01) != 0)
+        SVSHMD_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 6 - SVS and SVM high side event mask"]
     #[inline(always)]
     pub fn svsmhevm(&self) -> SVSMHEVM_R {
-        SVSMHEVM_R::new(((self.bits >> 6) & 0x01) != 0)
+        SVSMHEVM_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - SVS and SVM high side auto control enable"]
     #[inline(always)]
     pub fn svsmhace(&self) -> SVSMHACE_R {
-        SVSMHACE_R::new(((self.bits >> 7) & 0x01) != 0)
+        SVSMHACE_R::new(((self.bits >> 7) & 1) != 0)
     }
     #[doc = "Bits 8:9 - SVS high side reset voltage level Bit: 0"]
     #[inline(always)]
     pub fn svshrvl(&self) -> SVSHRVL_R {
-        SVSHRVL_R::new(((self.bits >> 8) & 0x03) as u8)
+        SVSHRVL_R::new(((self.bits >> 8) & 3) as u8)
     }
     #[doc = "Bit 10 - SVS high side enable"]
     #[inline(always)]
     pub fn svshe(&self) -> SVSHE_R {
-        SVSHE_R::new(((self.bits >> 10) & 0x01) != 0)
+        SVSHE_R::new(((self.bits >> 10) & 1) != 0)
     }
     #[doc = "Bit 11 - SVS high side full performace mode"]
     #[inline(always)]
     pub fn svshfp(&self) -> SVSHFP_R {
-        SVSHFP_R::new(((self.bits >> 11) & 0x01) != 0)
+        SVSHFP_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bit 12 - SVM high side over-voltage enable"]
     #[inline(always)]
     pub fn svmhovpe(&self) -> SVMHOVPE_R {
-        SVMHOVPE_R::new(((self.bits >> 12) & 0x01) != 0)
+        SVMHOVPE_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bit 14 - SVM high side enable"]
     #[inline(always)]
     pub fn svmhe(&self) -> SVMHE_R {
-        SVMHE_R::new(((self.bits >> 14) & 0x01) != 0)
+        SVMHE_R::new(((self.bits >> 14) & 1) != 0)
     }
     #[doc = "Bit 15 - SVM high side full performace mode"]
     #[inline(always)]
     pub fn svmhfp(&self) -> SVMHFP_R {
-        SVMHFP_R::new(((self.bits >> 15) & 0x01) != 0)
+        SVMHFP_R::new(((self.bits >> 15) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bits 0:2 - SVS and SVM high side Reset Release Voltage Level Bit: 0"]
     #[inline(always)]
-    pub fn svsmhrrl(&mut self) -> SVSMHRRL_W {
-        SVSMHRRL_W { w: self }
+    #[must_use]
+    pub fn svsmhrrl(&mut self) -> SVSMHRRL_W<SVSMHCTL_SPEC> {
+        SVSMHRRL_W::new(self, 0)
     }
     #[doc = "Bit 3 - SVS and SVM high side delay status"]
     #[inline(always)]
-    pub fn svsmhdlyst(&mut self) -> SVSMHDLYST_W {
-        SVSMHDLYST_W { w: self }
+    #[must_use]
+    pub fn svsmhdlyst(&mut self) -> SVSMHDLYST_W<SVSMHCTL_SPEC> {
+        SVSMHDLYST_W::new(self, 3)
     }
     #[doc = "Bit 4 - SVS high side mode"]
     #[inline(always)]
-    pub fn svshmd(&mut self) -> SVSHMD_W {
-        SVSHMD_W { w: self }
+    #[must_use]
+    pub fn svshmd(&mut self) -> SVSHMD_W<SVSMHCTL_SPEC> {
+        SVSHMD_W::new(self, 4)
     }
     #[doc = "Bit 6 - SVS and SVM high side event mask"]
     #[inline(always)]
-    pub fn svsmhevm(&mut self) -> SVSMHEVM_W {
-        SVSMHEVM_W { w: self }
+    #[must_use]
+    pub fn svsmhevm(&mut self) -> SVSMHEVM_W<SVSMHCTL_SPEC> {
+        SVSMHEVM_W::new(self, 6)
     }
     #[doc = "Bit 7 - SVS and SVM high side auto control enable"]
     #[inline(always)]
-    pub fn svsmhace(&mut self) -> SVSMHACE_W {
-        SVSMHACE_W { w: self }
+    #[must_use]
+    pub fn svsmhace(&mut self) -> SVSMHACE_W<SVSMHCTL_SPEC> {
+        SVSMHACE_W::new(self, 7)
     }
     #[doc = "Bits 8:9 - SVS high side reset voltage level Bit: 0"]
     #[inline(always)]
-    pub fn svshrvl(&mut self) -> SVSHRVL_W {
-        SVSHRVL_W { w: self }
+    #[must_use]
+    pub fn svshrvl(&mut self) -> SVSHRVL_W<SVSMHCTL_SPEC> {
+        SVSHRVL_W::new(self, 8)
     }
     #[doc = "Bit 10 - SVS high side enable"]
     #[inline(always)]
-    pub fn svshe(&mut self) -> SVSHE_W {
-        SVSHE_W { w: self }
+    #[must_use]
+    pub fn svshe(&mut self) -> SVSHE_W<SVSMHCTL_SPEC> {
+        SVSHE_W::new(self, 10)
     }
     #[doc = "Bit 11 - SVS high side full performace mode"]
     #[inline(always)]
-    pub fn svshfp(&mut self) -> SVSHFP_W {
-        SVSHFP_W { w: self }
+    #[must_use]
+    pub fn svshfp(&mut self) -> SVSHFP_W<SVSMHCTL_SPEC> {
+        SVSHFP_W::new(self, 11)
     }
     #[doc = "Bit 12 - SVM high side over-voltage enable"]
     #[inline(always)]
-    pub fn svmhovpe(&mut self) -> SVMHOVPE_W {
-        SVMHOVPE_W { w: self }
+    #[must_use]
+    pub fn svmhovpe(&mut self) -> SVMHOVPE_W<SVSMHCTL_SPEC> {
+        SVMHOVPE_W::new(self, 12)
     }
     #[doc = "Bit 14 - SVM high side enable"]
     #[inline(always)]
-    pub fn svmhe(&mut self) -> SVMHE_W {
-        SVMHE_W { w: self }
+    #[must_use]
+    pub fn svmhe(&mut self) -> SVMHE_W<SVSMHCTL_SPEC> {
+        SVMHE_W::new(self, 14)
     }
     #[doc = "Bit 15 - SVM high side full performace mode"]
     #[inline(always)]
-    pub fn svmhfp(&mut self) -> SVMHFP_W {
-        SVMHFP_W { w: self }
+    #[must_use]
+    pub fn svmhfp(&mut self) -> SVMHFP_W<SVSMHCTL_SPEC> {
+        SVMHFP_W::new(self, 15)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u16) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "SVS and SVM high side control register\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [svsmhctl](index.html) module"]
+#[doc = "SVS and SVM high side control register\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`svsmhctl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`svsmhctl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SVSMHCTL_SPEC;
 impl crate::RegisterSpec for SVSMHCTL_SPEC {
     type Ux = u16;
 }
-#[doc = "`read()` method returns [svsmhctl::R](R) reader structure"]
-impl crate::Readable for SVSMHCTL_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [svsmhctl::W](W) writer structure"]
+#[doc = "`read()` method returns [`svsmhctl::R`](R) reader structure"]
+impl crate::Readable for SVSMHCTL_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`svsmhctl::W`](W) writer structure"]
 impl crate::Writable for SVSMHCTL_SPEC {
-    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SVSMHCTL to value 0"]
 impl crate::Resettable for SVSMHCTL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

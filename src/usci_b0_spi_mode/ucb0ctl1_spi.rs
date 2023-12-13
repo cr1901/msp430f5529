@@ -1,78 +1,15 @@
 #[doc = "Register `UCB0CTL1_SPI` reader"]
-pub struct R(crate::R<UCB0CTL1_SPI_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<UCB0CTL1_SPI_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<UCB0CTL1_SPI_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<UCB0CTL1_SPI_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<UCB0CTL1_SPI_SPEC>;
 #[doc = "Register `UCB0CTL1_SPI` writer"]
-pub struct W(crate::W<UCB0CTL1_SPI_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<UCB0CTL1_SPI_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<UCB0CTL1_SPI_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<UCB0CTL1_SPI_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<UCB0CTL1_SPI_SPEC>;
 #[doc = "Field `UCSWRST` reader - USCI Software Reset"]
-pub struct UCSWRST_R(crate::FieldReader<bool, bool>);
-impl UCSWRST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        UCSWRST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for UCSWRST_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type UCSWRST_R = crate::BitReader;
 #[doc = "Field `UCSWRST` writer - USCI Software Reset"]
-pub struct UCSWRST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> UCSWRST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u8 & 0x01);
-        self.w
-    }
-}
+pub type UCSWRST_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `UCSSEL` reader - USCI 1 Clock Source Select 1"]
+pub type UCSSEL_R = crate::FieldReader<UCSSEL_A>;
 #[doc = "USCI 1 Clock Source Select 1\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum UCSSEL_A {
     #[doc = "0: USCI 0 Clock Source: 0"]
@@ -90,16 +27,13 @@ impl From<UCSSEL_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `UCSSEL` reader - USCI 1 Clock Source Select 1"]
-pub struct UCSSEL_R(crate::FieldReader<u8, UCSSEL_A>);
+impl crate::FieldSpec for UCSSEL_A {
+    type Ux = u8;
+}
 impl UCSSEL_R {
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        UCSSEL_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
-    #[inline(always)]
-    pub fn variant(&self) -> UCSSEL_A {
+    pub const fn variant(&self) -> UCSSEL_A {
         match self.bits {
             0 => UCSSEL_A::UCSSEL_0,
             1 => UCSSEL_A::UCSSEL_1,
@@ -108,118 +42,104 @@ impl UCSSEL_R {
             _ => unreachable!(),
         }
     }
-    #[doc = "Checks if the value of the field is `UCSSEL_0`"]
+    #[doc = "USCI 0 Clock Source: 0"]
     #[inline(always)]
     pub fn is_ucssel_0(&self) -> bool {
-        **self == UCSSEL_A::UCSSEL_0
+        *self == UCSSEL_A::UCSSEL_0
     }
-    #[doc = "Checks if the value of the field is `UCSSEL_1`"]
+    #[doc = "USCI 0 Clock Source: 1"]
     #[inline(always)]
     pub fn is_ucssel_1(&self) -> bool {
-        **self == UCSSEL_A::UCSSEL_1
+        *self == UCSSEL_A::UCSSEL_1
     }
-    #[doc = "Checks if the value of the field is `UCSSEL_2`"]
+    #[doc = "USCI 0 Clock Source: 2"]
     #[inline(always)]
     pub fn is_ucssel_2(&self) -> bool {
-        **self == UCSSEL_A::UCSSEL_2
+        *self == UCSSEL_A::UCSSEL_2
     }
-    #[doc = "Checks if the value of the field is `UCSSEL_3`"]
+    #[doc = "USCI 0 Clock Source: 3"]
     #[inline(always)]
     pub fn is_ucssel_3(&self) -> bool {
-        **self == UCSSEL_A::UCSSEL_3
-    }
-}
-impl core::ops::Deref for UCSSEL_R {
-    type Target = crate::FieldReader<u8, UCSSEL_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == UCSSEL_A::UCSSEL_3
     }
 }
 #[doc = "Field `UCSSEL` writer - USCI 1 Clock Source Select 1"]
-pub struct UCSSEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> UCSSEL_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: UCSSEL_A) -> &'a mut W {
-        self.bits(variant.into())
-    }
+pub type UCSSEL_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, UCSSEL_A>;
+impl<'a, REG> UCSSEL_W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
     #[doc = "USCI 0 Clock Source: 0"]
     #[inline(always)]
-    pub fn ucssel_0(self) -> &'a mut W {
+    pub fn ucssel_0(self) -> &'a mut crate::W<REG> {
         self.variant(UCSSEL_A::UCSSEL_0)
     }
     #[doc = "USCI 0 Clock Source: 1"]
     #[inline(always)]
-    pub fn ucssel_1(self) -> &'a mut W {
+    pub fn ucssel_1(self) -> &'a mut crate::W<REG> {
         self.variant(UCSSEL_A::UCSSEL_1)
     }
     #[doc = "USCI 0 Clock Source: 2"]
     #[inline(always)]
-    pub fn ucssel_2(self) -> &'a mut W {
+    pub fn ucssel_2(self) -> &'a mut crate::W<REG> {
         self.variant(UCSSEL_A::UCSSEL_2)
     }
     #[doc = "USCI 0 Clock Source: 3"]
     #[inline(always)]
-    pub fn ucssel_3(self) -> &'a mut W {
+    pub fn ucssel_3(self) -> &'a mut crate::W<REG> {
         self.variant(UCSSEL_A::UCSSEL_3)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 6)) | ((value as u8 & 0x03) << 6);
-        self.w
     }
 }
 impl R {
     #[doc = "Bit 0 - USCI Software Reset"]
     #[inline(always)]
     pub fn ucswrst(&self) -> UCSWRST_R {
-        UCSWRST_R::new((self.bits & 0x01) != 0)
+        UCSWRST_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bits 6:7 - USCI 1 Clock Source Select 1"]
     #[inline(always)]
     pub fn ucssel(&self) -> UCSSEL_R {
-        UCSSEL_R::new(((self.bits >> 6) & 0x03) as u8)
+        UCSSEL_R::new((self.bits >> 6) & 3)
     }
 }
 impl W {
     #[doc = "Bit 0 - USCI Software Reset"]
     #[inline(always)]
-    pub fn ucswrst(&mut self) -> UCSWRST_W {
-        UCSWRST_W { w: self }
+    #[must_use]
+    pub fn ucswrst(&mut self) -> UCSWRST_W<UCB0CTL1_SPI_SPEC> {
+        UCSWRST_W::new(self, 0)
     }
     #[doc = "Bits 6:7 - USCI 1 Clock Source Select 1"]
     #[inline(always)]
-    pub fn ucssel(&mut self) -> UCSSEL_W {
-        UCSSEL_W { w: self }
+    #[must_use]
+    pub fn ucssel(&mut self) -> UCSSEL_W<UCB0CTL1_SPI_SPEC> {
+        UCSSEL_W::new(self, 6)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u8) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "USCI B0 Control Register 1\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ucb0ctl1_spi](index.html) module"]
+#[doc = "USCI B0 Control Register 1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ucb0ctl1_spi::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ucb0ctl1_spi::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct UCB0CTL1_SPI_SPEC;
 impl crate::RegisterSpec for UCB0CTL1_SPI_SPEC {
     type Ux = u8;
 }
-#[doc = "`read()` method returns [ucb0ctl1_spi::R](R) reader structure"]
-impl crate::Readable for UCB0CTL1_SPI_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [ucb0ctl1_spi::W](W) writer structure"]
+#[doc = "`read()` method returns [`ucb0ctl1_spi::R`](R) reader structure"]
+impl crate::Readable for UCB0CTL1_SPI_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`ucb0ctl1_spi::W`](W) writer structure"]
 impl crate::Writable for UCB0CTL1_SPI_SPEC {
-    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets UCB0CTL1_SPI to value 0"]
 impl crate::Resettable for UCB0CTL1_SPI_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

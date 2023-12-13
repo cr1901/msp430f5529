@@ -1,7 +1,12 @@
-<?xml version="1.0"?>
-<device>
+<?xml version="1.0" encoding="UTF-8"?>
+<device schemaVersion="1.1" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+  <vendor>msp430gen</vendor>
   <name>MSP430F5529</name>
-  <size>2</size>
+  <version>v0.4.0-8-gde1e0b2</version>
+  <description></description>
+  <addressUnitBits>8</addressUnitBits>
+  <width>16</width>
+  <size>16</size>
   <access>read-write</access>
   <resetValue>0</resetValue>
   <peripherals>
@@ -15431,55 +15436,6 @@
           <resetMask>65535</resetMask>
           <fields>
             <field>
-              <name>WDTIS</name>
-              <description>WDT - Timer Interval Select 0</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-write</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>WDTIS_0</name>
-                  <description>WDT - Timer Interval Select: /2G</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>WDTIS_1</name>
-                  <description>WDT - Timer Interval Select: /128M</description>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>WDTIS_2</name>
-                  <description>WDT - Timer Interval Select: /8192k</description>
-                  <value>2</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>WDTIS_3</name>
-                  <description>WDT - Timer Interval Select: /512k</description>
-                  <value>3</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>WDTIS_4</name>
-                  <description>WDT - Timer Interval Select: /32k</description>
-                  <value>4</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>WDTIS_5</name>
-                  <description>WDT - Timer Interval Select: /8192</description>
-                  <value>5</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>WDTIS_6</name>
-                  <description>WDT - Timer Interval Select: /512</description>
-                  <value>6</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>WDTIS_7</name>
-                  <description>WDT - Timer Interval Select: /64</description>
-                  <value>7</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
               <name>WDTCNTCL</name>
               <description>WDT - Timer Clear</description>
               <bitOffset>3</bitOffset>
@@ -15528,6 +15484,42 @@
               <bitOffset>7</bitOffset>
               <bitWidth>1</bitWidth>
               <access>read-write</access>
+            </field>
+            <field>
+              <name>WDTPW</name>
+              <description>Watchdog Timer Password</description>
+              <bitOffset>8</bitOffset>
+              <bitWidth>8</bitWidth>
+              <enumeratedValues>
+                <name>WDTPWR</name>
+                <usage>read</usage>
+                <enumeratedValue>
+                  <name>PASSWORD</name>
+                  <description>Value always read from the Watchdog Password register</description>
+                  <value>105</value>
+                </enumeratedValue>
+              </enumeratedValues>
+              <enumeratedValues>
+                <name>WDTPWW</name>
+                <usage>write</usage>
+                <enumeratedValue>
+                  <name>PASSWORD</name>
+                  <description>Value which must be written to the Watchdog Password register</description>
+                  <value>90</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+            <field>
+              <name>WDTIS</name>
+              <description>WDT - Timer Interval Select 0</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>3</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>3</maximum>
+                </range>
+              </writeConstraint>
             </field>
           </fields>
         </register>
@@ -23695,10 +23687,4 @@
       </interrupt>
     </peripheral>
   </peripherals>
-  <vendorExtensions>
-    <msp430_svd>
-      <version>0.2.0</version>
-      <commit_hash>31091a0</commit_hash>
-    </msp430_svd>
-  </vendorExtensions>
 </device>

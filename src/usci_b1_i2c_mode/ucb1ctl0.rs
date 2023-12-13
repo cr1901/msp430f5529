@@ -1,78 +1,15 @@
 #[doc = "Register `UCB1CTL0` reader"]
-pub struct R(crate::R<UCB1CTL0_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<UCB1CTL0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<UCB1CTL0_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<UCB1CTL0_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<UCB1CTL0_SPEC>;
 #[doc = "Register `UCB1CTL0` writer"]
-pub struct W(crate::W<UCB1CTL0_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<UCB1CTL0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<UCB1CTL0_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<UCB1CTL0_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<UCB1CTL0_SPEC>;
 #[doc = "Field `UCSYNC` reader - Sync-Mode 0:UART-Mode / 1:SPI-Mode"]
-pub struct UCSYNC_R(crate::FieldReader<bool, bool>);
-impl UCSYNC_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        UCSYNC_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for UCSYNC_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type UCSYNC_R = crate::BitReader;
 #[doc = "Field `UCSYNC` writer - Sync-Mode 0:UART-Mode / 1:SPI-Mode"]
-pub struct UCSYNC_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> UCSYNC_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u8 & 0x01);
-        self.w
-    }
-}
+pub type UCSYNC_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `UCMODE` reader - Sync. Mode: USCI Mode 1"]
+pub type UCMODE_R = crate::FieldReader<UCMODE_A>;
 #[doc = "Sync. Mode: USCI Mode 1\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum UCMODE_A {
     #[doc = "0: Sync. Mode: USCI Mode: 0"]
@@ -90,16 +27,13 @@ impl From<UCMODE_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `UCMODE` reader - Sync. Mode: USCI Mode 1"]
-pub struct UCMODE_R(crate::FieldReader<u8, UCMODE_A>);
+impl crate::FieldSpec for UCMODE_A {
+    type Ux = u8;
+}
 impl UCMODE_R {
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        UCMODE_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
-    #[inline(always)]
-    pub fn variant(&self) -> UCMODE_A {
+    pub const fn variant(&self) -> UCMODE_A {
         match self.bits {
             0 => UCMODE_A::UCMODE_0,
             1 => UCMODE_A::UCMODE_1,
@@ -108,306 +42,164 @@ impl UCMODE_R {
             _ => unreachable!(),
         }
     }
-    #[doc = "Checks if the value of the field is `UCMODE_0`"]
+    #[doc = "Sync. Mode: USCI Mode: 0"]
     #[inline(always)]
     pub fn is_ucmode_0(&self) -> bool {
-        **self == UCMODE_A::UCMODE_0
+        *self == UCMODE_A::UCMODE_0
     }
-    #[doc = "Checks if the value of the field is `UCMODE_1`"]
+    #[doc = "Sync. Mode: USCI Mode: 1"]
     #[inline(always)]
     pub fn is_ucmode_1(&self) -> bool {
-        **self == UCMODE_A::UCMODE_1
+        *self == UCMODE_A::UCMODE_1
     }
-    #[doc = "Checks if the value of the field is `UCMODE_2`"]
+    #[doc = "Sync. Mode: USCI Mode: 2"]
     #[inline(always)]
     pub fn is_ucmode_2(&self) -> bool {
-        **self == UCMODE_A::UCMODE_2
+        *self == UCMODE_A::UCMODE_2
     }
-    #[doc = "Checks if the value of the field is `UCMODE_3`"]
+    #[doc = "Sync. Mode: USCI Mode: 3"]
     #[inline(always)]
     pub fn is_ucmode_3(&self) -> bool {
-        **self == UCMODE_A::UCMODE_3
-    }
-}
-impl core::ops::Deref for UCMODE_R {
-    type Target = crate::FieldReader<u8, UCMODE_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == UCMODE_A::UCMODE_3
     }
 }
 #[doc = "Field `UCMODE` writer - Sync. Mode: USCI Mode 1"]
-pub struct UCMODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> UCMODE_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: UCMODE_A) -> &'a mut W {
-        self.bits(variant.into())
-    }
+pub type UCMODE_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, UCMODE_A>;
+impl<'a, REG> UCMODE_W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
     #[doc = "Sync. Mode: USCI Mode: 0"]
     #[inline(always)]
-    pub fn ucmode_0(self) -> &'a mut W {
+    pub fn ucmode_0(self) -> &'a mut crate::W<REG> {
         self.variant(UCMODE_A::UCMODE_0)
     }
     #[doc = "Sync. Mode: USCI Mode: 1"]
     #[inline(always)]
-    pub fn ucmode_1(self) -> &'a mut W {
+    pub fn ucmode_1(self) -> &'a mut crate::W<REG> {
         self.variant(UCMODE_A::UCMODE_1)
     }
     #[doc = "Sync. Mode: USCI Mode: 2"]
     #[inline(always)]
-    pub fn ucmode_2(self) -> &'a mut W {
+    pub fn ucmode_2(self) -> &'a mut crate::W<REG> {
         self.variant(UCMODE_A::UCMODE_2)
     }
     #[doc = "Sync. Mode: USCI Mode: 3"]
     #[inline(always)]
-    pub fn ucmode_3(self) -> &'a mut W {
+    pub fn ucmode_3(self) -> &'a mut crate::W<REG> {
         self.variant(UCMODE_A::UCMODE_3)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 1)) | ((value as u8 & 0x03) << 1);
-        self.w
     }
 }
 #[doc = "Field `UCMST` reader - Sync. Mode: Master Select"]
-pub struct UCMST_R(crate::FieldReader<bool, bool>);
-impl UCMST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        UCMST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for UCMST_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type UCMST_R = crate::BitReader;
 #[doc = "Field `UCMST` writer - Sync. Mode: Master Select"]
-pub struct UCMST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> UCMST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u8 & 0x01) << 3);
-        self.w
-    }
-}
+pub type UCMST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `UCMM` reader - Multi-Master Environment"]
-pub struct UCMM_R(crate::FieldReader<bool, bool>);
-impl UCMM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        UCMM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for UCMM_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type UCMM_R = crate::BitReader;
 #[doc = "Field `UCMM` writer - Multi-Master Environment"]
-pub struct UCMM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> UCMM_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u8 & 0x01) << 5);
-        self.w
-    }
-}
+pub type UCMM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `UCSLA10` reader - 10-bit Slave Address Mode"]
-pub struct UCSLA10_R(crate::FieldReader<bool, bool>);
-impl UCSLA10_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        UCSLA10_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for UCSLA10_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type UCSLA10_R = crate::BitReader;
 #[doc = "Field `UCSLA10` writer - 10-bit Slave Address Mode"]
-pub struct UCSLA10_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> UCSLA10_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u8 & 0x01) << 6);
-        self.w
-    }
-}
+pub type UCSLA10_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `UCA10` reader - 10-bit Address Mode"]
-pub struct UCA10_R(crate::FieldReader<bool, bool>);
-impl UCA10_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        UCA10_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for UCA10_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type UCA10_R = crate::BitReader;
 #[doc = "Field `UCA10` writer - 10-bit Address Mode"]
-pub struct UCA10_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> UCA10_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u8 & 0x01) << 7);
-        self.w
-    }
-}
+pub type UCA10_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Sync-Mode 0:UART-Mode / 1:SPI-Mode"]
     #[inline(always)]
     pub fn ucsync(&self) -> UCSYNC_R {
-        UCSYNC_R::new((self.bits & 0x01) != 0)
+        UCSYNC_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bits 1:2 - Sync. Mode: USCI Mode 1"]
     #[inline(always)]
     pub fn ucmode(&self) -> UCMODE_R {
-        UCMODE_R::new(((self.bits >> 1) & 0x03) as u8)
+        UCMODE_R::new((self.bits >> 1) & 3)
     }
     #[doc = "Bit 3 - Sync. Mode: Master Select"]
     #[inline(always)]
     pub fn ucmst(&self) -> UCMST_R {
-        UCMST_R::new(((self.bits >> 3) & 0x01) != 0)
+        UCMST_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 5 - Multi-Master Environment"]
     #[inline(always)]
     pub fn ucmm(&self) -> UCMM_R {
-        UCMM_R::new(((self.bits >> 5) & 0x01) != 0)
+        UCMM_R::new(((self.bits >> 5) & 1) != 0)
     }
     #[doc = "Bit 6 - 10-bit Slave Address Mode"]
     #[inline(always)]
     pub fn ucsla10(&self) -> UCSLA10_R {
-        UCSLA10_R::new(((self.bits >> 6) & 0x01) != 0)
+        UCSLA10_R::new(((self.bits >> 6) & 1) != 0)
     }
     #[doc = "Bit 7 - 10-bit Address Mode"]
     #[inline(always)]
     pub fn uca10(&self) -> UCA10_R {
-        UCA10_R::new(((self.bits >> 7) & 0x01) != 0)
+        UCA10_R::new(((self.bits >> 7) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - Sync-Mode 0:UART-Mode / 1:SPI-Mode"]
     #[inline(always)]
-    pub fn ucsync(&mut self) -> UCSYNC_W {
-        UCSYNC_W { w: self }
+    #[must_use]
+    pub fn ucsync(&mut self) -> UCSYNC_W<UCB1CTL0_SPEC> {
+        UCSYNC_W::new(self, 0)
     }
     #[doc = "Bits 1:2 - Sync. Mode: USCI Mode 1"]
     #[inline(always)]
-    pub fn ucmode(&mut self) -> UCMODE_W {
-        UCMODE_W { w: self }
+    #[must_use]
+    pub fn ucmode(&mut self) -> UCMODE_W<UCB1CTL0_SPEC> {
+        UCMODE_W::new(self, 1)
     }
     #[doc = "Bit 3 - Sync. Mode: Master Select"]
     #[inline(always)]
-    pub fn ucmst(&mut self) -> UCMST_W {
-        UCMST_W { w: self }
+    #[must_use]
+    pub fn ucmst(&mut self) -> UCMST_W<UCB1CTL0_SPEC> {
+        UCMST_W::new(self, 3)
     }
     #[doc = "Bit 5 - Multi-Master Environment"]
     #[inline(always)]
-    pub fn ucmm(&mut self) -> UCMM_W {
-        UCMM_W { w: self }
+    #[must_use]
+    pub fn ucmm(&mut self) -> UCMM_W<UCB1CTL0_SPEC> {
+        UCMM_W::new(self, 5)
     }
     #[doc = "Bit 6 - 10-bit Slave Address Mode"]
     #[inline(always)]
-    pub fn ucsla10(&mut self) -> UCSLA10_W {
-        UCSLA10_W { w: self }
+    #[must_use]
+    pub fn ucsla10(&mut self) -> UCSLA10_W<UCB1CTL0_SPEC> {
+        UCSLA10_W::new(self, 6)
     }
     #[doc = "Bit 7 - 10-bit Address Mode"]
     #[inline(always)]
-    pub fn uca10(&mut self) -> UCA10_W {
-        UCA10_W { w: self }
+    #[must_use]
+    pub fn uca10(&mut self) -> UCA10_W<UCB1CTL0_SPEC> {
+        UCA10_W::new(self, 7)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u8) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "USCI B1 Control Register 0\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ucb1ctl0](index.html) module"]
+#[doc = "USCI B1 Control Register 0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ucb1ctl0::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ucb1ctl0::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct UCB1CTL0_SPEC;
 impl crate::RegisterSpec for UCB1CTL0_SPEC {
     type Ux = u8;
 }
-#[doc = "`read()` method returns [ucb1ctl0::R](R) reader structure"]
-impl crate::Readable for UCB1CTL0_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [ucb1ctl0::W](W) writer structure"]
+#[doc = "`read()` method returns [`ucb1ctl0::R`](R) reader structure"]
+impl crate::Readable for UCB1CTL0_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`ucb1ctl0::W`](W) writer structure"]
 impl crate::Writable for UCB1CTL0_SPEC {
-    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets UCB1CTL0 to value 0"]
 impl crate::Resettable for UCB1CTL0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

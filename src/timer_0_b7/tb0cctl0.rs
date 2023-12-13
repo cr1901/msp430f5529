@@ -1,226 +1,31 @@
 #[doc = "Register `TB0CCTL0` reader"]
-pub struct R(crate::R<TB0CCTL0_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<TB0CCTL0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<TB0CCTL0_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<TB0CCTL0_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<TB0CCTL0_SPEC>;
 #[doc = "Register `TB0CCTL0` writer"]
-pub struct W(crate::W<TB0CCTL0_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<TB0CCTL0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<TB0CCTL0_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<TB0CCTL0_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<TB0CCTL0_SPEC>;
 #[doc = "Field `CCIFG` reader - Capture/compare interrupt flag"]
-pub struct CCIFG_R(crate::FieldReader<bool, bool>);
-impl CCIFG_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CCIFG_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CCIFG_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CCIFG_R = crate::BitReader;
 #[doc = "Field `CCIFG` writer - Capture/compare interrupt flag"]
-pub struct CCIFG_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CCIFG_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u16 & 0x01);
-        self.w
-    }
-}
+pub type CCIFG_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `COV` reader - Capture/compare overflow flag"]
-pub struct COV_R(crate::FieldReader<bool, bool>);
-impl COV_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        COV_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for COV_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type COV_R = crate::BitReader;
 #[doc = "Field `COV` writer - Capture/compare overflow flag"]
-pub struct COV_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> COV_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u16 & 0x01) << 1);
-        self.w
-    }
-}
+pub type COV_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OUT` reader - PWM Output signal if output mode 0"]
-pub struct OUT_R(crate::FieldReader<bool, bool>);
-impl OUT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OUT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OUT_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type OUT_R = crate::BitReader;
 #[doc = "Field `OUT` writer - PWM Output signal if output mode 0"]
-pub struct OUT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OUT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u16 & 0x01) << 2);
-        self.w
-    }
-}
+pub type OUT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CCI` reader - Capture input signal (read)"]
-pub struct CCI_R(crate::FieldReader<bool, bool>);
-impl CCI_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CCI_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CCI_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CCI_R = crate::BitReader;
 #[doc = "Field `CCI` writer - Capture input signal (read)"]
-pub struct CCI_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CCI_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u16 & 0x01) << 3);
-        self.w
-    }
-}
+pub type CCI_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CCIE` reader - Capture/compare interrupt enable"]
-pub struct CCIE_R(crate::FieldReader<bool, bool>);
-impl CCIE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CCIE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CCIE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CCIE_R = crate::BitReader;
 #[doc = "Field `CCIE` writer - Capture/compare interrupt enable"]
-pub struct CCIE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CCIE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u16 & 0x01) << 4);
-        self.w
-    }
-}
+pub type CCIE_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `OUTMOD` reader - Output mode 2"]
+pub type OUTMOD_R = crate::FieldReader<OUTMOD_A>;
 #[doc = "Output mode 2\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum OUTMOD_A {
     #[doc = "0: PWM output mode: 0 - output only"]
@@ -246,16 +51,13 @@ impl From<OUTMOD_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `OUTMOD` reader - Output mode 2"]
-pub struct OUTMOD_R(crate::FieldReader<u8, OUTMOD_A>);
+impl crate::FieldSpec for OUTMOD_A {
+    type Ux = u8;
+}
 impl OUTMOD_R {
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        OUTMOD_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
-    #[inline(always)]
-    pub fn variant(&self) -> OUTMOD_A {
+    pub const fn variant(&self) -> OUTMOD_A {
         match self.bits {
             0 => OUTMOD_A::OUTMOD_0,
             1 => OUTMOD_A::OUTMOD_1,
@@ -268,150 +70,103 @@ impl OUTMOD_R {
             _ => unreachable!(),
         }
     }
-    #[doc = "Checks if the value of the field is `OUTMOD_0`"]
+    #[doc = "PWM output mode: 0 - output only"]
     #[inline(always)]
     pub fn is_outmod_0(&self) -> bool {
-        **self == OUTMOD_A::OUTMOD_0
+        *self == OUTMOD_A::OUTMOD_0
     }
-    #[doc = "Checks if the value of the field is `OUTMOD_1`"]
+    #[doc = "PWM output mode: 1 - set"]
     #[inline(always)]
     pub fn is_outmod_1(&self) -> bool {
-        **self == OUTMOD_A::OUTMOD_1
+        *self == OUTMOD_A::OUTMOD_1
     }
-    #[doc = "Checks if the value of the field is `OUTMOD_2`"]
+    #[doc = "PWM output mode: 2 - PWM toggle/reset"]
     #[inline(always)]
     pub fn is_outmod_2(&self) -> bool {
-        **self == OUTMOD_A::OUTMOD_2
+        *self == OUTMOD_A::OUTMOD_2
     }
-    #[doc = "Checks if the value of the field is `OUTMOD_3`"]
+    #[doc = "PWM output mode: 3 - PWM set/reset"]
     #[inline(always)]
     pub fn is_outmod_3(&self) -> bool {
-        **self == OUTMOD_A::OUTMOD_3
+        *self == OUTMOD_A::OUTMOD_3
     }
-    #[doc = "Checks if the value of the field is `OUTMOD_4`"]
+    #[doc = "PWM output mode: 4 - toggle"]
     #[inline(always)]
     pub fn is_outmod_4(&self) -> bool {
-        **self == OUTMOD_A::OUTMOD_4
+        *self == OUTMOD_A::OUTMOD_4
     }
-    #[doc = "Checks if the value of the field is `OUTMOD_5`"]
+    #[doc = "PWM output mode: 5 - Reset"]
     #[inline(always)]
     pub fn is_outmod_5(&self) -> bool {
-        **self == OUTMOD_A::OUTMOD_5
+        *self == OUTMOD_A::OUTMOD_5
     }
-    #[doc = "Checks if the value of the field is `OUTMOD_6`"]
+    #[doc = "PWM output mode: 6 - PWM toggle/set"]
     #[inline(always)]
     pub fn is_outmod_6(&self) -> bool {
-        **self == OUTMOD_A::OUTMOD_6
+        *self == OUTMOD_A::OUTMOD_6
     }
-    #[doc = "Checks if the value of the field is `OUTMOD_7`"]
+    #[doc = "PWM output mode: 7 - PWM reset/set"]
     #[inline(always)]
     pub fn is_outmod_7(&self) -> bool {
-        **self == OUTMOD_A::OUTMOD_7
-    }
-}
-impl core::ops::Deref for OUTMOD_R {
-    type Target = crate::FieldReader<u8, OUTMOD_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == OUTMOD_A::OUTMOD_7
     }
 }
 #[doc = "Field `OUTMOD` writer - Output mode 2"]
-pub struct OUTMOD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OUTMOD_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: OUTMOD_A) -> &'a mut W {
-        self.bits(variant.into())
-    }
+pub type OUTMOD_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 3, OUTMOD_A>;
+impl<'a, REG> OUTMOD_W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
     #[doc = "PWM output mode: 0 - output only"]
     #[inline(always)]
-    pub fn outmod_0(self) -> &'a mut W {
+    pub fn outmod_0(self) -> &'a mut crate::W<REG> {
         self.variant(OUTMOD_A::OUTMOD_0)
     }
     #[doc = "PWM output mode: 1 - set"]
     #[inline(always)]
-    pub fn outmod_1(self) -> &'a mut W {
+    pub fn outmod_1(self) -> &'a mut crate::W<REG> {
         self.variant(OUTMOD_A::OUTMOD_1)
     }
     #[doc = "PWM output mode: 2 - PWM toggle/reset"]
     #[inline(always)]
-    pub fn outmod_2(self) -> &'a mut W {
+    pub fn outmod_2(self) -> &'a mut crate::W<REG> {
         self.variant(OUTMOD_A::OUTMOD_2)
     }
     #[doc = "PWM output mode: 3 - PWM set/reset"]
     #[inline(always)]
-    pub fn outmod_3(self) -> &'a mut W {
+    pub fn outmod_3(self) -> &'a mut crate::W<REG> {
         self.variant(OUTMOD_A::OUTMOD_3)
     }
     #[doc = "PWM output mode: 4 - toggle"]
     #[inline(always)]
-    pub fn outmod_4(self) -> &'a mut W {
+    pub fn outmod_4(self) -> &'a mut crate::W<REG> {
         self.variant(OUTMOD_A::OUTMOD_4)
     }
     #[doc = "PWM output mode: 5 - Reset"]
     #[inline(always)]
-    pub fn outmod_5(self) -> &'a mut W {
+    pub fn outmod_5(self) -> &'a mut crate::W<REG> {
         self.variant(OUTMOD_A::OUTMOD_5)
     }
     #[doc = "PWM output mode: 6 - PWM toggle/set"]
     #[inline(always)]
-    pub fn outmod_6(self) -> &'a mut W {
+    pub fn outmod_6(self) -> &'a mut crate::W<REG> {
         self.variant(OUTMOD_A::OUTMOD_6)
     }
     #[doc = "PWM output mode: 7 - PWM reset/set"]
     #[inline(always)]
-    pub fn outmod_7(self) -> &'a mut W {
+    pub fn outmod_7(self) -> &'a mut crate::W<REG> {
         self.variant(OUTMOD_A::OUTMOD_7)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 5)) | ((value as u16 & 0x07) << 5);
-        self.w
     }
 }
 #[doc = "Field `CAP` reader - Capture mode: 1 /Compare mode : 0"]
-pub struct CAP_R(crate::FieldReader<bool, bool>);
-impl CAP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CAP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CAP_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CAP_R = crate::BitReader;
 #[doc = "Field `CAP` writer - Capture mode: 1 /Compare mode : 0"]
-pub struct CAP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CAP_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u16 & 0x01) << 8);
-        self.w
-    }
-}
+pub type CAP_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CLLD` reader - Compare latch load source 1"]
+pub type CLLD_R = crate::FieldReader<CLLD_A>;
 #[doc = "Compare latch load source 1\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum CLLD_A {
     #[doc = "0: Compare latch load sourec : 0 - immediate"]
@@ -429,16 +184,13 @@ impl From<CLLD_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `CLLD` reader - Compare latch load source 1"]
-pub struct CLLD_R(crate::FieldReader<u8, CLLD_A>);
+impl crate::FieldSpec for CLLD_A {
+    type Ux = u8;
+}
 impl CLLD_R {
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CLLD_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
-    #[inline(always)]
-    pub fn variant(&self) -> CLLD_A {
+    pub const fn variant(&self) -> CLLD_A {
         match self.bits {
             0 => CLLD_A::CLLD_0,
             1 => CLLD_A::CLLD_1,
@@ -447,110 +199,63 @@ impl CLLD_R {
             _ => unreachable!(),
         }
     }
-    #[doc = "Checks if the value of the field is `CLLD_0`"]
+    #[doc = "Compare latch load sourec : 0 - immediate"]
     #[inline(always)]
     pub fn is_clld_0(&self) -> bool {
-        **self == CLLD_A::CLLD_0
+        *self == CLLD_A::CLLD_0
     }
-    #[doc = "Checks if the value of the field is `CLLD_1`"]
+    #[doc = "Compare latch load sourec : 1 - TBR counts to 0"]
     #[inline(always)]
     pub fn is_clld_1(&self) -> bool {
-        **self == CLLD_A::CLLD_1
+        *self == CLLD_A::CLLD_1
     }
-    #[doc = "Checks if the value of the field is `CLLD_2`"]
+    #[doc = "Compare latch load sourec : 2 - up/down"]
     #[inline(always)]
     pub fn is_clld_2(&self) -> bool {
-        **self == CLLD_A::CLLD_2
+        *self == CLLD_A::CLLD_2
     }
-    #[doc = "Checks if the value of the field is `CLLD_3`"]
+    #[doc = "Compare latch load sourec : 3 - TBR counts to TBCTL0"]
     #[inline(always)]
     pub fn is_clld_3(&self) -> bool {
-        **self == CLLD_A::CLLD_3
-    }
-}
-impl core::ops::Deref for CLLD_R {
-    type Target = crate::FieldReader<u8, CLLD_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == CLLD_A::CLLD_3
     }
 }
 #[doc = "Field `CLLD` writer - Compare latch load source 1"]
-pub struct CLLD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CLLD_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: CLLD_A) -> &'a mut W {
-        self.bits(variant.into())
-    }
+pub type CLLD_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, CLLD_A>;
+impl<'a, REG> CLLD_W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
     #[doc = "Compare latch load sourec : 0 - immediate"]
     #[inline(always)]
-    pub fn clld_0(self) -> &'a mut W {
+    pub fn clld_0(self) -> &'a mut crate::W<REG> {
         self.variant(CLLD_A::CLLD_0)
     }
     #[doc = "Compare latch load sourec : 1 - TBR counts to 0"]
     #[inline(always)]
-    pub fn clld_1(self) -> &'a mut W {
+    pub fn clld_1(self) -> &'a mut crate::W<REG> {
         self.variant(CLLD_A::CLLD_1)
     }
     #[doc = "Compare latch load sourec : 2 - up/down"]
     #[inline(always)]
-    pub fn clld_2(self) -> &'a mut W {
+    pub fn clld_2(self) -> &'a mut crate::W<REG> {
         self.variant(CLLD_A::CLLD_2)
     }
     #[doc = "Compare latch load sourec : 3 - TBR counts to TBCTL0"]
     #[inline(always)]
-    pub fn clld_3(self) -> &'a mut W {
+    pub fn clld_3(self) -> &'a mut crate::W<REG> {
         self.variant(CLLD_A::CLLD_3)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 9)) | ((value as u16 & 0x03) << 9);
-        self.w
     }
 }
 #[doc = "Field `SCS` reader - Capture sychronize"]
-pub struct SCS_R(crate::FieldReader<bool, bool>);
-impl SCS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SCS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SCS_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SCS_R = crate::BitReader;
 #[doc = "Field `SCS` writer - Capture sychronize"]
-pub struct SCS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SCS_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u16 & 0x01) << 11);
-        self.w
-    }
-}
+pub type SCS_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `CCIS` reader - Capture input select 1"]
+pub type CCIS_R = crate::FieldReader<CCIS_A>;
 #[doc = "Capture input select 1\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum CCIS_A {
     #[doc = "0: Capture input select: 0 - CCIxA"]
@@ -568,16 +273,13 @@ impl From<CCIS_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `CCIS` reader - Capture input select 1"]
-pub struct CCIS_R(crate::FieldReader<u8, CCIS_A>);
+impl crate::FieldSpec for CCIS_A {
+    type Ux = u8;
+}
 impl CCIS_R {
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CCIS_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
-    #[inline(always)]
-    pub fn variant(&self) -> CCIS_A {
+    pub const fn variant(&self) -> CCIS_A {
         match self.bits {
             0 => CCIS_A::CCIS_0,
             1 => CCIS_A::CCIS_1,
@@ -586,73 +288,59 @@ impl CCIS_R {
             _ => unreachable!(),
         }
     }
-    #[doc = "Checks if the value of the field is `CCIS_0`"]
+    #[doc = "Capture input select: 0 - CCIxA"]
     #[inline(always)]
     pub fn is_ccis_0(&self) -> bool {
-        **self == CCIS_A::CCIS_0
+        *self == CCIS_A::CCIS_0
     }
-    #[doc = "Checks if the value of the field is `CCIS_1`"]
+    #[doc = "Capture input select: 1 - CCIxB"]
     #[inline(always)]
     pub fn is_ccis_1(&self) -> bool {
-        **self == CCIS_A::CCIS_1
+        *self == CCIS_A::CCIS_1
     }
-    #[doc = "Checks if the value of the field is `CCIS_2`"]
+    #[doc = "Capture input select: 2 - GND"]
     #[inline(always)]
     pub fn is_ccis_2(&self) -> bool {
-        **self == CCIS_A::CCIS_2
+        *self == CCIS_A::CCIS_2
     }
-    #[doc = "Checks if the value of the field is `CCIS_3`"]
+    #[doc = "Capture input select: 3 - Vcc"]
     #[inline(always)]
     pub fn is_ccis_3(&self) -> bool {
-        **self == CCIS_A::CCIS_3
-    }
-}
-impl core::ops::Deref for CCIS_R {
-    type Target = crate::FieldReader<u8, CCIS_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == CCIS_A::CCIS_3
     }
 }
 #[doc = "Field `CCIS` writer - Capture input select 1"]
-pub struct CCIS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CCIS_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: CCIS_A) -> &'a mut W {
-        self.bits(variant.into())
-    }
+pub type CCIS_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, CCIS_A>;
+impl<'a, REG> CCIS_W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
     #[doc = "Capture input select: 0 - CCIxA"]
     #[inline(always)]
-    pub fn ccis_0(self) -> &'a mut W {
+    pub fn ccis_0(self) -> &'a mut crate::W<REG> {
         self.variant(CCIS_A::CCIS_0)
     }
     #[doc = "Capture input select: 1 - CCIxB"]
     #[inline(always)]
-    pub fn ccis_1(self) -> &'a mut W {
+    pub fn ccis_1(self) -> &'a mut crate::W<REG> {
         self.variant(CCIS_A::CCIS_1)
     }
     #[doc = "Capture input select: 2 - GND"]
     #[inline(always)]
-    pub fn ccis_2(self) -> &'a mut W {
+    pub fn ccis_2(self) -> &'a mut crate::W<REG> {
         self.variant(CCIS_A::CCIS_2)
     }
     #[doc = "Capture input select: 3 - Vcc"]
     #[inline(always)]
-    pub fn ccis_3(self) -> &'a mut W {
+    pub fn ccis_3(self) -> &'a mut crate::W<REG> {
         self.variant(CCIS_A::CCIS_3)
     }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 12)) | ((value as u16 & 0x03) << 12);
-        self.w
-    }
 }
+#[doc = "Field `CM` reader - Capture mode 1"]
+pub type CM_R = crate::FieldReader<CM_A>;
 #[doc = "Capture mode 1\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum CM_A {
     #[doc = "0: Capture mode: 0 - disabled"]
@@ -670,16 +358,13 @@ impl From<CM_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `CM` reader - Capture mode 1"]
-pub struct CM_R(crate::FieldReader<u8, CM_A>);
+impl crate::FieldSpec for CM_A {
+    type Ux = u8;
+}
 impl CM_R {
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CM_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
-    #[inline(always)]
-    pub fn variant(&self) -> CM_A {
+    pub const fn variant(&self) -> CM_A {
         match self.bits {
             0 => CM_A::CM_0,
             1 => CM_A::CM_1,
@@ -688,208 +373,203 @@ impl CM_R {
             _ => unreachable!(),
         }
     }
-    #[doc = "Checks if the value of the field is `CM_0`"]
+    #[doc = "Capture mode: 0 - disabled"]
     #[inline(always)]
     pub fn is_cm_0(&self) -> bool {
-        **self == CM_A::CM_0
+        *self == CM_A::CM_0
     }
-    #[doc = "Checks if the value of the field is `CM_1`"]
+    #[doc = "Capture mode: 1 - pos. edge"]
     #[inline(always)]
     pub fn is_cm_1(&self) -> bool {
-        **self == CM_A::CM_1
+        *self == CM_A::CM_1
     }
-    #[doc = "Checks if the value of the field is `CM_2`"]
+    #[doc = "Capture mode: 1 - neg. edge"]
     #[inline(always)]
     pub fn is_cm_2(&self) -> bool {
-        **self == CM_A::CM_2
+        *self == CM_A::CM_2
     }
-    #[doc = "Checks if the value of the field is `CM_3`"]
+    #[doc = "Capture mode: 1 - both edges"]
     #[inline(always)]
     pub fn is_cm_3(&self) -> bool {
-        **self == CM_A::CM_3
-    }
-}
-impl core::ops::Deref for CM_R {
-    type Target = crate::FieldReader<u8, CM_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == CM_A::CM_3
     }
 }
 #[doc = "Field `CM` writer - Capture mode 1"]
-pub struct CM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CM_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: CM_A) -> &'a mut W {
-        self.bits(variant.into())
-    }
+pub type CM_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, CM_A>;
+impl<'a, REG> CM_W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
     #[doc = "Capture mode: 0 - disabled"]
     #[inline(always)]
-    pub fn cm_0(self) -> &'a mut W {
+    pub fn cm_0(self) -> &'a mut crate::W<REG> {
         self.variant(CM_A::CM_0)
     }
     #[doc = "Capture mode: 1 - pos. edge"]
     #[inline(always)]
-    pub fn cm_1(self) -> &'a mut W {
+    pub fn cm_1(self) -> &'a mut crate::W<REG> {
         self.variant(CM_A::CM_1)
     }
     #[doc = "Capture mode: 1 - neg. edge"]
     #[inline(always)]
-    pub fn cm_2(self) -> &'a mut W {
+    pub fn cm_2(self) -> &'a mut crate::W<REG> {
         self.variant(CM_A::CM_2)
     }
     #[doc = "Capture mode: 1 - both edges"]
     #[inline(always)]
-    pub fn cm_3(self) -> &'a mut W {
+    pub fn cm_3(self) -> &'a mut crate::W<REG> {
         self.variant(CM_A::CM_3)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 14)) | ((value as u16 & 0x03) << 14);
-        self.w
     }
 }
 impl R {
     #[doc = "Bit 0 - Capture/compare interrupt flag"]
     #[inline(always)]
     pub fn ccifg(&self) -> CCIFG_R {
-        CCIFG_R::new((self.bits & 0x01) != 0)
+        CCIFG_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Capture/compare overflow flag"]
     #[inline(always)]
     pub fn cov(&self) -> COV_R {
-        COV_R::new(((self.bits >> 1) & 0x01) != 0)
+        COV_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - PWM Output signal if output mode 0"]
     #[inline(always)]
     pub fn out(&self) -> OUT_R {
-        OUT_R::new(((self.bits >> 2) & 0x01) != 0)
+        OUT_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - Capture input signal (read)"]
     #[inline(always)]
     pub fn cci(&self) -> CCI_R {
-        CCI_R::new(((self.bits >> 3) & 0x01) != 0)
+        CCI_R::new(((self.bits >> 3) & 1) != 0)
     }
     #[doc = "Bit 4 - Capture/compare interrupt enable"]
     #[inline(always)]
     pub fn ccie(&self) -> CCIE_R {
-        CCIE_R::new(((self.bits >> 4) & 0x01) != 0)
+        CCIE_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bits 5:7 - Output mode 2"]
     #[inline(always)]
     pub fn outmod(&self) -> OUTMOD_R {
-        OUTMOD_R::new(((self.bits >> 5) & 0x07) as u8)
+        OUTMOD_R::new(((self.bits >> 5) & 7) as u8)
     }
     #[doc = "Bit 8 - Capture mode: 1 /Compare mode : 0"]
     #[inline(always)]
     pub fn cap(&self) -> CAP_R {
-        CAP_R::new(((self.bits >> 8) & 0x01) != 0)
+        CAP_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bits 9:10 - Compare latch load source 1"]
     #[inline(always)]
     pub fn clld(&self) -> CLLD_R {
-        CLLD_R::new(((self.bits >> 9) & 0x03) as u8)
+        CLLD_R::new(((self.bits >> 9) & 3) as u8)
     }
     #[doc = "Bit 11 - Capture sychronize"]
     #[inline(always)]
     pub fn scs(&self) -> SCS_R {
-        SCS_R::new(((self.bits >> 11) & 0x01) != 0)
+        SCS_R::new(((self.bits >> 11) & 1) != 0)
     }
     #[doc = "Bits 12:13 - Capture input select 1"]
     #[inline(always)]
     pub fn ccis(&self) -> CCIS_R {
-        CCIS_R::new(((self.bits >> 12) & 0x03) as u8)
+        CCIS_R::new(((self.bits >> 12) & 3) as u8)
     }
     #[doc = "Bits 14:15 - Capture mode 1"]
     #[inline(always)]
     pub fn cm(&self) -> CM_R {
-        CM_R::new(((self.bits >> 14) & 0x03) as u8)
+        CM_R::new(((self.bits >> 14) & 3) as u8)
     }
 }
 impl W {
     #[doc = "Bit 0 - Capture/compare interrupt flag"]
     #[inline(always)]
-    pub fn ccifg(&mut self) -> CCIFG_W {
-        CCIFG_W { w: self }
+    #[must_use]
+    pub fn ccifg(&mut self) -> CCIFG_W<TB0CCTL0_SPEC> {
+        CCIFG_W::new(self, 0)
     }
     #[doc = "Bit 1 - Capture/compare overflow flag"]
     #[inline(always)]
-    pub fn cov(&mut self) -> COV_W {
-        COV_W { w: self }
+    #[must_use]
+    pub fn cov(&mut self) -> COV_W<TB0CCTL0_SPEC> {
+        COV_W::new(self, 1)
     }
     #[doc = "Bit 2 - PWM Output signal if output mode 0"]
     #[inline(always)]
-    pub fn out(&mut self) -> OUT_W {
-        OUT_W { w: self }
+    #[must_use]
+    pub fn out(&mut self) -> OUT_W<TB0CCTL0_SPEC> {
+        OUT_W::new(self, 2)
     }
     #[doc = "Bit 3 - Capture input signal (read)"]
     #[inline(always)]
-    pub fn cci(&mut self) -> CCI_W {
-        CCI_W { w: self }
+    #[must_use]
+    pub fn cci(&mut self) -> CCI_W<TB0CCTL0_SPEC> {
+        CCI_W::new(self, 3)
     }
     #[doc = "Bit 4 - Capture/compare interrupt enable"]
     #[inline(always)]
-    pub fn ccie(&mut self) -> CCIE_W {
-        CCIE_W { w: self }
+    #[must_use]
+    pub fn ccie(&mut self) -> CCIE_W<TB0CCTL0_SPEC> {
+        CCIE_W::new(self, 4)
     }
     #[doc = "Bits 5:7 - Output mode 2"]
     #[inline(always)]
-    pub fn outmod(&mut self) -> OUTMOD_W {
-        OUTMOD_W { w: self }
+    #[must_use]
+    pub fn outmod(&mut self) -> OUTMOD_W<TB0CCTL0_SPEC> {
+        OUTMOD_W::new(self, 5)
     }
     #[doc = "Bit 8 - Capture mode: 1 /Compare mode : 0"]
     #[inline(always)]
-    pub fn cap(&mut self) -> CAP_W {
-        CAP_W { w: self }
+    #[must_use]
+    pub fn cap(&mut self) -> CAP_W<TB0CCTL0_SPEC> {
+        CAP_W::new(self, 8)
     }
     #[doc = "Bits 9:10 - Compare latch load source 1"]
     #[inline(always)]
-    pub fn clld(&mut self) -> CLLD_W {
-        CLLD_W { w: self }
+    #[must_use]
+    pub fn clld(&mut self) -> CLLD_W<TB0CCTL0_SPEC> {
+        CLLD_W::new(self, 9)
     }
     #[doc = "Bit 11 - Capture sychronize"]
     #[inline(always)]
-    pub fn scs(&mut self) -> SCS_W {
-        SCS_W { w: self }
+    #[must_use]
+    pub fn scs(&mut self) -> SCS_W<TB0CCTL0_SPEC> {
+        SCS_W::new(self, 11)
     }
     #[doc = "Bits 12:13 - Capture input select 1"]
     #[inline(always)]
-    pub fn ccis(&mut self) -> CCIS_W {
-        CCIS_W { w: self }
+    #[must_use]
+    pub fn ccis(&mut self) -> CCIS_W<TB0CCTL0_SPEC> {
+        CCIS_W::new(self, 12)
     }
     #[doc = "Bits 14:15 - Capture mode 1"]
     #[inline(always)]
-    pub fn cm(&mut self) -> CM_W {
-        CM_W { w: self }
+    #[must_use]
+    pub fn cm(&mut self) -> CM_W<TB0CCTL0_SPEC> {
+        CM_W::new(self, 14)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u16) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "Timer0_B7 Capture/Compare Control 0\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [tb0cctl0](index.html) module"]
+#[doc = "Timer0_B7 Capture/Compare Control 0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`tb0cctl0::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`tb0cctl0::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TB0CCTL0_SPEC;
 impl crate::RegisterSpec for TB0CCTL0_SPEC {
     type Ux = u16;
 }
-#[doc = "`read()` method returns [tb0cctl0::R](R) reader structure"]
-impl crate::Readable for TB0CCTL0_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [tb0cctl0::W](W) writer structure"]
+#[doc = "`read()` method returns [`tb0cctl0::R`](R) reader structure"]
+impl crate::Readable for TB0CCTL0_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`tb0cctl0::W`](W) writer structure"]
 impl crate::Writable for TB0CCTL0_SPEC {
-    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TB0CCTL0 to value 0"]
 impl crate::Resettable for TB0CCTL0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

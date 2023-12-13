@@ -1,41 +1,11 @@
 #[doc = "Register `DMACTL1` reader"]
-pub struct R(crate::R<DMACTL1_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<DMACTL1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<DMACTL1_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<DMACTL1_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<DMACTL1_SPEC>;
 #[doc = "Register `DMACTL1` writer"]
-pub struct W(crate::W<DMACTL1_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<DMACTL1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<DMACTL1_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<DMACTL1_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<DMACTL1_SPEC>;
+#[doc = "Field `DMA2TSEL` reader - DMA channel 2 transfer select bit 0"]
+pub type DMA2TSEL_R = crate::FieldReader<DMA2TSEL_A>;
 #[doc = "DMA channel 2 transfer select bit 0\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum DMA2TSEL_A {
     #[doc = "0: DMA channel 2 transfer select 0: DMA_REQ (sw)"]
@@ -109,16 +79,13 @@ impl From<DMA2TSEL_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `DMA2TSEL` reader - DMA channel 2 transfer select bit 0"]
-pub struct DMA2TSEL_R(crate::FieldReader<u8, DMA2TSEL_A>);
+impl crate::FieldSpec for DMA2TSEL_A {
+    type Ux = u8;
+}
 impl DMA2TSEL_R {
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DMA2TSEL_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
-    #[inline(always)]
-    pub fn variant(&self) -> DMA2TSEL_A {
+    pub const fn variant(&self) -> DMA2TSEL_A {
         match self.bits {
             0 => DMA2TSEL_A::DMA2TSEL_0,
             1 => DMA2TSEL_A::DMA2TSEL_1,
@@ -155,349 +122,333 @@ impl DMA2TSEL_R {
             _ => unreachable!(),
         }
     }
-    #[doc = "Checks if the value of the field is `DMA2TSEL_0`"]
+    #[doc = "DMA channel 2 transfer select 0: DMA_REQ (sw)"]
     #[inline(always)]
     pub fn is_dma2tsel_0(&self) -> bool {
-        **self == DMA2TSEL_A::DMA2TSEL_0
+        *self == DMA2TSEL_A::DMA2TSEL_0
     }
-    #[doc = "Checks if the value of the field is `DMA2TSEL_1`"]
+    #[doc = "DMA channel 2 transfer select 1: Timer0_A (TA0CCR0.IFG)"]
     #[inline(always)]
     pub fn is_dma2tsel_1(&self) -> bool {
-        **self == DMA2TSEL_A::DMA2TSEL_1
+        *self == DMA2TSEL_A::DMA2TSEL_1
     }
-    #[doc = "Checks if the value of the field is `DMA2TSEL_2`"]
+    #[doc = "DMA channel 2 transfer select 2: Timer0_A (TA0CCR2.IFG)"]
     #[inline(always)]
     pub fn is_dma2tsel_2(&self) -> bool {
-        **self == DMA2TSEL_A::DMA2TSEL_2
+        *self == DMA2TSEL_A::DMA2TSEL_2
     }
-    #[doc = "Checks if the value of the field is `DMA2TSEL_3`"]
+    #[doc = "DMA channel 2 transfer select 3: Timer1_A (TA1CCR0.IFG)"]
     #[inline(always)]
     pub fn is_dma2tsel_3(&self) -> bool {
-        **self == DMA2TSEL_A::DMA2TSEL_3
+        *self == DMA2TSEL_A::DMA2TSEL_3
     }
-    #[doc = "Checks if the value of the field is `DMA2TSEL_4`"]
+    #[doc = "DMA channel 2 transfer select 4: Timer1_A (TA1CCR2.IFG)"]
     #[inline(always)]
     pub fn is_dma2tsel_4(&self) -> bool {
-        **self == DMA2TSEL_A::DMA2TSEL_4
+        *self == DMA2TSEL_A::DMA2TSEL_4
     }
-    #[doc = "Checks if the value of the field is `DMA2TSEL_5`"]
+    #[doc = "DMA channel 2 transfer select 5: Timer2_A (TA2CCR0.IFG)"]
     #[inline(always)]
     pub fn is_dma2tsel_5(&self) -> bool {
-        **self == DMA2TSEL_A::DMA2TSEL_5
+        *self == DMA2TSEL_A::DMA2TSEL_5
     }
-    #[doc = "Checks if the value of the field is `DMA2TSEL_6`"]
+    #[doc = "DMA channel 2 transfer select 6: Timer2_A (TA2CCR2.IFG)"]
     #[inline(always)]
     pub fn is_dma2tsel_6(&self) -> bool {
-        **self == DMA2TSEL_A::DMA2TSEL_6
+        *self == DMA2TSEL_A::DMA2TSEL_6
     }
-    #[doc = "Checks if the value of the field is `DMA2TSEL_7`"]
+    #[doc = "DMA channel 2 transfer select 7: TimerB (TB0CCR0.IFG)"]
     #[inline(always)]
     pub fn is_dma2tsel_7(&self) -> bool {
-        **self == DMA2TSEL_A::DMA2TSEL_7
+        *self == DMA2TSEL_A::DMA2TSEL_7
     }
-    #[doc = "Checks if the value of the field is `DMA2TSEL_8`"]
+    #[doc = "DMA channel 2 transfer select 8: TimerB (TB0CCR2.IFG)"]
     #[inline(always)]
     pub fn is_dma2tsel_8(&self) -> bool {
-        **self == DMA2TSEL_A::DMA2TSEL_8
+        *self == DMA2TSEL_A::DMA2TSEL_8
     }
-    #[doc = "Checks if the value of the field is `DMA2TSEL_9`"]
+    #[doc = "DMA channel 2 transfer select 9: Reserved"]
     #[inline(always)]
     pub fn is_dma2tsel_9(&self) -> bool {
-        **self == DMA2TSEL_A::DMA2TSEL_9
+        *self == DMA2TSEL_A::DMA2TSEL_9
     }
-    #[doc = "Checks if the value of the field is `DMA2TSEL_10`"]
+    #[doc = "DMA channel 2 transfer select 10: Reserved"]
     #[inline(always)]
     pub fn is_dma2tsel_10(&self) -> bool {
-        **self == DMA2TSEL_A::DMA2TSEL_10
+        *self == DMA2TSEL_A::DMA2TSEL_10
     }
-    #[doc = "Checks if the value of the field is `DMA2TSEL_11`"]
+    #[doc = "DMA channel 2 transfer select 11: Reserved"]
     #[inline(always)]
     pub fn is_dma2tsel_11(&self) -> bool {
-        **self == DMA2TSEL_A::DMA2TSEL_11
+        *self == DMA2TSEL_A::DMA2TSEL_11
     }
-    #[doc = "Checks if the value of the field is `DMA2TSEL_12`"]
+    #[doc = "DMA channel 2 transfer select 12: Reserved"]
     #[inline(always)]
     pub fn is_dma2tsel_12(&self) -> bool {
-        **self == DMA2TSEL_A::DMA2TSEL_12
+        *self == DMA2TSEL_A::DMA2TSEL_12
     }
-    #[doc = "Checks if the value of the field is `DMA2TSEL_13`"]
+    #[doc = "DMA channel 2 transfer select 13: Reserved"]
     #[inline(always)]
     pub fn is_dma2tsel_13(&self) -> bool {
-        **self == DMA2TSEL_A::DMA2TSEL_13
+        *self == DMA2TSEL_A::DMA2TSEL_13
     }
-    #[doc = "Checks if the value of the field is `DMA2TSEL_14`"]
+    #[doc = "DMA channel 2 transfer select 14: Reserved"]
     #[inline(always)]
     pub fn is_dma2tsel_14(&self) -> bool {
-        **self == DMA2TSEL_A::DMA2TSEL_14
+        *self == DMA2TSEL_A::DMA2TSEL_14
     }
-    #[doc = "Checks if the value of the field is `DMA2TSEL_15`"]
+    #[doc = "DMA channel 2 transfer select 15: Reserved"]
     #[inline(always)]
     pub fn is_dma2tsel_15(&self) -> bool {
-        **self == DMA2TSEL_A::DMA2TSEL_15
+        *self == DMA2TSEL_A::DMA2TSEL_15
     }
-    #[doc = "Checks if the value of the field is `DMA2TSEL_16`"]
+    #[doc = "DMA channel 2 transfer select 16: USCIA0 receive"]
     #[inline(always)]
     pub fn is_dma2tsel_16(&self) -> bool {
-        **self == DMA2TSEL_A::DMA2TSEL_16
+        *self == DMA2TSEL_A::DMA2TSEL_16
     }
-    #[doc = "Checks if the value of the field is `DMA2TSEL_17`"]
+    #[doc = "DMA channel 2 transfer select 17: USCIA0 transmit"]
     #[inline(always)]
     pub fn is_dma2tsel_17(&self) -> bool {
-        **self == DMA2TSEL_A::DMA2TSEL_17
+        *self == DMA2TSEL_A::DMA2TSEL_17
     }
-    #[doc = "Checks if the value of the field is `DMA2TSEL_18`"]
+    #[doc = "DMA channel 2 transfer select 18: USCIB0 receive"]
     #[inline(always)]
     pub fn is_dma2tsel_18(&self) -> bool {
-        **self == DMA2TSEL_A::DMA2TSEL_18
+        *self == DMA2TSEL_A::DMA2TSEL_18
     }
-    #[doc = "Checks if the value of the field is `DMA2TSEL_19`"]
+    #[doc = "DMA channel 2 transfer select 19: USCIB0 transmit"]
     #[inline(always)]
     pub fn is_dma2tsel_19(&self) -> bool {
-        **self == DMA2TSEL_A::DMA2TSEL_19
+        *self == DMA2TSEL_A::DMA2TSEL_19
     }
-    #[doc = "Checks if the value of the field is `DMA2TSEL_20`"]
+    #[doc = "DMA channel 2 transfer select 20: USCIA1 receive"]
     #[inline(always)]
     pub fn is_dma2tsel_20(&self) -> bool {
-        **self == DMA2TSEL_A::DMA2TSEL_20
+        *self == DMA2TSEL_A::DMA2TSEL_20
     }
-    #[doc = "Checks if the value of the field is `DMA2TSEL_21`"]
+    #[doc = "DMA channel 2 transfer select 21: USCIA1 transmit"]
     #[inline(always)]
     pub fn is_dma2tsel_21(&self) -> bool {
-        **self == DMA2TSEL_A::DMA2TSEL_21
+        *self == DMA2TSEL_A::DMA2TSEL_21
     }
-    #[doc = "Checks if the value of the field is `DMA2TSEL_22`"]
+    #[doc = "DMA channel 2 transfer select 22: USCIB1 receive"]
     #[inline(always)]
     pub fn is_dma2tsel_22(&self) -> bool {
-        **self == DMA2TSEL_A::DMA2TSEL_22
+        *self == DMA2TSEL_A::DMA2TSEL_22
     }
-    #[doc = "Checks if the value of the field is `DMA2TSEL_23`"]
+    #[doc = "DMA channel 2 transfer select 23: USCIB1 transmit"]
     #[inline(always)]
     pub fn is_dma2tsel_23(&self) -> bool {
-        **self == DMA2TSEL_A::DMA2TSEL_23
+        *self == DMA2TSEL_A::DMA2TSEL_23
     }
-    #[doc = "Checks if the value of the field is `DMA2TSEL_24`"]
+    #[doc = "DMA channel 2 transfer select 24: ADC12IFGx"]
     #[inline(always)]
     pub fn is_dma2tsel_24(&self) -> bool {
-        **self == DMA2TSEL_A::DMA2TSEL_24
+        *self == DMA2TSEL_A::DMA2TSEL_24
     }
-    #[doc = "Checks if the value of the field is `DMA2TSEL_25`"]
+    #[doc = "DMA channel 2 transfer select 25: Reserved"]
     #[inline(always)]
     pub fn is_dma2tsel_25(&self) -> bool {
-        **self == DMA2TSEL_A::DMA2TSEL_25
+        *self == DMA2TSEL_A::DMA2TSEL_25
     }
-    #[doc = "Checks if the value of the field is `DMA2TSEL_26`"]
+    #[doc = "DMA channel 2 transfer select 26: Reserved"]
     #[inline(always)]
     pub fn is_dma2tsel_26(&self) -> bool {
-        **self == DMA2TSEL_A::DMA2TSEL_26
+        *self == DMA2TSEL_A::DMA2TSEL_26
     }
-    #[doc = "Checks if the value of the field is `DMA2TSEL_27`"]
+    #[doc = "DMA channel 2 transfer select 27: USB FNRXD"]
     #[inline(always)]
     pub fn is_dma2tsel_27(&self) -> bool {
-        **self == DMA2TSEL_A::DMA2TSEL_27
+        *self == DMA2TSEL_A::DMA2TSEL_27
     }
-    #[doc = "Checks if the value of the field is `DMA2TSEL_28`"]
+    #[doc = "DMA channel 2 transfer select 28: USB ready"]
     #[inline(always)]
     pub fn is_dma2tsel_28(&self) -> bool {
-        **self == DMA2TSEL_A::DMA2TSEL_28
+        *self == DMA2TSEL_A::DMA2TSEL_28
     }
-    #[doc = "Checks if the value of the field is `DMA2TSEL_29`"]
+    #[doc = "DMA channel 2 transfer select 29: Multiplier ready"]
     #[inline(always)]
     pub fn is_dma2tsel_29(&self) -> bool {
-        **self == DMA2TSEL_A::DMA2TSEL_29
+        *self == DMA2TSEL_A::DMA2TSEL_29
     }
-    #[doc = "Checks if the value of the field is `DMA2TSEL_30`"]
+    #[doc = "DMA channel 2 transfer select 30: previous DMA channel DMA1IFG"]
     #[inline(always)]
     pub fn is_dma2tsel_30(&self) -> bool {
-        **self == DMA2TSEL_A::DMA2TSEL_30
+        *self == DMA2TSEL_A::DMA2TSEL_30
     }
-    #[doc = "Checks if the value of the field is `DMA2TSEL_31`"]
+    #[doc = "DMA channel 2 transfer select 31: ext. Trigger (DMAE0)"]
     #[inline(always)]
     pub fn is_dma2tsel_31(&self) -> bool {
-        **self == DMA2TSEL_A::DMA2TSEL_31
-    }
-}
-impl core::ops::Deref for DMA2TSEL_R {
-    type Target = crate::FieldReader<u8, DMA2TSEL_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == DMA2TSEL_A::DMA2TSEL_31
     }
 }
 #[doc = "Field `DMA2TSEL` writer - DMA channel 2 transfer select bit 0"]
-pub struct DMA2TSEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DMA2TSEL_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: DMA2TSEL_A) -> &'a mut W {
-        self.bits(variant.into())
-    }
+pub type DMA2TSEL_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 5, DMA2TSEL_A>;
+impl<'a, REG> DMA2TSEL_W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
     #[doc = "DMA channel 2 transfer select 0: DMA_REQ (sw)"]
     #[inline(always)]
-    pub fn dma2tsel_0(self) -> &'a mut W {
+    pub fn dma2tsel_0(self) -> &'a mut crate::W<REG> {
         self.variant(DMA2TSEL_A::DMA2TSEL_0)
     }
     #[doc = "DMA channel 2 transfer select 1: Timer0_A (TA0CCR0.IFG)"]
     #[inline(always)]
-    pub fn dma2tsel_1(self) -> &'a mut W {
+    pub fn dma2tsel_1(self) -> &'a mut crate::W<REG> {
         self.variant(DMA2TSEL_A::DMA2TSEL_1)
     }
     #[doc = "DMA channel 2 transfer select 2: Timer0_A (TA0CCR2.IFG)"]
     #[inline(always)]
-    pub fn dma2tsel_2(self) -> &'a mut W {
+    pub fn dma2tsel_2(self) -> &'a mut crate::W<REG> {
         self.variant(DMA2TSEL_A::DMA2TSEL_2)
     }
     #[doc = "DMA channel 2 transfer select 3: Timer1_A (TA1CCR0.IFG)"]
     #[inline(always)]
-    pub fn dma2tsel_3(self) -> &'a mut W {
+    pub fn dma2tsel_3(self) -> &'a mut crate::W<REG> {
         self.variant(DMA2TSEL_A::DMA2TSEL_3)
     }
     #[doc = "DMA channel 2 transfer select 4: Timer1_A (TA1CCR2.IFG)"]
     #[inline(always)]
-    pub fn dma2tsel_4(self) -> &'a mut W {
+    pub fn dma2tsel_4(self) -> &'a mut crate::W<REG> {
         self.variant(DMA2TSEL_A::DMA2TSEL_4)
     }
     #[doc = "DMA channel 2 transfer select 5: Timer2_A (TA2CCR0.IFG)"]
     #[inline(always)]
-    pub fn dma2tsel_5(self) -> &'a mut W {
+    pub fn dma2tsel_5(self) -> &'a mut crate::W<REG> {
         self.variant(DMA2TSEL_A::DMA2TSEL_5)
     }
     #[doc = "DMA channel 2 transfer select 6: Timer2_A (TA2CCR2.IFG)"]
     #[inline(always)]
-    pub fn dma2tsel_6(self) -> &'a mut W {
+    pub fn dma2tsel_6(self) -> &'a mut crate::W<REG> {
         self.variant(DMA2TSEL_A::DMA2TSEL_6)
     }
     #[doc = "DMA channel 2 transfer select 7: TimerB (TB0CCR0.IFG)"]
     #[inline(always)]
-    pub fn dma2tsel_7(self) -> &'a mut W {
+    pub fn dma2tsel_7(self) -> &'a mut crate::W<REG> {
         self.variant(DMA2TSEL_A::DMA2TSEL_7)
     }
     #[doc = "DMA channel 2 transfer select 8: TimerB (TB0CCR2.IFG)"]
     #[inline(always)]
-    pub fn dma2tsel_8(self) -> &'a mut W {
+    pub fn dma2tsel_8(self) -> &'a mut crate::W<REG> {
         self.variant(DMA2TSEL_A::DMA2TSEL_8)
     }
     #[doc = "DMA channel 2 transfer select 9: Reserved"]
     #[inline(always)]
-    pub fn dma2tsel_9(self) -> &'a mut W {
+    pub fn dma2tsel_9(self) -> &'a mut crate::W<REG> {
         self.variant(DMA2TSEL_A::DMA2TSEL_9)
     }
     #[doc = "DMA channel 2 transfer select 10: Reserved"]
     #[inline(always)]
-    pub fn dma2tsel_10(self) -> &'a mut W {
+    pub fn dma2tsel_10(self) -> &'a mut crate::W<REG> {
         self.variant(DMA2TSEL_A::DMA2TSEL_10)
     }
     #[doc = "DMA channel 2 transfer select 11: Reserved"]
     #[inline(always)]
-    pub fn dma2tsel_11(self) -> &'a mut W {
+    pub fn dma2tsel_11(self) -> &'a mut crate::W<REG> {
         self.variant(DMA2TSEL_A::DMA2TSEL_11)
     }
     #[doc = "DMA channel 2 transfer select 12: Reserved"]
     #[inline(always)]
-    pub fn dma2tsel_12(self) -> &'a mut W {
+    pub fn dma2tsel_12(self) -> &'a mut crate::W<REG> {
         self.variant(DMA2TSEL_A::DMA2TSEL_12)
     }
     #[doc = "DMA channel 2 transfer select 13: Reserved"]
     #[inline(always)]
-    pub fn dma2tsel_13(self) -> &'a mut W {
+    pub fn dma2tsel_13(self) -> &'a mut crate::W<REG> {
         self.variant(DMA2TSEL_A::DMA2TSEL_13)
     }
     #[doc = "DMA channel 2 transfer select 14: Reserved"]
     #[inline(always)]
-    pub fn dma2tsel_14(self) -> &'a mut W {
+    pub fn dma2tsel_14(self) -> &'a mut crate::W<REG> {
         self.variant(DMA2TSEL_A::DMA2TSEL_14)
     }
     #[doc = "DMA channel 2 transfer select 15: Reserved"]
     #[inline(always)]
-    pub fn dma2tsel_15(self) -> &'a mut W {
+    pub fn dma2tsel_15(self) -> &'a mut crate::W<REG> {
         self.variant(DMA2TSEL_A::DMA2TSEL_15)
     }
     #[doc = "DMA channel 2 transfer select 16: USCIA0 receive"]
     #[inline(always)]
-    pub fn dma2tsel_16(self) -> &'a mut W {
+    pub fn dma2tsel_16(self) -> &'a mut crate::W<REG> {
         self.variant(DMA2TSEL_A::DMA2TSEL_16)
     }
     #[doc = "DMA channel 2 transfer select 17: USCIA0 transmit"]
     #[inline(always)]
-    pub fn dma2tsel_17(self) -> &'a mut W {
+    pub fn dma2tsel_17(self) -> &'a mut crate::W<REG> {
         self.variant(DMA2TSEL_A::DMA2TSEL_17)
     }
     #[doc = "DMA channel 2 transfer select 18: USCIB0 receive"]
     #[inline(always)]
-    pub fn dma2tsel_18(self) -> &'a mut W {
+    pub fn dma2tsel_18(self) -> &'a mut crate::W<REG> {
         self.variant(DMA2TSEL_A::DMA2TSEL_18)
     }
     #[doc = "DMA channel 2 transfer select 19: USCIB0 transmit"]
     #[inline(always)]
-    pub fn dma2tsel_19(self) -> &'a mut W {
+    pub fn dma2tsel_19(self) -> &'a mut crate::W<REG> {
         self.variant(DMA2TSEL_A::DMA2TSEL_19)
     }
     #[doc = "DMA channel 2 transfer select 20: USCIA1 receive"]
     #[inline(always)]
-    pub fn dma2tsel_20(self) -> &'a mut W {
+    pub fn dma2tsel_20(self) -> &'a mut crate::W<REG> {
         self.variant(DMA2TSEL_A::DMA2TSEL_20)
     }
     #[doc = "DMA channel 2 transfer select 21: USCIA1 transmit"]
     #[inline(always)]
-    pub fn dma2tsel_21(self) -> &'a mut W {
+    pub fn dma2tsel_21(self) -> &'a mut crate::W<REG> {
         self.variant(DMA2TSEL_A::DMA2TSEL_21)
     }
     #[doc = "DMA channel 2 transfer select 22: USCIB1 receive"]
     #[inline(always)]
-    pub fn dma2tsel_22(self) -> &'a mut W {
+    pub fn dma2tsel_22(self) -> &'a mut crate::W<REG> {
         self.variant(DMA2TSEL_A::DMA2TSEL_22)
     }
     #[doc = "DMA channel 2 transfer select 23: USCIB1 transmit"]
     #[inline(always)]
-    pub fn dma2tsel_23(self) -> &'a mut W {
+    pub fn dma2tsel_23(self) -> &'a mut crate::W<REG> {
         self.variant(DMA2TSEL_A::DMA2TSEL_23)
     }
     #[doc = "DMA channel 2 transfer select 24: ADC12IFGx"]
     #[inline(always)]
-    pub fn dma2tsel_24(self) -> &'a mut W {
+    pub fn dma2tsel_24(self) -> &'a mut crate::W<REG> {
         self.variant(DMA2TSEL_A::DMA2TSEL_24)
     }
     #[doc = "DMA channel 2 transfer select 25: Reserved"]
     #[inline(always)]
-    pub fn dma2tsel_25(self) -> &'a mut W {
+    pub fn dma2tsel_25(self) -> &'a mut crate::W<REG> {
         self.variant(DMA2TSEL_A::DMA2TSEL_25)
     }
     #[doc = "DMA channel 2 transfer select 26: Reserved"]
     #[inline(always)]
-    pub fn dma2tsel_26(self) -> &'a mut W {
+    pub fn dma2tsel_26(self) -> &'a mut crate::W<REG> {
         self.variant(DMA2TSEL_A::DMA2TSEL_26)
     }
     #[doc = "DMA channel 2 transfer select 27: USB FNRXD"]
     #[inline(always)]
-    pub fn dma2tsel_27(self) -> &'a mut W {
+    pub fn dma2tsel_27(self) -> &'a mut crate::W<REG> {
         self.variant(DMA2TSEL_A::DMA2TSEL_27)
     }
     #[doc = "DMA channel 2 transfer select 28: USB ready"]
     #[inline(always)]
-    pub fn dma2tsel_28(self) -> &'a mut W {
+    pub fn dma2tsel_28(self) -> &'a mut crate::W<REG> {
         self.variant(DMA2TSEL_A::DMA2TSEL_28)
     }
     #[doc = "DMA channel 2 transfer select 29: Multiplier ready"]
     #[inline(always)]
-    pub fn dma2tsel_29(self) -> &'a mut W {
+    pub fn dma2tsel_29(self) -> &'a mut crate::W<REG> {
         self.variant(DMA2TSEL_A::DMA2TSEL_29)
     }
     #[doc = "DMA channel 2 transfer select 30: previous DMA channel DMA1IFG"]
     #[inline(always)]
-    pub fn dma2tsel_30(self) -> &'a mut W {
+    pub fn dma2tsel_30(self) -> &'a mut crate::W<REG> {
         self.variant(DMA2TSEL_A::DMA2TSEL_30)
     }
     #[doc = "DMA channel 2 transfer select 31: ext. Trigger (DMAE0)"]
     #[inline(always)]
-    pub fn dma2tsel_31(self) -> &'a mut W {
+    pub fn dma2tsel_31(self) -> &'a mut crate::W<REG> {
         self.variant(DMA2TSEL_A::DMA2TSEL_31)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x1f) | (value as u16 & 0x1f);
-        self.w
     }
 }
 impl R {
@@ -510,33 +461,34 @@ impl R {
 impl W {
     #[doc = "Bits 0:4 - DMA channel 2 transfer select bit 0"]
     #[inline(always)]
-    pub fn dma2tsel(&mut self) -> DMA2TSEL_W {
-        DMA2TSEL_W { w: self }
+    #[must_use]
+    pub fn dma2tsel(&mut self) -> DMA2TSEL_W<DMACTL1_SPEC> {
+        DMA2TSEL_W::new(self, 0)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u16) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
-#[doc = "DMA Module Control 1\n\nThis register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dmactl1](index.html) module"]
+#[doc = "DMA Module Control 1\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`dmactl1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dmactl1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DMACTL1_SPEC;
 impl crate::RegisterSpec for DMACTL1_SPEC {
     type Ux = u16;
 }
-#[doc = "`read()` method returns [dmactl1::R](R) reader structure"]
-impl crate::Readable for DMACTL1_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [dmactl1::W](W) writer structure"]
+#[doc = "`read()` method returns [`dmactl1::R`](R) reader structure"]
+impl crate::Readable for DMACTL1_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`dmactl1::W`](W) writer structure"]
 impl crate::Writable for DMACTL1_SPEC {
-    type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DMACTL1 to value 0"]
 impl crate::Resettable for DMACTL1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }
