@@ -10,6 +10,10 @@ pub type UCBUSY_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type UCADDR_R = crate::BitReader;
 #[doc = "Field `UCADDR` writer - USCI Address received Flag"]
 pub type UCADDR_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `UCIDLE` reader - Idle line detected"]
+pub type UCIDLE_R = crate::BitReader;
+#[doc = "Field `UCIDLE` writer - Idle line detected"]
+pub type UCIDLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `UCRXERR` reader - USCI RX Error Flag"]
 pub type UCRXERR_R = crate::BitReader;
 #[doc = "Field `UCRXERR` writer - USCI RX Error Flag"]
@@ -44,6 +48,11 @@ impl R {
     #[inline(always)]
     pub fn ucaddr(&self) -> UCADDR_R {
         UCADDR_R::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 1 - Idle line detected"]
+    #[inline(always)]
+    pub fn ucidle(&self) -> UCIDLE_R {
+        UCIDLE_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - USCI RX Error Flag"]
     #[inline(always)]
@@ -88,6 +97,12 @@ impl W {
     #[must_use]
     pub fn ucaddr(&mut self) -> UCADDR_W<UCA1STAT_SPEC> {
         UCADDR_W::new(self, 1)
+    }
+    #[doc = "Bit 1 - Idle line detected"]
+    #[inline(always)]
+    #[must_use]
+    pub fn ucidle(&mut self) -> UCIDLE_W<UCA1STAT_SPEC> {
+        UCIDLE_W::new(self, 1)
     }
     #[doc = "Bit 2 - USCI RX Error Flag"]
     #[inline(always)]

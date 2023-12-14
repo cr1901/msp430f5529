@@ -2,24 +2,27 @@
 pub type R = crate::R<UCA1RXBUF_SPEC>;
 #[doc = "Register `UCA1RXBUF` writer"]
 pub type W = crate::W<UCA1RXBUF_SPEC>;
-impl core::fmt::Debug for R {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        write!(f, "{}", self.bits())
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<UCA1RXBUF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
+#[doc = "Field `UCA1RXBUF` reader - USCI A1 Receive Buffer register"]
+pub type UCA1RXBUF_R = crate::FieldReader;
+#[doc = "Field `UCA1RXBUF` writer - USCI A1 Receive Buffer register"]
+pub type UCA1RXBUF_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 8>;
+impl R {
+    #[doc = "Bits 0:7 - USCI A1 Receive Buffer register"]
+    #[inline(always)]
+    pub fn uca1rxbuf(&self) -> UCA1RXBUF_R {
+        UCA1RXBUF_R::new(self.bits)
     }
 }
 impl W {
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
+    #[doc = "Bits 0:7 - USCI A1 Receive Buffer register"]
     #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u8) -> &mut Self {
+    #[must_use]
+    pub fn uca1rxbuf(&mut self) -> UCA1RXBUF_W<UCA1RXBUF_SPEC> {
+        UCA1RXBUF_W::new(self, 0)
+    }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub fn bits(&mut self, bits: u8) -> &mut Self {
         self.bits = bits;
         self
     }

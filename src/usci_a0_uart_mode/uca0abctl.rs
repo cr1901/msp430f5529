@@ -14,14 +14,10 @@ pub type UCBTOE_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type UCSTOE_R = crate::BitReader;
 #[doc = "Field `UCSTOE` writer - Sync-Field Timeout error"]
 pub type UCSTOE_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `UCDELIM0` reader - Break Sync Delimiter 0"]
-pub type UCDELIM0_R = crate::BitReader;
-#[doc = "Field `UCDELIM0` writer - Break Sync Delimiter 0"]
-pub type UCDELIM0_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `UCDELIM1` reader - Break Sync Delimiter 1"]
-pub type UCDELIM1_R = crate::BitReader;
-#[doc = "Field `UCDELIM1` writer - Break Sync Delimiter 1"]
-pub type UCDELIM1_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `UCDELIM` reader - Break Sync Delimiter 0"]
+pub type UCDELIM_R = crate::FieldReader;
+#[doc = "Field `UCDELIM` writer - Break Sync Delimiter 0"]
+pub type UCDELIM_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2>;
 impl R {
     #[doc = "Bit 0 - Auto Baud Rate detect enable"]
     #[inline(always)]
@@ -38,15 +34,10 @@ impl R {
     pub fn ucstoe(&self) -> UCSTOE_R {
         UCSTOE_R::new(((self.bits >> 3) & 1) != 0)
     }
-    #[doc = "Bit 4 - Break Sync Delimiter 0"]
+    #[doc = "Bits 4:5 - Break Sync Delimiter 0"]
     #[inline(always)]
-    pub fn ucdelim0(&self) -> UCDELIM0_R {
-        UCDELIM0_R::new(((self.bits >> 4) & 1) != 0)
-    }
-    #[doc = "Bit 5 - Break Sync Delimiter 1"]
-    #[inline(always)]
-    pub fn ucdelim1(&self) -> UCDELIM1_R {
-        UCDELIM1_R::new(((self.bits >> 5) & 1) != 0)
+    pub fn ucdelim(&self) -> UCDELIM_R {
+        UCDELIM_R::new((self.bits >> 4) & 3)
     }
 }
 impl W {
@@ -68,17 +59,11 @@ impl W {
     pub fn ucstoe(&mut self) -> UCSTOE_W<UCA0ABCTL_SPEC> {
         UCSTOE_W::new(self, 3)
     }
-    #[doc = "Bit 4 - Break Sync Delimiter 0"]
+    #[doc = "Bits 4:5 - Break Sync Delimiter 0"]
     #[inline(always)]
     #[must_use]
-    pub fn ucdelim0(&mut self) -> UCDELIM0_W<UCA0ABCTL_SPEC> {
-        UCDELIM0_W::new(self, 4)
-    }
-    #[doc = "Bit 5 - Break Sync Delimiter 1"]
-    #[inline(always)]
-    #[must_use]
-    pub fn ucdelim1(&mut self) -> UCDELIM1_W<UCA0ABCTL_SPEC> {
-        UCDELIM1_W::new(self, 5)
+    pub fn ucdelim(&mut self) -> UCDELIM_W<UCA0ABCTL_SPEC> {
+        UCDELIM_W::new(self, 4)
     }
     #[doc = r" Writes raw bits to the register."]
     #[doc = r""]

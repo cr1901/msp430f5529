@@ -2,7 +2,7 @@
 <device schemaVersion="1.1" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
   <vendor>msp430gen</vendor>
   <name>MSP430F5529</name>
-  <version>v0.4.0-9-gf287ed8</version>
+  <version>v0.4.0-10-gd4db4bc</version>
   <description></description>
   <addressUnitBits>8</addressUnitBits>
   <width>16</width>
@@ -5808,6 +5808,20 @@
           <addressOffset>6</addressOffset>
           <size>8</size>
           <resetMask>255</resetMask>
+          <fields>
+            <field>
+              <name>UCA0BR0</name>
+              <description>USCI A0 Baud Rate 0 register</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>255</maximum>
+                </range>
+              </writeConstraint>
+            </field>
+          </fields>
         </register>
         <register>
           <name>UCA0BR1</name>
@@ -5815,6 +5829,20 @@
           <addressOffset>7</addressOffset>
           <size>8</size>
           <resetMask>255</resetMask>
+          <fields>
+            <field>
+              <name>UCA0BR1</name>
+              <description>USCI A0 Baud Rate 1 register</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>255</maximum>
+                </range>
+              </writeConstraint>
+            </field>
+          </fields>
         </register>
         <register>
           <name>UCA0MCTL</name>
@@ -6039,6 +6067,12 @@
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
+            <field>
+              <name>UCIDLE</name>
+              <description>Idle line detected</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
           </fields>
         </register>
         <register>
@@ -6047,6 +6081,20 @@
           <addressOffset>12</addressOffset>
           <size>8</size>
           <resetMask>255</resetMask>
+          <fields>
+            <field>
+              <name>UCA0RXBUF</name>
+              <description>USCI A0 Receive Buffer register</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>255</maximum>
+                </range>
+              </writeConstraint>
+            </field>
+          </fields>
         </register>
         <register>
           <name>UCA0TXBUF</name>
@@ -6054,6 +6102,20 @@
           <addressOffset>14</addressOffset>
           <size>8</size>
           <resetMask>255</resetMask>
+          <fields>
+            <field>
+              <name>UCA0TXBUF</name>
+              <description>USCI A0 Transmit Buffer register</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>255</maximum>
+                </range>
+              </writeConstraint>
+            </field>
+          </fields>
         </register>
         <register>
           <name>UCA0ABCTL</name>
@@ -6084,18 +6146,16 @@
               <access>read-write</access>
             </field>
             <field>
-              <name>UCDELIM0</name>
+              <name>UCDELIM</name>
               <description>Break Sync Delimiter 0</description>
               <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>UCDELIM1</name>
-              <description>Break Sync Delimiter 1</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
+              <bitWidth>2</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>3</maximum>
+                </range>
+              </writeConstraint>
             </field>
           </fields>
         </register>
@@ -6127,46 +6187,16 @@
               <access>read-write</access>
             </field>
             <field>
-              <name>UCIRTXPL0</name>
+              <name>UCIRTXPL</name>
               <description>IRDA Transmit Pulse Length 0</description>
               <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>UCIRTXPL1</name>
-              <description>IRDA Transmit Pulse Length 1</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>UCIRTXPL2</name>
-              <description>IRDA Transmit Pulse Length 2</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>UCIRTXPL3</name>
-              <description>IRDA Transmit Pulse Length 3</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>UCIRTXPL4</name>
-              <description>IRDA Transmit Pulse Length 4</description>
-              <bitOffset>6</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>UCIRTXPL5</name>
-              <description>IRDA Transmit Pulse Length 5</description>
-              <bitOffset>7</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
+              <bitWidth>6</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>63</maximum>
+                </range>
+              </writeConstraint>
             </field>
           </fields>
         </register>
@@ -6198,46 +6228,16 @@
               <access>read-write</access>
             </field>
             <field>
-              <name>UCIRRXFL0</name>
+              <name>UCIRRXFL</name>
               <description>IRDA Receive Filter Length 0</description>
               <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>UCIRRXFL1</name>
-              <description>IRDA Receive Filter Length 1</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>UCIRRXFL2</name>
-              <description>IRDA Receive Filter Length 2</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>UCIRRXFL3</name>
-              <description>IRDA Receive Filter Length 3</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>UCIRRXFL4</name>
-              <description>IRDA Receive Filter Length 4</description>
-              <bitOffset>6</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>UCIRRXFL5</name>
-              <description>IRDA Receive Filter Length 5</description>
-              <bitOffset>7</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
+              <bitWidth>6</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>63</maximum>
+                </range>
+              </writeConstraint>
             </field>
           </fields>
         </register>
@@ -7522,6 +7522,20 @@
           <addressOffset>6</addressOffset>
           <size>8</size>
           <resetMask>255</resetMask>
+          <fields>
+            <field>
+              <name>UCA1BR0</name>
+              <description>USCI A1 Baud Rate 0 register</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>255</maximum>
+                </range>
+              </writeConstraint>
+            </field>
+          </fields>
         </register>
         <register>
           <name>UCA1BR1</name>
@@ -7529,6 +7543,20 @@
           <addressOffset>7</addressOffset>
           <size>8</size>
           <resetMask>255</resetMask>
+          <fields>
+            <field>
+              <name>UCA1BR1</name>
+              <description>USCI A1 Baud Rate 1 register</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>255</maximum>
+                </range>
+              </writeConstraint>
+            </field>
+          </fields>
         </register>
         <register>
           <name>UCA1MCTL</name>
@@ -7753,6 +7781,12 @@
               <bitWidth>1</bitWidth>
               <access>read-write</access>
             </field>
+            <field>
+              <name>UCIDLE</name>
+              <description>Idle line detected</description>
+              <bitOffset>1</bitOffset>
+              <bitWidth>1</bitWidth>
+            </field>
           </fields>
         </register>
         <register>
@@ -7761,6 +7795,20 @@
           <addressOffset>12</addressOffset>
           <size>8</size>
           <resetMask>255</resetMask>
+          <fields>
+            <field>
+              <name>UCA1RXBUF</name>
+              <description>USCI A1 Receive Buffer register</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>255</maximum>
+                </range>
+              </writeConstraint>
+            </field>
+          </fields>
         </register>
         <register>
           <name>UCA1TXBUF</name>
@@ -7768,6 +7816,20 @@
           <addressOffset>14</addressOffset>
           <size>8</size>
           <resetMask>255</resetMask>
+          <fields>
+            <field>
+              <name>UCA1TXBUF</name>
+              <description>USCI A1 Transmit Buffer register</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>8</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>255</maximum>
+                </range>
+              </writeConstraint>
+            </field>
+          </fields>
         </register>
         <register>
           <name>UCA1ABCTL</name>
@@ -7798,18 +7860,16 @@
               <access>read-write</access>
             </field>
             <field>
-              <name>UCDELIM0</name>
+              <name>UCDELIM</name>
               <description>Break Sync Delimiter 0</description>
               <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>UCDELIM1</name>
-              <description>Break Sync Delimiter 1</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
+              <bitWidth>2</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>3</maximum>
+                </range>
+              </writeConstraint>
             </field>
           </fields>
         </register>
@@ -7841,46 +7901,16 @@
               <access>read-write</access>
             </field>
             <field>
-              <name>UCIRTXPL0</name>
+              <name>UCIRTXPL</name>
               <description>IRDA Transmit Pulse Length 0</description>
               <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>UCIRTXPL1</name>
-              <description>IRDA Transmit Pulse Length 1</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>UCIRTXPL2</name>
-              <description>IRDA Transmit Pulse Length 2</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>UCIRTXPL3</name>
-              <description>IRDA Transmit Pulse Length 3</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>UCIRTXPL4</name>
-              <description>IRDA Transmit Pulse Length 4</description>
-              <bitOffset>6</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>UCIRTXPL5</name>
-              <description>IRDA Transmit Pulse Length 5</description>
-              <bitOffset>7</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
+              <bitWidth>6</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>63</maximum>
+                </range>
+              </writeConstraint>
             </field>
           </fields>
         </register>
@@ -7912,46 +7942,16 @@
               <access>read-write</access>
             </field>
             <field>
-              <name>UCIRRXFL0</name>
+              <name>UCIRRXFL</name>
               <description>IRDA Receive Filter Length 0</description>
               <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>UCIRRXFL1</name>
-              <description>IRDA Receive Filter Length 1</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>UCIRRXFL2</name>
-              <description>IRDA Receive Filter Length 2</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>UCIRRXFL3</name>
-              <description>IRDA Receive Filter Length 3</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>UCIRRXFL4</name>
-              <description>IRDA Receive Filter Length 4</description>
-              <bitOffset>6</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>UCIRRXFL5</name>
-              <description>IRDA Receive Filter Length 5</description>
-              <bitOffset>7</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
+              <bitWidth>6</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>63</maximum>
+                </range>
+              </writeConstraint>
             </field>
           </fields>
         </register>

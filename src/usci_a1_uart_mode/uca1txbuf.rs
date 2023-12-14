@@ -2,24 +2,27 @@
 pub type R = crate::R<UCA1TXBUF_SPEC>;
 #[doc = "Register `UCA1TXBUF` writer"]
 pub type W = crate::W<UCA1TXBUF_SPEC>;
-impl core::fmt::Debug for R {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        write!(f, "{}", self.bits())
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<UCA1TXBUF_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
+#[doc = "Field `UCA1TXBUF` reader - USCI A1 Transmit Buffer register"]
+pub type UCA1TXBUF_R = crate::FieldReader;
+#[doc = "Field `UCA1TXBUF` writer - USCI A1 Transmit Buffer register"]
+pub type UCA1TXBUF_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 8>;
+impl R {
+    #[doc = "Bits 0:7 - USCI A1 Transmit Buffer register"]
+    #[inline(always)]
+    pub fn uca1txbuf(&self) -> UCA1TXBUF_R {
+        UCA1TXBUF_R::new(self.bits)
     }
 }
 impl W {
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
+    #[doc = "Bits 0:7 - USCI A1 Transmit Buffer register"]
     #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u8) -> &mut Self {
+    #[must_use]
+    pub fn uca1txbuf(&mut self) -> UCA1TXBUF_W<UCA1TXBUF_SPEC> {
+        UCA1TXBUF_W::new(self, 0)
+    }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub fn bits(&mut self, bits: u8) -> &mut Self {
         self.bits = bits;
         self
     }

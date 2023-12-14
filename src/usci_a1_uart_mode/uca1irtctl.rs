@@ -10,30 +10,10 @@ pub type UCIREN_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type UCIRTXCLK_R = crate::BitReader;
 #[doc = "Field `UCIRTXCLK` writer - IRDA Transmit Pulse Clock Select"]
 pub type UCIRTXCLK_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `UCIRTXPL0` reader - IRDA Transmit Pulse Length 0"]
-pub type UCIRTXPL0_R = crate::BitReader;
-#[doc = "Field `UCIRTXPL0` writer - IRDA Transmit Pulse Length 0"]
-pub type UCIRTXPL0_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `UCIRTXPL1` reader - IRDA Transmit Pulse Length 1"]
-pub type UCIRTXPL1_R = crate::BitReader;
-#[doc = "Field `UCIRTXPL1` writer - IRDA Transmit Pulse Length 1"]
-pub type UCIRTXPL1_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `UCIRTXPL2` reader - IRDA Transmit Pulse Length 2"]
-pub type UCIRTXPL2_R = crate::BitReader;
-#[doc = "Field `UCIRTXPL2` writer - IRDA Transmit Pulse Length 2"]
-pub type UCIRTXPL2_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `UCIRTXPL3` reader - IRDA Transmit Pulse Length 3"]
-pub type UCIRTXPL3_R = crate::BitReader;
-#[doc = "Field `UCIRTXPL3` writer - IRDA Transmit Pulse Length 3"]
-pub type UCIRTXPL3_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `UCIRTXPL4` reader - IRDA Transmit Pulse Length 4"]
-pub type UCIRTXPL4_R = crate::BitReader;
-#[doc = "Field `UCIRTXPL4` writer - IRDA Transmit Pulse Length 4"]
-pub type UCIRTXPL4_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `UCIRTXPL5` reader - IRDA Transmit Pulse Length 5"]
-pub type UCIRTXPL5_R = crate::BitReader;
-#[doc = "Field `UCIRTXPL5` writer - IRDA Transmit Pulse Length 5"]
-pub type UCIRTXPL5_W<'a, REG> = crate::BitWriter<'a, REG>;
+#[doc = "Field `UCIRTXPL` reader - IRDA Transmit Pulse Length 0"]
+pub type UCIRTXPL_R = crate::FieldReader;
+#[doc = "Field `UCIRTXPL` writer - IRDA Transmit Pulse Length 0"]
+pub type UCIRTXPL_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 6>;
 impl R {
     #[doc = "Bit 0 - IRDA Encoder/Decoder enable"]
     #[inline(always)]
@@ -45,35 +25,10 @@ impl R {
     pub fn ucirtxclk(&self) -> UCIRTXCLK_R {
         UCIRTXCLK_R::new(((self.bits >> 1) & 1) != 0)
     }
-    #[doc = "Bit 2 - IRDA Transmit Pulse Length 0"]
+    #[doc = "Bits 2:7 - IRDA Transmit Pulse Length 0"]
     #[inline(always)]
-    pub fn ucirtxpl0(&self) -> UCIRTXPL0_R {
-        UCIRTXPL0_R::new(((self.bits >> 2) & 1) != 0)
-    }
-    #[doc = "Bit 3 - IRDA Transmit Pulse Length 1"]
-    #[inline(always)]
-    pub fn ucirtxpl1(&self) -> UCIRTXPL1_R {
-        UCIRTXPL1_R::new(((self.bits >> 3) & 1) != 0)
-    }
-    #[doc = "Bit 4 - IRDA Transmit Pulse Length 2"]
-    #[inline(always)]
-    pub fn ucirtxpl2(&self) -> UCIRTXPL2_R {
-        UCIRTXPL2_R::new(((self.bits >> 4) & 1) != 0)
-    }
-    #[doc = "Bit 5 - IRDA Transmit Pulse Length 3"]
-    #[inline(always)]
-    pub fn ucirtxpl3(&self) -> UCIRTXPL3_R {
-        UCIRTXPL3_R::new(((self.bits >> 5) & 1) != 0)
-    }
-    #[doc = "Bit 6 - IRDA Transmit Pulse Length 4"]
-    #[inline(always)]
-    pub fn ucirtxpl4(&self) -> UCIRTXPL4_R {
-        UCIRTXPL4_R::new(((self.bits >> 6) & 1) != 0)
-    }
-    #[doc = "Bit 7 - IRDA Transmit Pulse Length 5"]
-    #[inline(always)]
-    pub fn ucirtxpl5(&self) -> UCIRTXPL5_R {
-        UCIRTXPL5_R::new(((self.bits >> 7) & 1) != 0)
+    pub fn ucirtxpl(&self) -> UCIRTXPL_R {
+        UCIRTXPL_R::new((self.bits >> 2) & 0x3f)
     }
 }
 impl W {
@@ -89,41 +44,11 @@ impl W {
     pub fn ucirtxclk(&mut self) -> UCIRTXCLK_W<UCA1IRTCTL_SPEC> {
         UCIRTXCLK_W::new(self, 1)
     }
-    #[doc = "Bit 2 - IRDA Transmit Pulse Length 0"]
+    #[doc = "Bits 2:7 - IRDA Transmit Pulse Length 0"]
     #[inline(always)]
     #[must_use]
-    pub fn ucirtxpl0(&mut self) -> UCIRTXPL0_W<UCA1IRTCTL_SPEC> {
-        UCIRTXPL0_W::new(self, 2)
-    }
-    #[doc = "Bit 3 - IRDA Transmit Pulse Length 1"]
-    #[inline(always)]
-    #[must_use]
-    pub fn ucirtxpl1(&mut self) -> UCIRTXPL1_W<UCA1IRTCTL_SPEC> {
-        UCIRTXPL1_W::new(self, 3)
-    }
-    #[doc = "Bit 4 - IRDA Transmit Pulse Length 2"]
-    #[inline(always)]
-    #[must_use]
-    pub fn ucirtxpl2(&mut self) -> UCIRTXPL2_W<UCA1IRTCTL_SPEC> {
-        UCIRTXPL2_W::new(self, 4)
-    }
-    #[doc = "Bit 5 - IRDA Transmit Pulse Length 3"]
-    #[inline(always)]
-    #[must_use]
-    pub fn ucirtxpl3(&mut self) -> UCIRTXPL3_W<UCA1IRTCTL_SPEC> {
-        UCIRTXPL3_W::new(self, 5)
-    }
-    #[doc = "Bit 6 - IRDA Transmit Pulse Length 4"]
-    #[inline(always)]
-    #[must_use]
-    pub fn ucirtxpl4(&mut self) -> UCIRTXPL4_W<UCA1IRTCTL_SPEC> {
-        UCIRTXPL4_W::new(self, 6)
-    }
-    #[doc = "Bit 7 - IRDA Transmit Pulse Length 5"]
-    #[inline(always)]
-    #[must_use]
-    pub fn ucirtxpl5(&mut self) -> UCIRTXPL5_W<UCA1IRTCTL_SPEC> {
-        UCIRTXPL5_W::new(self, 7)
+    pub fn ucirtxpl(&mut self) -> UCIRTXPL_W<UCA1IRTCTL_SPEC> {
+        UCIRTXPL_W::new(self, 2)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

@@ -2,24 +2,27 @@
 pub type R = crate::R<UCA1BR1_SPEC>;
 #[doc = "Register `UCA1BR1` writer"]
 pub type W = crate::W<UCA1BR1_SPEC>;
-impl core::fmt::Debug for R {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        write!(f, "{}", self.bits())
-    }
-}
-impl core::fmt::Debug for crate::generic::Reg<UCA1BR1_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
+#[doc = "Field `UCA1BR1` reader - USCI A1 Baud Rate 1 register"]
+pub type UCA1BR1_R = crate::FieldReader;
+#[doc = "Field `UCA1BR1` writer - USCI A1 Baud Rate 1 register"]
+pub type UCA1BR1_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 8>;
+impl R {
+    #[doc = "Bits 0:7 - USCI A1 Baud Rate 1 register"]
+    #[inline(always)]
+    pub fn uca1br1(&self) -> UCA1BR1_R {
+        UCA1BR1_R::new(self.bits)
     }
 }
 impl W {
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
+    #[doc = "Bits 0:7 - USCI A1 Baud Rate 1 register"]
     #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u8) -> &mut Self {
+    #[must_use]
+    pub fn uca1br1(&mut self) -> UCA1BR1_W<UCA1BR1_SPEC> {
+        UCA1BR1_W::new(self, 0)
+    }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub fn bits(&mut self, bits: u8) -> &mut Self {
         self.bits = bits;
         self
     }
