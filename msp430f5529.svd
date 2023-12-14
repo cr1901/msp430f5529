@@ -2,7 +2,7 @@
 <device schemaVersion="1.1" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
   <vendor>msp430gen</vendor>
   <name>MSP430F5529</name>
-  <version>v0.4.0-8-gde1e0b2</version>
+  <version>v0.4.0-9-gf287ed8</version>
   <description></description>
   <addressUnitBits>8</addressUnitBits>
   <width>16</width>
@@ -17010,12 +17010,12 @@
       </registers>
     </peripheral>
     <peripheral>
-      <name>TIMER_0_A5</name>
-      <description>Timer0_A5</description>
+      <name>TIMER0_A5</name>
+      <description>Timer A5</description>
       <baseAddress>832</baseAddress>
       <registers>
         <register>
-          <name>TA0CTL</name>
+          <name>TACTL</name>
           <description>Timer0_A5 Control</description>
           <addressOffset>0</addressOffset>
           <size>16</size>
@@ -17132,7 +17132,7 @@
           </fields>
         </register>
         <register>
-          <name>TA0CCTL0</name>
+          <name>TACCTL0</name>
           <description>Timer0_A5 Capture/Compare Control 0</description>
           <addressOffset>2</addressOffset>
           <size>16</size>
@@ -17304,7 +17304,7 @@
           </fields>
         </register>
         <register>
-          <name>TA0CCTL1</name>
+          <name>TACCTL1</name>
           <description>Timer0_A5 Capture/Compare Control 1</description>
           <addressOffset>4</addressOffset>
           <size>16</size>
@@ -17476,7 +17476,7 @@
           </fields>
         </register>
         <register>
-          <name>TA0CCTL2</name>
+          <name>TACCTL2</name>
           <description>Timer0_A5 Capture/Compare Control 2</description>
           <addressOffset>6</addressOffset>
           <size>16</size>
@@ -17648,7 +17648,7 @@
           </fields>
         </register>
         <register>
-          <name>TA0CCTL3</name>
+          <name>TACCTL3</name>
           <description>Timer0_A5 Capture/Compare Control 3</description>
           <addressOffset>8</addressOffset>
           <size>16</size>
@@ -17820,7 +17820,7 @@
           </fields>
         </register>
         <register>
-          <name>TA0CCTL4</name>
+          <name>TACCTL4</name>
           <description>Timer0_A5 Capture/Compare Control 4</description>
           <addressOffset>10</addressOffset>
           <size>16</size>
@@ -17992,46 +17992,130 @@
           </fields>
         </register>
         <register>
-          <name>TA0R</name>
+          <name>TAR</name>
           <description>Timer0_A5</description>
           <addressOffset>16</addressOffset>
           <size>16</size>
           <resetMask>65535</resetMask>
+          <fields>
+            <field>
+              <name>TAR</name>
+              <description>Timer A Counter Register</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>65535</maximum>
+                </range>
+              </writeConstraint>
+            </field>
+          </fields>
         </register>
         <register>
-          <name>TA0CCR0</name>
+          <name>TACCR0</name>
           <description>Timer0_A5 Capture/Compare 0</description>
           <addressOffset>18</addressOffset>
           <size>16</size>
           <resetMask>65535</resetMask>
+          <fields>
+            <field>
+              <name>TACCR0</name>
+              <description>Timer A Capture/Compare register 0</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>65535</maximum>
+                </range>
+              </writeConstraint>
+            </field>
+          </fields>
         </register>
         <register>
-          <name>TA0CCR1</name>
+          <name>TACCR1</name>
           <description>Timer0_A5 Capture/Compare 1</description>
           <addressOffset>20</addressOffset>
           <size>16</size>
           <resetMask>65535</resetMask>
+          <fields>
+            <field>
+              <name>TACCR1</name>
+              <description>Timer A Capture/Compare register 1</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>65535</maximum>
+                </range>
+              </writeConstraint>
+            </field>
+          </fields>
         </register>
         <register>
-          <name>TA0CCR2</name>
+          <name>TACCR2</name>
           <description>Timer0_A5 Capture/Compare 2</description>
           <addressOffset>22</addressOffset>
           <size>16</size>
           <resetMask>65535</resetMask>
+          <fields>
+            <field>
+              <name>TACCR2</name>
+              <description>Timer A Capture/Compare register 2</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>65535</maximum>
+                </range>
+              </writeConstraint>
+            </field>
+          </fields>
         </register>
         <register>
-          <name>TA0CCR3</name>
+          <name>TACCR3</name>
           <description>Timer0_A5 Capture/Compare 3</description>
           <addressOffset>24</addressOffset>
           <size>16</size>
           <resetMask>65535</resetMask>
+          <fields>
+            <field>
+              <name>TACCR3</name>
+              <description>Timer A Capture/Compare register 3</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>65535</maximum>
+                </range>
+              </writeConstraint>
+            </field>
+          </fields>
         </register>
         <register>
-          <name>TA0CCR4</name>
+          <name>TACCR4</name>
           <description>Timer0_A5 Capture/Compare 4</description>
           <addressOffset>26</addressOffset>
           <size>16</size>
           <resetMask>65535</resetMask>
+          <fields>
+            <field>
+              <name>TACCR4</name>
+              <description>Timer A Capture/Compare register 4</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>65535</maximum>
+                </range>
+              </writeConstraint>
+            </field>
+          </fields>
         </register>
         <register>
           <name>TA0EX0</name>
@@ -18092,21 +18176,53 @@
           </fields>
         </register>
         <register>
-          <name>TA0IV</name>
+          <name>TAIV</name>
           <description>Timer0_A5 Interrupt Vector Word</description>
           <addressOffset>46</addressOffset>
           <size>16</size>
           <resetMask>65535</resetMask>
+          <fields>
+            <field>
+              <name>TAIV</name>
+              <description>Timer A Interrupt Vector value</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <enumeratedValues>
+                <name>TAIV</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>NONE</name>
+                  <description>No interrupt pending</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>TACCR1</name>
+                  <description>Capture/Compare 1</description>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>TACCR2</name>
+                  <description>Capture/Compare 2</description>
+                  <value>4</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>TAIFG</name>
+                  <description>Timer overflow</description>
+                  <value>10</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+          </fields>
         </register>
       </registers>
     </peripheral>
     <peripheral>
-      <name>TIMER_1_A3</name>
-      <description>Timer1_A3</description>
+      <name>TIMER1_A3</name>
+      <description>Timer A3</description>
       <baseAddress>896</baseAddress>
       <registers>
         <register>
-          <name>TA1CTL</name>
+          <name>TACTL</name>
           <description>Timer1_A3 Control</description>
           <addressOffset>0</addressOffset>
           <size>16</size>
@@ -18223,7 +18339,7 @@
           </fields>
         </register>
         <register>
-          <name>TA1CCTL0</name>
+          <name>TACCTL0</name>
           <description>Timer1_A3 Capture/Compare Control 0</description>
           <addressOffset>2</addressOffset>
           <size>16</size>
@@ -18395,7 +18511,7 @@
           </fields>
         </register>
         <register>
-          <name>TA1CCTL1</name>
+          <name>TACCTL1</name>
           <description>Timer1_A3 Capture/Compare Control 1</description>
           <addressOffset>4</addressOffset>
           <size>16</size>
@@ -18567,7 +18683,7 @@
           </fields>
         </register>
         <register>
-          <name>TA1CCTL2</name>
+          <name>TACCTL2</name>
           <description>Timer1_A3 Capture/Compare Control 2</description>
           <addressOffset>6</addressOffset>
           <size>16</size>
@@ -18739,32 +18855,88 @@
           </fields>
         </register>
         <register>
-          <name>TA1R</name>
+          <name>TAR</name>
           <description>Timer1_A3</description>
           <addressOffset>16</addressOffset>
           <size>16</size>
           <resetMask>65535</resetMask>
+          <fields>
+            <field>
+              <name>TAR</name>
+              <description>Timer A Counter Register</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>65535</maximum>
+                </range>
+              </writeConstraint>
+            </field>
+          </fields>
         </register>
         <register>
-          <name>TA1CCR0</name>
+          <name>TACCR0</name>
           <description>Timer1_A3 Capture/Compare 0</description>
           <addressOffset>18</addressOffset>
           <size>16</size>
           <resetMask>65535</resetMask>
+          <fields>
+            <field>
+              <name>TACCR0</name>
+              <description>Timer A Capture/Compare register 0</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>65535</maximum>
+                </range>
+              </writeConstraint>
+            </field>
+          </fields>
         </register>
         <register>
-          <name>TA1CCR1</name>
+          <name>TACCR1</name>
           <description>Timer1_A3 Capture/Compare 1</description>
           <addressOffset>20</addressOffset>
           <size>16</size>
           <resetMask>65535</resetMask>
+          <fields>
+            <field>
+              <name>TACCR1</name>
+              <description>Timer A Capture/Compare register 1</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>65535</maximum>
+                </range>
+              </writeConstraint>
+            </field>
+          </fields>
         </register>
         <register>
-          <name>TA1CCR2</name>
+          <name>TACCR2</name>
           <description>Timer1_A3 Capture/Compare 2</description>
           <addressOffset>22</addressOffset>
           <size>16</size>
           <resetMask>65535</resetMask>
+          <fields>
+            <field>
+              <name>TACCR2</name>
+              <description>Timer A Capture/Compare register 2</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>16</bitWidth>
+              <writeConstraint>
+                <range>
+                  <minimum>0</minimum>
+                  <maximum>65535</maximum>
+                </range>
+              </writeConstraint>
+            </field>
+          </fields>
         </register>
         <register>
           <name>TA1EX0</name>
@@ -18825,11 +18997,43 @@
           </fields>
         </register>
         <register>
-          <name>TA1IV</name>
+          <name>TAIV</name>
           <description>Timer1_A3 Interrupt Vector Word</description>
           <addressOffset>46</addressOffset>
           <size>16</size>
           <resetMask>65535</resetMask>
+          <fields>
+            <field>
+              <name>TAIV</name>
+              <description>Timer A Interrupt Vector value</description>
+              <bitOffset>0</bitOffset>
+              <bitWidth>4</bitWidth>
+              <enumeratedValues>
+                <name>TAIV</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>NONE</name>
+                  <description>No interrupt pending</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>TACCR1</name>
+                  <description>Capture/Compare 1</description>
+                  <value>2</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>TACCR2</name>
+                  <description>Capture/Compare 2</description>
+                  <value>4</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>TAIFG</name>
+                  <description>Timer overflow</description>
+                  <value>10</value>
+                </enumeratedValue>
+              </enumeratedValues>
+            </field>
+          </fields>
         </register>
       </registers>
     </peripheral>
@@ -20494,738 +20698,10 @@
         </register>
       </registers>
     </peripheral>
-    <peripheral>
-      <name>TIMER_2_A3</name>
-      <description>Timer2_A3</description>
+    <peripheral derivedFrom="TIMER1_A3">
+      <name>TIMER2_A3</name>
+      <description>Timer A3</description>
       <baseAddress>1024</baseAddress>
-      <registers>
-        <register>
-          <name>TA2CTL</name>
-          <description>Timer2_A3 Control</description>
-          <addressOffset>0</addressOffset>
-          <size>16</size>
-          <resetMask>65535</resetMask>
-          <fields>
-            <field>
-              <name>TAIFG</name>
-              <description>Timer A counter interrupt flag</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>TAIE</name>
-              <description>Timer A counter interrupt enable</description>
-              <bitOffset>1</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>TACLR</name>
-              <description>Timer A counter clear</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>MC</name>
-              <description>Timer A mode control 1</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>MC_0</name>
-                  <description>Timer A mode control: 0 - Stop</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>MC_1</name>
-                  <description>Timer A mode control: 1 - Up to CCR0</description>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>MC_2</name>
-                  <description>Timer A mode control: 2 - Continuous up</description>
-                  <value>2</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>MC_3</name>
-                  <description>Timer A mode control: 3 - Up/Down</description>
-                  <value>3</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>ID</name>
-              <description>Timer A clock input divider 1</description>
-              <bitOffset>6</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>ID_0</name>
-                  <description>Timer A input divider: 0 - /1</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>ID_1</name>
-                  <description>Timer A input divider: 1 - /2</description>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>ID_2</name>
-                  <description>Timer A input divider: 2 - /4</description>
-                  <value>2</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>ID_3</name>
-                  <description>Timer A input divider: 3 - /8</description>
-                  <value>3</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>TASSEL</name>
-              <description>Timer A clock source select 1</description>
-              <bitOffset>8</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>TASSEL_0</name>
-                  <description>Timer A clock source select: 0 - TACLK</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>TASSEL_1</name>
-                  <description>Timer A clock source select: 1 - ACLK</description>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>TASSEL_2</name>
-                  <description>Timer A clock source select: 2 - SMCLK</description>
-                  <value>2</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>TASSEL_3</name>
-                  <description>Timer A clock source select: 3 - INCLK</description>
-                  <value>3</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>TA2CCTL0</name>
-          <description>Timer2_A3 Capture/Compare Control 0</description>
-          <addressOffset>2</addressOffset>
-          <size>16</size>
-          <resetMask>65535</resetMask>
-          <fields>
-            <field>
-              <name>CCIFG</name>
-              <description>Capture/compare interrupt flag</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>COV</name>
-              <description>Capture/compare overflow flag</description>
-              <bitOffset>1</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>OUT</name>
-              <description>PWM Output signal if output mode 0</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CCI</name>
-              <description>Capture input signal (read)</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CCIE</name>
-              <description>Capture/compare interrupt enable</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>OUTMOD</name>
-              <description>Output mode 2</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-write</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>OUTMOD_0</name>
-                  <description>PWM output mode: 0 - output only</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>OUTMOD_1</name>
-                  <description>PWM output mode: 1 - set</description>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>OUTMOD_2</name>
-                  <description>PWM output mode: 2 - PWM toggle/reset</description>
-                  <value>2</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>OUTMOD_3</name>
-                  <description>PWM output mode: 3 - PWM set/reset</description>
-                  <value>3</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>OUTMOD_4</name>
-                  <description>PWM output mode: 4 - toggle</description>
-                  <value>4</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>OUTMOD_5</name>
-                  <description>PWM output mode: 5 - Reset</description>
-                  <value>5</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>OUTMOD_6</name>
-                  <description>PWM output mode: 6 - PWM toggle/set</description>
-                  <value>6</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>OUTMOD_7</name>
-                  <description>PWM output mode: 7 - PWM reset/set</description>
-                  <value>7</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>CAP</name>
-              <description>Capture mode: 1 /Compare mode : 0</description>
-              <bitOffset>8</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>SCCI</name>
-              <description>Latched capture signal (read)</description>
-              <bitOffset>10</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>SCS</name>
-              <description>Capture sychronize</description>
-              <bitOffset>11</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CCIS</name>
-              <description>Capture input select 1</description>
-              <bitOffset>12</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>CCIS_0</name>
-                  <description>Capture input select: 0 - CCIxA</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CCIS_1</name>
-                  <description>Capture input select: 1 - CCIxB</description>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CCIS_2</name>
-                  <description>Capture input select: 2 - GND</description>
-                  <value>2</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CCIS_3</name>
-                  <description>Capture input select: 3 - Vcc</description>
-                  <value>3</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>CM</name>
-              <description>Capture mode 1</description>
-              <bitOffset>14</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>CM_0</name>
-                  <description>Capture mode: 0 - disabled</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CM_1</name>
-                  <description>Capture mode: 1 - pos. edge</description>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CM_2</name>
-                  <description>Capture mode: 1 - neg. edge</description>
-                  <value>2</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CM_3</name>
-                  <description>Capture mode: 1 - both edges</description>
-                  <value>3</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>TA2CCTL1</name>
-          <description>Timer2_A3 Capture/Compare Control 1</description>
-          <addressOffset>4</addressOffset>
-          <size>16</size>
-          <resetMask>65535</resetMask>
-          <fields>
-            <field>
-              <name>CCIFG</name>
-              <description>Capture/compare interrupt flag</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>COV</name>
-              <description>Capture/compare overflow flag</description>
-              <bitOffset>1</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>OUT</name>
-              <description>PWM Output signal if output mode 0</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CCI</name>
-              <description>Capture input signal (read)</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CCIE</name>
-              <description>Capture/compare interrupt enable</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>OUTMOD</name>
-              <description>Output mode 2</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-write</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>OUTMOD_0</name>
-                  <description>PWM output mode: 0 - output only</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>OUTMOD_1</name>
-                  <description>PWM output mode: 1 - set</description>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>OUTMOD_2</name>
-                  <description>PWM output mode: 2 - PWM toggle/reset</description>
-                  <value>2</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>OUTMOD_3</name>
-                  <description>PWM output mode: 3 - PWM set/reset</description>
-                  <value>3</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>OUTMOD_4</name>
-                  <description>PWM output mode: 4 - toggle</description>
-                  <value>4</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>OUTMOD_5</name>
-                  <description>PWM output mode: 5 - Reset</description>
-                  <value>5</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>OUTMOD_6</name>
-                  <description>PWM output mode: 6 - PWM toggle/set</description>
-                  <value>6</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>OUTMOD_7</name>
-                  <description>PWM output mode: 7 - PWM reset/set</description>
-                  <value>7</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>CAP</name>
-              <description>Capture mode: 1 /Compare mode : 0</description>
-              <bitOffset>8</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>SCCI</name>
-              <description>Latched capture signal (read)</description>
-              <bitOffset>10</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>SCS</name>
-              <description>Capture sychronize</description>
-              <bitOffset>11</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CCIS</name>
-              <description>Capture input select 1</description>
-              <bitOffset>12</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>CCIS_0</name>
-                  <description>Capture input select: 0 - CCIxA</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CCIS_1</name>
-                  <description>Capture input select: 1 - CCIxB</description>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CCIS_2</name>
-                  <description>Capture input select: 2 - GND</description>
-                  <value>2</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CCIS_3</name>
-                  <description>Capture input select: 3 - Vcc</description>
-                  <value>3</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>CM</name>
-              <description>Capture mode 1</description>
-              <bitOffset>14</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>CM_0</name>
-                  <description>Capture mode: 0 - disabled</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CM_1</name>
-                  <description>Capture mode: 1 - pos. edge</description>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CM_2</name>
-                  <description>Capture mode: 1 - neg. edge</description>
-                  <value>2</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CM_3</name>
-                  <description>Capture mode: 1 - both edges</description>
-                  <value>3</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>TA2CCTL2</name>
-          <description>Timer2_A3 Capture/Compare Control 2</description>
-          <addressOffset>6</addressOffset>
-          <size>16</size>
-          <resetMask>65535</resetMask>
-          <fields>
-            <field>
-              <name>CCIFG</name>
-              <description>Capture/compare interrupt flag</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>COV</name>
-              <description>Capture/compare overflow flag</description>
-              <bitOffset>1</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>OUT</name>
-              <description>PWM Output signal if output mode 0</description>
-              <bitOffset>2</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CCI</name>
-              <description>Capture input signal (read)</description>
-              <bitOffset>3</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CCIE</name>
-              <description>Capture/compare interrupt enable</description>
-              <bitOffset>4</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>OUTMOD</name>
-              <description>Output mode 2</description>
-              <bitOffset>5</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-write</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>OUTMOD_0</name>
-                  <description>PWM output mode: 0 - output only</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>OUTMOD_1</name>
-                  <description>PWM output mode: 1 - set</description>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>OUTMOD_2</name>
-                  <description>PWM output mode: 2 - PWM toggle/reset</description>
-                  <value>2</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>OUTMOD_3</name>
-                  <description>PWM output mode: 3 - PWM set/reset</description>
-                  <value>3</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>OUTMOD_4</name>
-                  <description>PWM output mode: 4 - toggle</description>
-                  <value>4</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>OUTMOD_5</name>
-                  <description>PWM output mode: 5 - Reset</description>
-                  <value>5</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>OUTMOD_6</name>
-                  <description>PWM output mode: 6 - PWM toggle/set</description>
-                  <value>6</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>OUTMOD_7</name>
-                  <description>PWM output mode: 7 - PWM reset/set</description>
-                  <value>7</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>CAP</name>
-              <description>Capture mode: 1 /Compare mode : 0</description>
-              <bitOffset>8</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>SCCI</name>
-              <description>Latched capture signal (read)</description>
-              <bitOffset>10</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>SCS</name>
-              <description>Capture sychronize</description>
-              <bitOffset>11</bitOffset>
-              <bitWidth>1</bitWidth>
-              <access>read-write</access>
-            </field>
-            <field>
-              <name>CCIS</name>
-              <description>Capture input select 1</description>
-              <bitOffset>12</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>CCIS_0</name>
-                  <description>Capture input select: 0 - CCIxA</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CCIS_1</name>
-                  <description>Capture input select: 1 - CCIxB</description>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CCIS_2</name>
-                  <description>Capture input select: 2 - GND</description>
-                  <value>2</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CCIS_3</name>
-                  <description>Capture input select: 3 - Vcc</description>
-                  <value>3</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-            <field>
-              <name>CM</name>
-              <description>Capture mode 1</description>
-              <bitOffset>14</bitOffset>
-              <bitWidth>2</bitWidth>
-              <access>read-write</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>CM_0</name>
-                  <description>Capture mode: 0 - disabled</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CM_1</name>
-                  <description>Capture mode: 1 - pos. edge</description>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CM_2</name>
-                  <description>Capture mode: 1 - neg. edge</description>
-                  <value>2</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>CM_3</name>
-                  <description>Capture mode: 1 - both edges</description>
-                  <value>3</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>TA2R</name>
-          <description>Timer2_A3</description>
-          <addressOffset>16</addressOffset>
-          <size>16</size>
-          <resetMask>65535</resetMask>
-        </register>
-        <register>
-          <name>TA2CCR0</name>
-          <description>Timer2_A3 Capture/Compare 0</description>
-          <addressOffset>18</addressOffset>
-          <size>16</size>
-          <resetMask>65535</resetMask>
-        </register>
-        <register>
-          <name>TA2CCR1</name>
-          <description>Timer2_A3 Capture/Compare 1</description>
-          <addressOffset>20</addressOffset>
-          <size>16</size>
-          <resetMask>65535</resetMask>
-        </register>
-        <register>
-          <name>TA2CCR2</name>
-          <description>Timer2_A3 Capture/Compare 2</description>
-          <addressOffset>22</addressOffset>
-          <size>16</size>
-          <resetMask>65535</resetMask>
-        </register>
-        <register>
-          <name>TA2EX0</name>
-          <description>Timer2_A3 Expansion Register 0</description>
-          <addressOffset>32</addressOffset>
-          <size>16</size>
-          <resetMask>65535</resetMask>
-          <fields>
-            <field>
-              <name>TAIDEX</name>
-              <description>Timer A Input divider expansion Bit: 0</description>
-              <bitOffset>0</bitOffset>
-              <bitWidth>3</bitWidth>
-              <access>read-write</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>TAIDEX_0</name>
-                  <description>Timer A Input divider expansion : /1</description>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>TAIDEX_1</name>
-                  <description>Timer A Input divider expansion : /2</description>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>TAIDEX_2</name>
-                  <description>Timer A Input divider expansion : /3</description>
-                  <value>2</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>TAIDEX_3</name>
-                  <description>Timer A Input divider expansion : /4</description>
-                  <value>3</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>TAIDEX_4</name>
-                  <description>Timer A Input divider expansion : /5</description>
-                  <value>4</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>TAIDEX_5</name>
-                  <description>Timer A Input divider expansion : /6</description>
-                  <value>5</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>TAIDEX_6</name>
-                  <description>Timer A Input divider expansion : /7</description>
-                  <value>6</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>TAIDEX_7</name>
-                  <description>Timer A Input divider expansion : /8</description>
-                  <value>7</value>
-                </enumeratedValue>
-              </enumeratedValues>
-            </field>
-          </fields>
-        </register>
-        <register>
-          <name>TA2IV</name>
-          <description>Timer2_A3 Interrupt Vector Word</description>
-          <addressOffset>46</addressOffset>
-          <size>16</size>
-          <resetMask>65535</resetMask>
-        </register>
-      </registers>
     </peripheral>
     <peripheral>
       <name>MPY_16</name>

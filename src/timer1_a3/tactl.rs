@@ -1,7 +1,7 @@
-#[doc = "Register `TA1CTL` reader"]
-pub type R = crate::R<TA1CTL_SPEC>;
-#[doc = "Register `TA1CTL` writer"]
-pub type W = crate::W<TA1CTL_SPEC>;
+#[doc = "Register `TACTL` reader"]
+pub type R = crate::R<TACTL_SPEC>;
+#[doc = "Register `TACTL` writer"]
+pub type W = crate::W<TACTL_SPEC>;
 #[doc = "Field `TAIFG` reader - Timer A counter interrupt flag"]
 pub type TAIFG_R = crate::BitReader;
 #[doc = "Field `TAIFG` writer - Timer A counter interrupt flag"]
@@ -305,37 +305,37 @@ impl W {
     #[doc = "Bit 0 - Timer A counter interrupt flag"]
     #[inline(always)]
     #[must_use]
-    pub fn taifg(&mut self) -> TAIFG_W<TA1CTL_SPEC> {
+    pub fn taifg(&mut self) -> TAIFG_W<TACTL_SPEC> {
         TAIFG_W::new(self, 0)
     }
     #[doc = "Bit 1 - Timer A counter interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn taie(&mut self) -> TAIE_W<TA1CTL_SPEC> {
+    pub fn taie(&mut self) -> TAIE_W<TACTL_SPEC> {
         TAIE_W::new(self, 1)
     }
     #[doc = "Bit 2 - Timer A counter clear"]
     #[inline(always)]
     #[must_use]
-    pub fn taclr(&mut self) -> TACLR_W<TA1CTL_SPEC> {
+    pub fn taclr(&mut self) -> TACLR_W<TACTL_SPEC> {
         TACLR_W::new(self, 2)
     }
     #[doc = "Bits 4:5 - Timer A mode control 1"]
     #[inline(always)]
     #[must_use]
-    pub fn mc(&mut self) -> MC_W<TA1CTL_SPEC> {
+    pub fn mc(&mut self) -> MC_W<TACTL_SPEC> {
         MC_W::new(self, 4)
     }
     #[doc = "Bits 6:7 - Timer A clock input divider 1"]
     #[inline(always)]
     #[must_use]
-    pub fn id(&mut self) -> ID_W<TA1CTL_SPEC> {
+    pub fn id(&mut self) -> ID_W<TACTL_SPEC> {
         ID_W::new(self, 6)
     }
     #[doc = "Bits 8:9 - Timer A clock source select 1"]
     #[inline(always)]
     #[must_use]
-    pub fn tassel(&mut self) -> TASSEL_W<TA1CTL_SPEC> {
+    pub fn tassel(&mut self) -> TASSEL_W<TACTL_SPEC> {
         TASSEL_W::new(self, 8)
     }
     #[doc = r" Writes raw bits to the register."]
@@ -349,19 +349,19 @@ impl W {
         self
     }
 }
-#[doc = "Timer1_A3 Control\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ta1ctl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ta1ctl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
-pub struct TA1CTL_SPEC;
-impl crate::RegisterSpec for TA1CTL_SPEC {
+#[doc = "Timer1_A3 Control\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`tactl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`tactl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct TACTL_SPEC;
+impl crate::RegisterSpec for TACTL_SPEC {
     type Ux = u16;
 }
-#[doc = "`read()` method returns [`ta1ctl::R`](R) reader structure"]
-impl crate::Readable for TA1CTL_SPEC {}
-#[doc = "`write(|w| ..)` method takes [`ta1ctl::W`](W) writer structure"]
-impl crate::Writable for TA1CTL_SPEC {
+#[doc = "`read()` method returns [`tactl::R`](R) reader structure"]
+impl crate::Readable for TACTL_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`tactl::W`](W) writer structure"]
+impl crate::Writable for TACTL_SPEC {
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
-#[doc = "`reset()` method sets TA1CTL to value 0"]
-impl crate::Resettable for TA1CTL_SPEC {
+#[doc = "`reset()` method sets TACTL to value 0"]
+impl crate::Resettable for TACTL_SPEC {
     const RESET_VALUE: Self::Ux = 0;
 }

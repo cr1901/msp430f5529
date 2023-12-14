@@ -1,7 +1,7 @@
-#[doc = "Register `TA2CCTL2` reader"]
-pub type R = crate::R<TA2CCTL2_SPEC>;
-#[doc = "Register `TA2CCTL2` writer"]
-pub type W = crate::W<TA2CCTL2_SPEC>;
+#[doc = "Register `TACCTL0` reader"]
+pub type R = crate::R<TACCTL0_SPEC>;
+#[doc = "Register `TACCTL0` writer"]
+pub type W = crate::W<TACCTL0_SPEC>;
 #[doc = "Field `CCIFG` reader - Capture/compare interrupt flag"]
 pub type CCIFG_R = crate::BitReader;
 #[doc = "Field `CCIFG` writer - Capture/compare interrupt flag"]
@@ -402,67 +402,67 @@ impl W {
     #[doc = "Bit 0 - Capture/compare interrupt flag"]
     #[inline(always)]
     #[must_use]
-    pub fn ccifg(&mut self) -> CCIFG_W<TA2CCTL2_SPEC> {
+    pub fn ccifg(&mut self) -> CCIFG_W<TACCTL0_SPEC> {
         CCIFG_W::new(self, 0)
     }
     #[doc = "Bit 1 - Capture/compare overflow flag"]
     #[inline(always)]
     #[must_use]
-    pub fn cov(&mut self) -> COV_W<TA2CCTL2_SPEC> {
+    pub fn cov(&mut self) -> COV_W<TACCTL0_SPEC> {
         COV_W::new(self, 1)
     }
     #[doc = "Bit 2 - PWM Output signal if output mode 0"]
     #[inline(always)]
     #[must_use]
-    pub fn out(&mut self) -> OUT_W<TA2CCTL2_SPEC> {
+    pub fn out(&mut self) -> OUT_W<TACCTL0_SPEC> {
         OUT_W::new(self, 2)
     }
     #[doc = "Bit 3 - Capture input signal (read)"]
     #[inline(always)]
     #[must_use]
-    pub fn cci(&mut self) -> CCI_W<TA2CCTL2_SPEC> {
+    pub fn cci(&mut self) -> CCI_W<TACCTL0_SPEC> {
         CCI_W::new(self, 3)
     }
     #[doc = "Bit 4 - Capture/compare interrupt enable"]
     #[inline(always)]
     #[must_use]
-    pub fn ccie(&mut self) -> CCIE_W<TA2CCTL2_SPEC> {
+    pub fn ccie(&mut self) -> CCIE_W<TACCTL0_SPEC> {
         CCIE_W::new(self, 4)
     }
     #[doc = "Bits 5:7 - Output mode 2"]
     #[inline(always)]
     #[must_use]
-    pub fn outmod(&mut self) -> OUTMOD_W<TA2CCTL2_SPEC> {
+    pub fn outmod(&mut self) -> OUTMOD_W<TACCTL0_SPEC> {
         OUTMOD_W::new(self, 5)
     }
     #[doc = "Bit 8 - Capture mode: 1 /Compare mode : 0"]
     #[inline(always)]
     #[must_use]
-    pub fn cap(&mut self) -> CAP_W<TA2CCTL2_SPEC> {
+    pub fn cap(&mut self) -> CAP_W<TACCTL0_SPEC> {
         CAP_W::new(self, 8)
     }
     #[doc = "Bit 10 - Latched capture signal (read)"]
     #[inline(always)]
     #[must_use]
-    pub fn scci(&mut self) -> SCCI_W<TA2CCTL2_SPEC> {
+    pub fn scci(&mut self) -> SCCI_W<TACCTL0_SPEC> {
         SCCI_W::new(self, 10)
     }
     #[doc = "Bit 11 - Capture sychronize"]
     #[inline(always)]
     #[must_use]
-    pub fn scs(&mut self) -> SCS_W<TA2CCTL2_SPEC> {
+    pub fn scs(&mut self) -> SCS_W<TACCTL0_SPEC> {
         SCS_W::new(self, 11)
     }
     #[doc = "Bits 12:13 - Capture input select 1"]
     #[inline(always)]
     #[must_use]
-    pub fn ccis(&mut self) -> CCIS_W<TA2CCTL2_SPEC> {
+    pub fn ccis(&mut self) -> CCIS_W<TACCTL0_SPEC> {
         CCIS_W::new(self, 12)
     }
     #[doc = "Bits 14:15 - Capture mode 1"]
     #[inline(always)]
     #[must_use]
-    pub fn cm(&mut self) -> CM_W<TA2CCTL2_SPEC> {
+    pub fn cm(&mut self) -> CM_W<TACCTL0_SPEC> {
         CM_W::new(self, 14)
     }
     #[doc = r" Writes raw bits to the register."]
@@ -476,19 +476,19 @@ impl W {
         self
     }
 }
-#[doc = "Timer2_A3 Capture/Compare Control 2\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`ta2cctl2::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ta2cctl2::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
-pub struct TA2CCTL2_SPEC;
-impl crate::RegisterSpec for TA2CCTL2_SPEC {
+#[doc = "Timer1_A3 Capture/Compare Control 0\n\nYou can [`read`](crate::generic::Reg::read) this register and get [`tacctl0::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`tacctl0::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct TACCTL0_SPEC;
+impl crate::RegisterSpec for TACCTL0_SPEC {
     type Ux = u16;
 }
-#[doc = "`read()` method returns [`ta2cctl2::R`](R) reader structure"]
-impl crate::Readable for TA2CCTL2_SPEC {}
-#[doc = "`write(|w| ..)` method takes [`ta2cctl2::W`](W) writer structure"]
-impl crate::Writable for TA2CCTL2_SPEC {
+#[doc = "`read()` method returns [`tacctl0::R`](R) reader structure"]
+impl crate::Readable for TACCTL0_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`tacctl0::W`](W) writer structure"]
+impl crate::Writable for TACCTL0_SPEC {
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
-#[doc = "`reset()` method sets TA2CCTL2 to value 0"]
-impl crate::Resettable for TA2CCTL2_SPEC {
+#[doc = "`reset()` method sets TACCTL0 to value 0"]
+impl crate::Resettable for TACCTL0_SPEC {
     const RESET_VALUE: Self::Ux = 0;
 }

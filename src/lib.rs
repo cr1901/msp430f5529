@@ -1468,17 +1468,17 @@ impl core::fmt::Debug for PORT_J {
 }
 #[doc = "Port J"]
 pub mod port_j;
-#[doc = "Timer0_A5"]
-pub struct TIMER_0_A5 {
+#[doc = "Timer A5"]
+pub struct TIMER0_A5 {
     _marker: PhantomData<*const ()>,
 }
-unsafe impl Send for TIMER_0_A5 {}
-impl TIMER_0_A5 {
+unsafe impl Send for TIMER0_A5 {}
+impl TIMER0_A5 {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const timer_0_a5::RegisterBlock = 0x0340 as *const _;
+    pub const PTR: *const timer0_a5::RegisterBlock = 0x0340 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const timer_0_a5::RegisterBlock {
+    pub const fn ptr() -> *const timer0_a5::RegisterBlock {
         Self::PTR
     }
     #[doc = r" Steal an instance of this peripheral"]
@@ -1500,31 +1500,31 @@ impl TIMER_0_A5 {
         }
     }
 }
-impl Deref for TIMER_0_A5 {
-    type Target = timer_0_a5::RegisterBlock;
+impl Deref for TIMER0_A5 {
+    type Target = timer0_a5::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
     }
 }
-impl core::fmt::Debug for TIMER_0_A5 {
+impl core::fmt::Debug for TIMER0_A5 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("TIMER_0_A5").finish()
+        f.debug_struct("TIMER0_A5").finish()
     }
 }
-#[doc = "Timer0_A5"]
-pub mod timer_0_a5;
-#[doc = "Timer1_A3"]
-pub struct TIMER_1_A3 {
+#[doc = "Timer A5"]
+pub mod timer0_a5;
+#[doc = "Timer A3"]
+pub struct TIMER1_A3 {
     _marker: PhantomData<*const ()>,
 }
-unsafe impl Send for TIMER_1_A3 {}
-impl TIMER_1_A3 {
+unsafe impl Send for TIMER1_A3 {}
+impl TIMER1_A3 {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const timer_1_a3::RegisterBlock = 0x0380 as *const _;
+    pub const PTR: *const timer1_a3::RegisterBlock = 0x0380 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const timer_1_a3::RegisterBlock {
+    pub const fn ptr() -> *const timer1_a3::RegisterBlock {
         Self::PTR
     }
     #[doc = r" Steal an instance of this peripheral"]
@@ -1546,20 +1546,20 @@ impl TIMER_1_A3 {
         }
     }
 }
-impl Deref for TIMER_1_A3 {
-    type Target = timer_1_a3::RegisterBlock;
+impl Deref for TIMER1_A3 {
+    type Target = timer1_a3::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
     }
 }
-impl core::fmt::Debug for TIMER_1_A3 {
+impl core::fmt::Debug for TIMER1_A3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("TIMER_1_A3").finish()
+        f.debug_struct("TIMER1_A3").finish()
     }
 }
-#[doc = "Timer1_A3"]
-pub mod timer_1_a3;
+#[doc = "Timer A3"]
+pub mod timer1_a3;
 #[doc = "Timer0_B7"]
 pub struct TIMER_0_B7 {
     _marker: PhantomData<*const ()>,
@@ -1606,17 +1606,17 @@ impl core::fmt::Debug for TIMER_0_B7 {
 }
 #[doc = "Timer0_B7"]
 pub mod timer_0_b7;
-#[doc = "Timer2_A3"]
-pub struct TIMER_2_A3 {
+#[doc = "Timer A3"]
+pub struct TIMER2_A3 {
     _marker: PhantomData<*const ()>,
 }
-unsafe impl Send for TIMER_2_A3 {}
-impl TIMER_2_A3 {
+unsafe impl Send for TIMER2_A3 {}
+impl TIMER2_A3 {
     #[doc = r"Pointer to the register block"]
-    pub const PTR: *const timer_2_a3::RegisterBlock = 0x0400 as *const _;
+    pub const PTR: *const timer1_a3::RegisterBlock = 0x0400 as *const _;
     #[doc = r"Return the pointer to the register block"]
     #[inline(always)]
-    pub const fn ptr() -> *const timer_2_a3::RegisterBlock {
+    pub const fn ptr() -> *const timer1_a3::RegisterBlock {
         Self::PTR
     }
     #[doc = r" Steal an instance of this peripheral"]
@@ -1638,20 +1638,20 @@ impl TIMER_2_A3 {
         }
     }
 }
-impl Deref for TIMER_2_A3 {
-    type Target = timer_2_a3::RegisterBlock;
+impl Deref for TIMER2_A3 {
+    type Target = timer1_a3::RegisterBlock;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         unsafe { &*Self::PTR }
     }
 }
-impl core::fmt::Debug for TIMER_2_A3 {
+impl core::fmt::Debug for TIMER2_A3 {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("TIMER_2_A3").finish()
+        f.debug_struct("TIMER2_A3").finish()
     }
 }
-#[doc = "Timer2_A3"]
-pub mod timer_2_a3;
+#[doc = "Timer A3"]
+pub use self::timer1_a3 as timer2_a3;
 #[doc = "MPY 16 Multiplier 16 Bit Mode"]
 pub struct MPY_16 {
     _marker: PhantomData<*const ()>,
@@ -1897,14 +1897,14 @@ pub struct Peripherals {
     pub PORT_MAPPING_CONTROL: PORT_MAPPING_CONTROL,
     #[doc = "PORT_J"]
     pub PORT_J: PORT_J,
-    #[doc = "TIMER_0_A5"]
-    pub TIMER_0_A5: TIMER_0_A5,
-    #[doc = "TIMER_1_A3"]
-    pub TIMER_1_A3: TIMER_1_A3,
+    #[doc = "TIMER0_A5"]
+    pub TIMER0_A5: TIMER0_A5,
+    #[doc = "TIMER1_A3"]
+    pub TIMER1_A3: TIMER1_A3,
     #[doc = "TIMER_0_B7"]
     pub TIMER_0_B7: TIMER_0_B7,
-    #[doc = "TIMER_2_A3"]
-    pub TIMER_2_A3: TIMER_2_A3,
+    #[doc = "TIMER2_A3"]
+    pub TIMER2_A3: TIMER2_A3,
     #[doc = "MPY_16"]
     pub MPY_16: MPY_16,
     #[doc = "MPY_32"]
@@ -2019,16 +2019,16 @@ impl Peripherals {
             PORT_J: PORT_J {
                 _marker: PhantomData,
             },
-            TIMER_0_A5: TIMER_0_A5 {
+            TIMER0_A5: TIMER0_A5 {
                 _marker: PhantomData,
             },
-            TIMER_1_A3: TIMER_1_A3 {
+            TIMER1_A3: TIMER1_A3 {
                 _marker: PhantomData,
             },
             TIMER_0_B7: TIMER_0_B7 {
                 _marker: PhantomData,
             },
-            TIMER_2_A3: TIMER_2_A3 {
+            TIMER2_A3: TIMER2_A3 {
                 _marker: PhantomData,
             },
             MPY_16: MPY_16 {
